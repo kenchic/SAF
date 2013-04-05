@@ -39,8 +39,29 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
+    <Compile Include="ClaseBase.cs" />
+    <Compile Include="clsAuditoria.cs" />
+    <Compile Include="clsEventoAuditoria.cs" />
+    <Compile Include="clsPrivilegio.cs" />
+    <Compile Include="clsPrivilegioRol.cs" />
+    <Compile Include="clsRol.cs" />
+    <Compile Include="clsUsuario.cs" />
+    <Compile Include="DALC\clsAuditoriaDALC.cs" />
+    <Compile Include="DALC\clsControladorClaseBasica.cs" />
+    <Compile Include="DALC\clsControladorSeguridad.cs" />
+    <Compile Include="DALC\clsEventoAuditoriaDALC.cs" />
+    <Compile Include="DALC\clsPrivilegioDALC.cs" />
+    <Compile Include="DALC\clsPrivilegioRolDALC.cs" />
+    <Compile Include="DALC\clsRolDALC.cs" />
+    <Compile Include="DALC\clsUsuarioDALC.cs" />
+    <Compile Include="DALC\Entidad.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BaseDatos\BaseDatos.csproj">
+      <Project>{676087AB-06B3-4862-A7BB-1C1EC347A0CE}</Project>
+      <Name>BaseDatos</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

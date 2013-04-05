@@ -39,8 +39,109 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
+    <Compile Include="ClaseBase.cs" />
+    <Compile Include="ClaseBaseDetalle.cs" />
+    <Compile Include="ClaseBaseDocumento.cs" />
+    <Compile Include="clsAgente.cs" />
+    <Compile Include="clsBodega.cs" />
+    <Compile Include="clsCiudad.cs" />
+    <Compile Include="clsCliente.cs" />
+    <Compile Include="clsConductor.cs" />
+    <Compile Include="clsContrato.cs" />
+    <Compile Include="clsCorte.cs" />
+    <Compile Include="clsDetalleCorte.cs" />
+    <Compile Include="clsDetalleDevolucion.cs" />
+    <Compile Include="clsDetalleDevolucionServicio.cs" />
+    <Compile Include="clsDetalleDocumento.cs" />
+    <Compile Include="clsDetalleFactura.cs" />
+    <Compile Include="clsDetalleListaPrecio.cs" />
+    <Compile Include="clsDetalleMantenimiento.cs" />
+    <Compile Include="clsDetalleOrdenServicio.cs" />
+    <Compile Include="clsDetalleRemision.cs" />
+    <Compile Include="clsDetalleRepDevolucionServicio.cs" />
+    <Compile Include="clsDetalleReposicion.cs" />
+    <Compile Include="clsDetalleVenta.cs" />
+    <Compile Include="clsDevolucion.cs" />
+    <Compile Include="clsDevolucionServicio.cs" />
+    <Compile Include="clsDocumento.cs" />
+    <Compile Include="clsElemento.cs" />
+    <Compile Include="clsFactura.cs" />
+    <Compile Include="clsGrupoElemento.cs" />
+    <Compile Include="clsListaPrecio.cs" />
+    <Compile Include="clsMantenimiento.cs" />
+    <Compile Include="clsMovimientoBodega.cs" />
+    <Compile Include="clsOrdenServicio.cs" />
+    <Compile Include="clsProveedor.cs" />
+    <Compile Include="clsProyecto.cs" />
+    <Compile Include="clsProyectoAlquiler.cs" />
+    <Compile Include="clsProyectoVenta.cs" />
+    <Compile Include="clsRemision.cs" />
+    <Compile Include="clsRepDevolucionServicio.cs" />
+    <Compile Include="clsReposicion.cs" />
+    <Compile Include="clsTipoDocumento.cs" />
+    <Compile Include="clsUnidadMedida.cs" />
+    <Compile Include="clsVenta.cs" />
+    <Compile Include="DALC\clsAgenteDALC.cs" />
+    <Compile Include="DALC\clsBodegaDALC.cs" />
+    <Compile Include="DALC\clsCiudadDALC.cs" />
+    <Compile Include="DALC\clsClienteDALC.cs" />
+    <Compile Include="DALC\clsConductorDALC.cs" />
+    <Compile Include="DALC\clsContratoDALC.cs" />
+    <Compile Include="DALC\clsControladorClaseBasica.cs" />
+    <Compile Include="DALC\clsControladorClaseDetalle.cs" />
+    <Compile Include="DALC\clsControladorClaseDocumento.cs" />
+    <Compile Include="DALC\clsControladorSAF.cs" />
+    <Compile Include="DALC\clsCorteDALC.cs" />
+    <Compile Include="DALC\clsDetalleCorteDALC.cs" />
+    <Compile Include="DALC\clsDetalleDevolucionDALC.cs" />
+    <Compile Include="DALC\clsDetalleDevolucionServicioDALC.cs" />
+    <Compile Include="DALC\clsDetalleDocumentoDALC.cs" />
+    <Compile Include="DALC\clsDetalleFacturaDALC.cs" />
+    <Compile Include="DALC\clsDetalleListaPrecioDALC.cs" />
+    <Compile Include="DALC\clsDetalleMantenimientoDALC.cs" />
+    <Compile Include="DALC\clsDetalleOrdenServicioDALC.cs" />
+    <Compile Include="DALC\clsDetalleRemisionDALC.cs" />
+    <Compile Include="DALC\clsDetalleRepDevolucionServicioDALC.cs" />
+    <Compile Include="DALC\clsDetalleReposicionDALC.cs" />
+    <Compile Include="DALC\clsDetalleVentaDALC.cs" />
+    <Compile Include="DALC\clsDevolucionDALC.cs" />
+    <Compile Include="DALC\clsDevolucionServicioDALC.cs" />
+    <Compile Include="DALC\clsDocumentoDALC.cs" />
+    <Compile Include="DALC\clsElementoDALC.cs" />
+    <Compile Include="DALC\clsFacturaDALC.cs" />
+    <Compile Include="DALC\clsGrupoElementoDALC.cs" />
+    <Compile Include="DALC\clsListaPrecioDALC.cs" />
+    <Compile Include="DALC\clsMantenimientoDALC.cs" />
+    <Compile Include="DALC\clsMovimientoBodegaDALC.cs" />
+    <Compile Include="DALC\clsOrdenServicioDALC.cs" />
+    <Compile Include="DALC\clsProveedorDALC.cs" />
+    <Compile Include="DALC\clsProyectoAlquilerDALC.cs" />
+    <Compile Include="DALC\clsProyectoDALC.cs" />
+    <Compile Include="DALC\clsProyectoVentaDALC.cs" />
+    <Compile Include="DALC\clsRemisionDALC.cs" />
+    <Compile Include="DALC\clsRepDevolucionServicioDALC.cs" />
+    <Compile Include="DALC\clsReposicionDALC.cs" />
+    <Compile Include="DALC\clsTipoDocumentoDALC.cs" />
+    <Compile Include="DALC\clsUnidadMedidaDALC.cs" />
+    <Compile Include="DALC\clsVentaDALC.cs" />
+    <Compile Include="DALC\Entidad.cs" />
+    <Compile Include="DALC\EntidadBasica.cs" />
+    <Compile Include="DALC\EntidadDetalle.cs" />
+    <Compile Include="DALC\EntidadDocumento.cs" />
+    <Compile Include="enuEstadoProyecto.cs" />
+    <Compile Include="enuTipoFactura.cs" />
+    <Compile Include="enuTipoMantenimiento.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BaseDatos\BaseDatos.csproj">
+      <Project>{676087ab-06b3-4862-a7bb-1c1ec347a0ce}</Project>
+      <Name>BaseDatos</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Seguridad\Seguridad.csproj">
+      <Project>{1eb24b2b-b2e7-443b-83b5-38e4250448bc}</Project>
+      <Name>Seguridad</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
