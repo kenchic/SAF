@@ -1,0 +1,14 @@
+﻿body {
+  margin: 0 auto;
+  padding: 0;
+  color: #242B2D;
+  background-color: #F7F8F8;
+  background-image: url('../img/fondos/fondoInicio.jpg');
+  background-repeat: repeat-x;
+  background-attachment: fixed;
+  background-position: top center;
+}
+
+.tableInicio {
+  background-image: url('../img/fondos/fondoInicio.jpg');
+}

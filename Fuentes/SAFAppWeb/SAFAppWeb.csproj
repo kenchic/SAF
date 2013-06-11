@@ -67,7 +67,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="css\Estilos.css" />
     <Content Include="Default.aspx" />
+    <Content Include="Global.asax" />
+    <Content Include="img\fondos\fondoInicio.jpg" />
     <Content Include="Principal.aspx" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
@@ -80,6 +83,9 @@
     </Compile>
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Principal.aspx.cs">
       <DependentUpon>Principal.aspx</DependentUpon>
@@ -99,13 +105,17 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\BaseDatos\BaseDatos.csproj">
+      <Project>{676087ab-06b3-4862-a7bb-1c1ec347a0ce}</Project>
+      <Name>BaseDatos</Name>
+    </ProjectReference>
     <ProjectReference Include="..\SAFCore\SAFCore.csproj">
       <Project>{f0103fc0-aee4-44f7-bb79-294d41f566ff}</Project>
       <Name>SAFCore</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="css\" />
+    <Folder Include="img\iconos\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

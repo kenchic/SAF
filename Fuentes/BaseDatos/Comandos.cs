@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Data;
 using System.Data.Common;
+using BaseDatos;
+
 namespace Datos
 {
     public class Comandos : Conexion
@@ -26,7 +28,7 @@ namespace Datos
         }
         public string proveedor
         {
-            get { return m_proveedor; }
+            get { return MProveedor; }
         }
         #endregion
 
@@ -39,8 +41,8 @@ namespace Datos
         public Comandos(string strconexion, string proveedor)
             : base(strconexion, proveedor)
         {
-            m_comando = base.obtenerFabrica().CreateCommand();
-            m_comando.Connection = base.m_conexion;
+            m_comando = base.ObtenerFabrica().CreateCommand();
+            m_comando.Connection = base.MConexion;
             m_comando.CommandTimeout = 0;
         }
         /// <summary>
@@ -52,8 +54,8 @@ namespace Datos
         public Comandos(string strconexion, string proveedor, string nombrecursorsalida)
             : base(strconexion, proveedor)
         {
-            m_comando = base.obtenerFabrica().CreateCommand();
-            m_comando.Connection = base.m_conexion;
+            m_comando = base.ObtenerFabrica().CreateCommand();
+            m_comando.Connection = base.MConexion;
             m_comando.CommandTimeout = 0;
             m_nombrecursorsalida = nombrecursorsalida;
         }
@@ -74,7 +76,7 @@ namespace Datos
         /// <param name="valor">Valor del parametro</param>
         public void agregarParametro(string nombre, object valor)
         {
-            DbParameter param = base.obtenerFabrica().CreateParameter();
+            DbParameter param = base.ObtenerFabrica().CreateParameter();
             param.ParameterName = nombre;
             param.Value = valor;
             m_comando.Parameters.Add(param);
@@ -114,7 +116,7 @@ namespace Datos
         /// <param name="direccion">Direccion del Parametro (Entrada o Salida)</param>
         public void agregarParametro(string nombre, object valor, ParameterDirection direccion)
         {
-            DbParameter param = base.obtenerFabrica().CreateParameter();
+            DbParameter param = base.ObtenerFabrica().CreateParameter();
             param.ParameterName = nombre;
             param.Value = valor;
             param.Direction = direccion;
@@ -122,7 +124,7 @@ namespace Datos
         }
         public void agregarParametro(string nombre, object valor, ParameterDirection direccion, int tamano)
         {
-            DbParameter param = base.obtenerFabrica().CreateParameter();
+            DbParameter param = base.ObtenerFabrica().CreateParameter();
             param.ParameterName = nombre;
             param.Value = valor;
             param.Direction = direccion;
@@ -137,7 +139,7 @@ namespace Datos
         private string obtenerError(DbException e)
         {
             string mensaje = e.Message;
-            switch (base.m_proveedor)
+            switch (base.MProveedor)
             {
                 case "System.Data.SqlClient":
                     {
@@ -217,9 +219,9 @@ namespace Datos
             m_comando.CommandText = nombrePA;
             m_comando.CommandType = CommandType.StoredProcedure;
             m_dataset = new DataSet();
-            m_adaptador = base.obtenerFabrica().CreateDataAdapter();
+            m_adaptador = base.ObtenerFabrica().CreateDataAdapter();
             m_adaptador.SelectCommand = m_comando;
-            base.abrir();
+            base.Abrir();
             try
             {
                 m_adaptador.Fill(m_dataset);
@@ -230,7 +232,7 @@ namespace Datos
             }
             finally
             {
-                base.cerrar();
+                base.Cerrar();
             }
 
             return m_dataset;
@@ -245,7 +247,7 @@ namespace Datos
             int filasafectadas;
             m_comando.CommandText = nombrePA;
             m_comando.CommandType = CommandType.StoredProcedure;
-            base.abrir();
+            base.Abrir();
             try
             {
                 filasafectadas = m_comando.ExecuteNonQuery();
@@ -257,7 +259,7 @@ namespace Datos
             }
             finally
             {
-                base.cerrar();
+                base.Cerrar();
             }
             return filasafectadas;
         }
@@ -271,7 +273,7 @@ namespace Datos
             object datoretorno = new object();
             m_comando.CommandText = nombrePA;
             m_comando.CommandType = CommandType.StoredProcedure;
-            base.abrir();
+            base.Abrir();
             try
             {
                 datoretorno = m_comando.ExecuteScalar();
@@ -283,7 +285,7 @@ namespace Datos
             }
             finally
             {
-                base.cerrar();
+                base.Cerrar();
             }
             return datoretorno;
         }
@@ -297,9 +299,9 @@ namespace Datos
             m_datatable = new DataTable();
             m_comando.CommandText = nombre;
             m_comando.CommandType = CommandType.TableDirect;
-            m_adaptador = base.obtenerFabrica().CreateDataAdapter();
+            m_adaptador = base.ObtenerFabrica().CreateDataAdapter();
             m_adaptador.SelectCommand = m_comando;
-            base.abrir();
+            base.Abrir();
             try
             {
                 m_adaptador.Fill(m_datatable);
@@ -310,7 +312,7 @@ namespace Datos
             }
             finally
             {
-                base.cerrar();
+                base.Cerrar();
             }
             return m_datatable;
         }
@@ -325,9 +327,9 @@ namespace Datos
             m_datatable = new DataTable();
             m_comando.CommandText = consultaSQL;
             m_comando.CommandType = CommandType.Text;
-            m_adaptador = base.obtenerFabrica().CreateDataAdapter();
+            m_adaptador = base.ObtenerFabrica().CreateDataAdapter();
             m_adaptador.SelectCommand = m_comando;
-            base.abrir();
+            base.Abrir();
             try
             {
                 m_adaptador.Fill(m_datatable);
@@ -338,7 +340,7 @@ namespace Datos
             }
             finally
             {
-                base.cerrar();
+                base.Cerrar();
             }
             return m_datatable;
         }
@@ -353,7 +355,7 @@ namespace Datos
             int filasafectadas;
             m_comando.CommandText = sentenciaSQL;
             m_comando.CommandType = CommandType.Text;
-            base.abrir();
+            base.Abrir();
             try
             {
                 filasafectadas = m_comando.ExecuteNonQuery();
@@ -365,7 +367,7 @@ namespace Datos
             }
             finally
             {
-                base.cerrar();
+                base.Cerrar();
             }
             return filasafectadas;
         }

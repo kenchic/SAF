@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Data.Common;
 
-namespace Datos
+namespace BaseDatos
 {
     /// <summary>
     /// Clase para crear y manejar la conexion con la Base de Datos
@@ -9,10 +9,10 @@ namespace Datos
     public abstract class Conexion
     {
         #region "Miembros"
-        protected string m_strconexion;
-        protected string m_proveedor;
-        protected DbConnection m_conexion;
-        private const string DEFPROVEEDOR = "System.Data.SqlClient";
+        protected string MStrconexion;
+        protected string MProveedor;
+        protected DbConnection MConexion;
+        private const string Defproveedor = "System.Data.SqlClient";
         #endregion
 
         #region "Constructores"
@@ -21,9 +21,9 @@ namespace Datos
         /// </summary>
         public Conexion()
         {
-            m_strconexion = "";
-            m_conexion = null;
-            m_proveedor = DEFPROVEEDOR;
+            MStrconexion = "";
+            MConexion = null;
+            MProveedor = Defproveedor;
         }
         /// <summary>
         /// Constructor
@@ -35,11 +35,11 @@ namespace Datos
             if (string.IsNullOrEmpty(strconexion))
                 strconexion = "";
             if (string.IsNullOrEmpty(proveedor))
-                proveedor = DEFPROVEEDOR;
-            m_strconexion = strconexion;
-            m_proveedor = proveedor;
-            m_conexion = this.crearConexion();
-            m_conexion.ConnectionString = m_strconexion;
+                proveedor = Defproveedor;
+            MStrconexion = strconexion;
+            MProveedor = proveedor;
+            MConexion = CrearConexion();
+            MConexion.ConnectionString = MStrconexion;
         }
         #endregion
 
@@ -48,27 +48,27 @@ namespace Datos
         /// Retorna la fabrica del proveedor
         /// </summary>
         /// <returns></returns>
-        protected DbProviderFactory obtenerFabrica()
+        protected DbProviderFactory ObtenerFabrica()
         {
-            return DbProviderFactories.GetFactory(m_proveedor);
+            return DbProviderFactories.GetFactory(MProveedor);
         }
         /// <summary>
         /// Retorna la nueva conexion
         /// </summary>
         /// <returns></returns>
-        private DbConnection crearConexion()
+        private DbConnection CrearConexion()
         {
-            return this.obtenerFabrica().CreateConnection();
+            return ObtenerFabrica().CreateConnection();
         }
         /// <summary>
         /// Abre la conexion con la Base de Datos
         /// </summary>
-        protected void abrir()
+        protected void Abrir()
         {
             try
             {
-                if (m_conexion.State == System.Data.ConnectionState.Closed)
-                    this.m_conexion.Open();
+                if (MConexion.State == System.Data.ConnectionState.Closed)
+                    MConexion.Open();
             }
             catch (Exception ex)
             {
@@ -78,12 +78,12 @@ namespace Datos
         /// <summary>
         /// Cierra la conexion con la Base de Datos
         /// </summary>
-        protected void cerrar()
+        protected void Cerrar()
         {
             try
             {
-                if (m_conexion.State != System.Data.ConnectionState.Closed)
-                    this.m_conexion.Close();
+                if (MConexion.State != System.Data.ConnectionState.Closed)
+                    MConexion.Close();
             }
             catch (Exception ex)
             {
