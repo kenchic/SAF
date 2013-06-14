@@ -7,7 +7,8 @@
 ///////////////////////////////////////////////////////////
 
 using System.Collections.Generic;
-using Datos;
+using System.Data;
+using BaseDatos;
 
 namespace Seguridad.DALC {
 
@@ -57,7 +58,7 @@ namespace Seguridad.DALC {
 			return 0;
 		}
 
-		public Comandos Ejecutor_Base_Datos{
+		public Comandos EjecutorBaseDatos{
 			get{
 				return m_ejecutor_base_datos;
 			}
@@ -82,7 +83,7 @@ namespace Seguridad.DALC {
 			return 0;
 		}
 
-		public string Nombre_Procedimiento{
+		public string NombreProcedimiento{
 			get{
 				return m_nombre_procedimiento;
 			}
@@ -91,6 +92,16 @@ namespace Seguridad.DALC {
 			}
 		}
 
+        public virtual List<T> ConsultarPorParametros( Dictionary<string, string> par, IConstructorEntidad<T> constructor)
+        {
+	        DataTable datos;
+	        EjecutorBaseDatos.limpiarParametros();
+            foreach (var parametros in par)
+                EjecutorBaseDatos.agregarParametro(parametros.Key, parametros.Value);
+	        EjecutorBaseDatos.agregarParametroCursor();
+	        datos = EjecutorBaseDatos.ejecutarProcedimiento(NombreProcedimiento).Tables[0];
+            return constructor.CrearObjetos(ref datos);
+        }
 	}//end Entidad
 
 }//end namespace DALC

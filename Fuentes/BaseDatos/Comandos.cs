@@ -3,7 +3,7 @@ using System.Data;
 using System.Data.Common;
 using BaseDatos;
 
-namespace Datos
+namespace BaseDatos
 {
     public class Comandos : Conexion
     {

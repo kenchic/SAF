@@ -7,19 +7,26 @@
 ///////////////////////////////////////////////////////////
 
 using System.Collections.Generic;
+using BaseDatos;
+
 
 namespace Seguridad.DALC {
 	public class clsControladorClaseBasica {
 
+        #region Miembros
 		private clsEventoAuditoriaDALC m_clsEventoAuditoriaDALC;
 		private clsPrivilegioDALC m_clsPrivilegioDALC;
 		private clsPrivilegioRolDALC m_clsPrivilegioRolDALC;
 		private clsRolDALC m_clsRolDALC;
 		private clsUsuarioDALC m_clsUsuarioDALC;
+        private Comandos m_EjecutorBaseDatos ;
+        #endregion
 
-		public clsControladorClaseBasica(){
-
-		}
+        #region Constructores
+        public clsControladorClaseBasica(Comandos ejecutor)
+        {
+            m_EjecutorBaseDatos = ejecutor;
+        }
 
 		~clsControladorClaseBasica(){
 
@@ -28,6 +35,7 @@ namespace Seguridad.DALC {
 		public virtual void Dispose(){
 
 		}
+        #endregion
 
 		/// 
 		/// <param name="Id"></param>
@@ -84,12 +92,45 @@ namespace Seguridad.DALC {
 			return null;
 		}
 
+        #region Usuario 
 		public List<clsUsuario> ConsultarUsuarios(){
 
 			return null;
 		}
 
-		/// 
+        public List<clsUsuario> ConsultarUsuariosAutenticacion()
+        {
+            
+            return null;
+        }
+
+        /// 
+        /// <param name="obj"></param>
+        public int EditarUsuario(clsUsuario obj)
+        {
+
+            return 0;
+        }
+
+        /// 
+        /// <param name="obj"></param>
+        public int EliminarUsuario(clsUsuario obj)
+        {
+
+            return 0;
+        }
+
+        /// 
+        /// <param name="obj"></param>
+        public int InsertarUsuario(clsUsuario obj)
+        {
+
+            return 0;
+        }
+        #endregion
+
+
+        /// 
 		/// <param name="obj"></param>
 		public int EditarEventoAuditoria(clsEventoAuditoria obj){
 
@@ -117,12 +158,7 @@ namespace Seguridad.DALC {
 			return 0;
 		}
 
-		/// 
-		/// <param name="obj"></param>
-		public int EditarUsuario(clsUsuario obj){
-
-			return 0;
-		}
+		
 
 		/// 
 		/// <param name="obj"></param>
@@ -152,12 +188,7 @@ namespace Seguridad.DALC {
 			return 0;
 		}
 
-		/// 
-		/// <param name="obj"></param>
-		public int EliminarUsuario(clsUsuario obj){
-
-			return 0;
-		}
+		
 
 		/// 
 		/// <param name="obj"></param>
@@ -187,12 +218,7 @@ namespace Seguridad.DALC {
 			return 0;
 		}
 
-		/// 
-		/// <param name="obj"></param>
-		public int InsertarUsuario(clsUsuario obj){
-
-			return 0;
-		}
+		
 
 	}//end clsControladorClaseBasica
 

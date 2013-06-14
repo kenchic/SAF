@@ -113,9 +113,14 @@
       <Project>{f0103fc0-aee4-44f7-bb79-294d41f566ff}</Project>
       <Name>SAFCore</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Seguridad\Seguridad.csproj">
+      <Project>{1eb24b2b-b2e7-443b-83b5-38e4250448bc}</Project>
+      <Name>Seguridad</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="img\iconos\" />
+    <Folder Include="sistema\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

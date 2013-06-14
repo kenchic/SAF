@@ -1,7 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Configuration;
-using System.Linq;
 namespace SAFAppWeb
 {
     public class Global : System.Web.HttpApplication
@@ -14,7 +11,7 @@ namespace SAFAppWeb
 
         protected void Session_Start(object sender, EventArgs e)
         {
-            Datos.Comandos ejecutor = new Datos.Comandos("Data Source=localhost;Initial Catalog=SAF; User ID=saf; Password=K9/saf$126", "System.Data.SqlClient", "pDATOS");
+            var ejecutor = new BaseDatos.Comandos("Data Source=localhost;Initial Catalog=SAF; User ID=saf; Password=sql", "System.Data.SqlClient", "pDATOS");
             Session["ejecutorBD"] = ejecutor;
         }
 
