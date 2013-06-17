@@ -7,8 +7,7 @@
 ///////////////////////////////////////////////////////////
 
 
-
-
+using System;
 using SAFCore;
 namespace SAFCore {
 	public abstract class ClaseBaseDetalle {
@@ -16,15 +15,20 @@ namespace SAFCore {
 		private int m_cantidad;
 		private int m_id;
 		public SAFCore.clsElemento m_clsElemento;
-
-
-
-		~ClaseBaseDetalle(){
-
+        
+        ~ClaseBaseDetalle()
+        {
+            Dispose(false);
 		}
 
-		public virtual void Dispose(){
+        public void Dispose()
+        {
+            Dispose(true);
+            GC.SuppressFinalize(this);
+        }
 
+		public virtual void Dispose(bool disposing){
+            
 		}
 
 		public ClaseBaseDetalle(){

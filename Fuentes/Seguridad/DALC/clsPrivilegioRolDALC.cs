@@ -13,7 +13,7 @@ using Seguridad.DALC;
 namespace Seguridad.DALC {
 	internal class clsPrivilegioRolDALC : Entidad<clsPrivilegioRol> {
 
-		public Seguridad.DALC.clsFachadaClaseBasica m_clsFachadaClaseBasica;
+		public Seguridad.DALC.clsFachadaClaseBase m_clsFachadaClaseBase;
 
 		public clsPrivilegioRolDALC(){
 
@@ -23,7 +23,7 @@ namespace Seguridad.DALC {
 
 		}
 
-		public override void Dispose(){
+		public override void Dispose(bool disposing){
 
 		}
 

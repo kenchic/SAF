@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Web.Security;
 using System.Web.UI.WebControls;
+using Seguridad;
 
 namespace SAFAppWeb
 {
@@ -145,15 +146,15 @@ namespace SAFAppWeb
         #endregion
 
         #region Sin Autenticar DA
-        protected void IniciarSesion_Authenticate(object sender, AuthenticateEventArgs e)
+        protected void InicioSesion_Authenticate(object sender, AuthenticateEventArgs e)
         {
             bool estado;
             string nomportal;
             string passcredencial;
 
-            Seguridad.DALC.clsFachadaClaseBasica controladorClaseBasica = new Seguridad.DALC.clsFachadaClaseBasica(Session["ejecutorBD"] as BaseDatos.Comandos);
-            
+            Seguridad.DALC.clsFachadaClaseBase fachadaClaseBase = new Seguridad.DALC.clsFachadaClaseBase(Session["ejecutorBD"] as BaseDatos.Comandos);
 
+            clsUsuario usuario = fachadaClaseBase.ConsultarUsuariosAutenticacion(InicioSesion.UserName,InicioSesion.Password);
 
             CuentaAcceso cuentausuario = ((SCLA.DAL.OperacionesBD)Session["ejecutorBD"]).autenticarUsuario(IniciarSesion.UserName, CuentaAcceso.obtenerHash(CuentaAcceso.obtenerHash(IniciarSesion.Password)), "SCLA");
             if (cuentausuario == null)

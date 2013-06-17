@@ -6,6 +6,7 @@
 //  Original author: kenchic
 ///////////////////////////////////////////////////////////
 
+using System;
 using System.Collections.Generic;
 using System.Data;
 using BaseDatos;
@@ -19,12 +20,19 @@ namespace Seguridad.DALC {
         private string m_nombre_procedimiento;
 
 		~Entidad(){
-
+            Dispose(false);
 		}
 
-		public virtual void Dispose(){
+        public void Dispose()
+        {
+            Dispose(true);
+            GC.SuppressFinalize(this);
+        }
 
-		}
+        public virtual void Dispose(bool disposing)
+        {
+
+        }
 
 		/// 
 		/// <param name="ejecutorBaseDatos"></param>
@@ -92,15 +100,15 @@ namespace Seguridad.DALC {
 			}
 		}
 
-        public virtual List<T> ConsultarPorParametros( Dictionary<string, string> par, IConstructorEntidad<T> constructor)
+        public virtual List<T> ConsultarPorParametros(Dictionary<string, string> parametros, IFabricaEntidad<T> fabrica)
         {
 	        DataTable datos;
 	        EjecutorBaseDatos.limpiarParametros();
-            foreach (var parametros in par)
-                EjecutorBaseDatos.agregarParametro(parametros.Key, parametros.Value);
+            foreach (var parametro in parametros)
+                EjecutorBaseDatos.agregarParametro(parametro.Key, parametro.Value);
 	        EjecutorBaseDatos.agregarParametroCursor();
 	        datos = EjecutorBaseDatos.ejecutarProcedimiento(NombreProcedimiento).Tables[0];
-            return constructor.CrearObjetos(ref datos);
+            return fabrica.CrearObjetos(ref datos);
         }
 	}//end Entidad
 

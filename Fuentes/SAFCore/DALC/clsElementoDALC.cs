@@ -11,7 +11,7 @@
 
 using SAFCore.DALC;
 namespace SAFCore.DALC {
-	internal class clsElementoDALC : EntidadBasica<clsElemento> {
+	internal class clsElementoDALC : EntidadBase<clsElemento> {
 
 		public clsElementoDALC(){
 
@@ -21,7 +21,7 @@ namespace SAFCore.DALC {
 
 		}
 
-		public override void Dispose(){
+		public override void Dispose(bool disposing){
 
 		}
 

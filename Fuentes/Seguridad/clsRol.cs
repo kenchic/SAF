@@ -13,7 +13,7 @@ using Seguridad;
 namespace Seguridad {
 	public class clsRol : ClaseBase {
 
-		public Seguridad.ClsUsuario m_clsUsuario;
+		public Seguridad.clsUsuario m_clsUsuario;
 
 		public clsRol(){
 
@@ -23,7 +23,7 @@ namespace Seguridad {
 
 		}
 
-		public override void Dispose(){
+		public override void Dispose(bool disposing){
 
 		}
 

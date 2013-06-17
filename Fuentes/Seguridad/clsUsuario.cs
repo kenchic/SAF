@@ -10,7 +10,7 @@
 using System;
 
 namespace Seguridad {
-	public class ClsUsuario : ClaseBase, IDisposable
+	public class clsUsuario : ClaseBase, IDisposable
     {
 
         #region Miembros
@@ -24,19 +24,19 @@ namespace Seguridad {
 
         #region Constructores
 
-        public ClsUsuario(long id = 0, string nombre = "", bool activo = true) : base(id,nombre,activo)
+        public clsUsuario(long id = 0, string nombre = "", bool activo = true) : base(id,nombre,activo)
         {
            
         }
 
-        public ClsUsuario()
+        public clsUsuario()
         {
             Id = 0;
             Nombre = "";
             Activo = false;
         }
 
-	    ~ClsUsuario(){
+	    ~clsUsuario(){
             Dispose(false);
 		}
 

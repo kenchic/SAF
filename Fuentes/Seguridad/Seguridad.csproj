@@ -58,6 +58,7 @@
     <Compile Include="DALC\clsUsuarioDALC.cs" />
     <Compile Include="DALC\Entidad.cs" />
     <Compile Include="DALC\IFabricaEntidad.cs" />
+    <Compile Include="DALC\TipoAccionBaseDatos.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

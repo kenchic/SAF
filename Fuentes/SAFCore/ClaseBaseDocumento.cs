@@ -7,7 +7,7 @@
 ///////////////////////////////////////////////////////////
 
 
-
+using System;
 
 namespace SAFCore {
 	public abstract class ClaseBaseDocumento {
@@ -16,14 +16,19 @@ namespace SAFCore {
 		private int m_id;
 		private int m_numero;
 
-
-
-		~ClaseBaseDocumento(){
-
+        ~ClaseBaseDocumento()
+        {
+            Dispose(false);
 		}
 
-		public virtual void Dispose(){
+        public void Dispose()
+        {
+            Dispose(true);
+            GC.SuppressFinalize(this);
+        }
 
+		public virtual void Dispose(bool disposing){
+            
 		}
 
 		public ClaseBaseDocumento(){

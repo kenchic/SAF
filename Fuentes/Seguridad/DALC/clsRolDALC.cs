@@ -10,7 +10,7 @@
 namespace Seguridad.DALC {
 	internal class clsRolDALC : Entidad<clsRol> {
 
-		public Seguridad.DALC.clsFachadaClaseBasica m_clsFachadaClaseBasica;
+		public Seguridad.DALC.clsFachadaClaseBase m_clsFachadaClaseBase;
 
 		public clsRolDALC(){
 
@@ -20,7 +20,7 @@ namespace Seguridad.DALC {
 
 		}
 
-		public override void Dispose(){
+		public override void Dispose(bool disposing){
 
 		}
 

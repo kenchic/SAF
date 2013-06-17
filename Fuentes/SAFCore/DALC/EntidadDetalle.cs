@@ -7,8 +7,9 @@
 ///////////////////////////////////////////////////////////
 
 
+using System;
 using System.Collections.Generic;
-using Datos;
+using BaseDatos;
 
 namespace SAFCore.DALC {
 
@@ -19,12 +20,19 @@ namespace SAFCore.DALC {
 		private string m_nombre_procedimiento;
 
 		~EntidadDetalle(){
-
+            Dispose(false);
 		}
 
-		public virtual void Dispose(){
+        public void Dispose()
+        {
+            Dispose(true);
+            GC.SuppressFinalize(this);
+        }
 
-		}
+        public virtual void Dispose(bool disposing)
+        {
+
+        }
 
 		/// 
 		/// <param name="ejecutorBaseDatos"></param>

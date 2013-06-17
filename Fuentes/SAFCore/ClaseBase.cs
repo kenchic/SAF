@@ -7,7 +7,7 @@
 ///////////////////////////////////////////////////////////
 
 
-
+using System;
 
 namespace SAFCore {
 	public abstract class ClaseBase {
@@ -18,13 +18,21 @@ namespace SAFCore {
 
 
 
-		~ClaseBase(){
+        ~ClaseBase()
+        {
+            Dispose(false);
+        }
 
-		}
+        public void Dispose()
+        {
+            Dispose(true);
+            GC.SuppressFinalize(this);
+        }
 
-		public virtual void Dispose(){
+        public virtual void Dispose(bool disposing)
+        {
 
-		}
+        }
 
 		public ClaseBase(){
 

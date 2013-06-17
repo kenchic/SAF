@@ -11,7 +11,7 @@
 
 using SAFCore.DALC;
 namespace SAFCore.DALC {
-	internal class clsTipoDocumentoDALC : EntidadBasica<clsTipoDocumento> {
+	internal class clsTipoDocumentoDALC : EntidadBase<clsTipoDocumento> {
 
 		public clsTipoDocumentoDALC(){
 
@@ -21,7 +21,7 @@ namespace SAFCore.DALC {
 
 		}
 
-		public override void Dispose(){
+		public override void Dispose(bool disposing){
 
 		}
 

@@ -27,7 +27,7 @@ namespace SAFCore {
 
 		}
 
-		public override void Dispose(){
+		public override void Dispose(bool disposing){
 
 		}
 

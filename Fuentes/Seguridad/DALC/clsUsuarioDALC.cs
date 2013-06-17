@@ -7,39 +7,41 @@
 ///////////////////////////////////////////////////////////
 
 namespace Seguridad.DALC {
-	internal class clsUsuarioDALC : Entidad<ClsUsuario> {
-
-		public clsFachadaClaseBasica m_clsFachadaClaseBasica;
-
-		public clsUsuarioDALC(){
-
-		}
+    internal class clsUsuarioDALC : Entidad<clsUsuario>
+    {
+        public clsUsuarioDALC(BaseDatos.Comandos ejecutorBaseDatos)
+        {
+            EjecutorBaseDatos = ejecutorBaseDatos;
+        }
 
 		~clsUsuarioDALC(){
 
 		}
 
-		public override void Dispose(){
+		public override void Dispose(bool disposing){
 
 		}
 
 		/// 
 		/// <param name="obj"></param>
-		internal override int Editar(ClsUsuario obj){
+        internal override int Editar(clsUsuario obj)
+        {
 
 			return 0;
 		}
 
 		/// 
 		/// <param name="obj"></param>
-		internal override int Eliminar(ClsUsuario obj){
+        internal override int Eliminar(clsUsuario obj)
+        {
 
 			return 0;
 		}
 
 		/// 
 		/// <param name="obj"></param>
-		internal override int Insertar(ClsUsuario obj){
+        internal override int Insertar(clsUsuario obj)
+        {
 
 			return 0;
 		}
