@@ -13,7 +13,7 @@ using Seguridad;
 namespace Seguridad {
 	public class clsRol : ClaseBase {
 
-		public Seguridad.clsUsuario m_clsUsuario;
+		public Seguridad.ClsUsuario m_clsUsuario;
 
 		public clsRol(){
 

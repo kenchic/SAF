@@ -6,24 +6,34 @@
 //  Original author: kenchic
 ///////////////////////////////////////////////////////////
 
+using System;
+
 namespace Seguridad {
-	public abstract class ClaseBase {
+	public abstract class ClaseBase: IDisposable
+    {
 
-		private bool m_Activo;
-		private int m_Id;
+        #region Miembros
+        private bool m_Activo;
+		private long m_Id;
 		private string m_Nombre;
+        #endregion
 
-
-
-		~ClaseBase(){
-
+        #region Constructores
+        ~ClaseBase(){
+            Dispose(false);
 		}
 
-		public virtual void Dispose(){
+        public void Dispose()
+        {
+            Dispose(true);
+            GC.SuppressFinalize(this);
+        }
 
+		public virtual void Dispose(bool disposing){
+            
 		}
 
-		public ClaseBase(){
+	    protected ClaseBase(){
 
 		}
 
@@ -31,11 +41,16 @@ namespace Seguridad {
 		/// <param name="id"></param>
 		/// <param name="nombre"></param>
 		/// <param name="activo"></param>
-		public ClaseBase(int id, string nombre, bool activo = true){
-
+		public ClaseBase(long id=0, string nombre = "", bool activo = false)
+		{
+		    Id = id;
+		    Nombre = nombre;
+		    Activo = activo;
 		}
+        #endregion
 
-		public bool Activo{
+        #region Metodos
+        public bool Activo{
 			get{
 				return m_Activo;
 			}
@@ -44,7 +59,8 @@ namespace Seguridad {
 			}
 		}
 
-		public int Id{
+        public long Id
+        {
 			get{
 				return m_Id;
 			}
@@ -60,8 +76,8 @@ namespace Seguridad {
 			set{
 				m_Nombre = value;
 			}
-		}
-
-	}//end ClaseBase
+        }
+        #endregion
+    }//end ClaseBase
 
 }//end namespace Seguridad

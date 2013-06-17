@@ -37,6 +37,45 @@ namespace Seguridad.DALC {
 		}
         #endregion
 
+        #region Usuario
+        public List<ClsUsuario> ConsultarUsuarios()
+        {
+
+            return null;
+        }
+
+        public List<ClsUsuario> ConsultarUsuariosAutenticacion()
+        {
+
+            return null;
+        }
+
+        /// 
+        /// <param name="obj"></param>
+        public int EditarUsuario(ClsUsuario obj)
+        {
+
+            return 0;
+        }
+
+        /// 
+        /// <param name="obj"></param>
+        public int EliminarUsuario(ClsUsuario obj)
+        {
+
+            return 0;
+        }
+
+        /// 
+        /// <param name="obj"></param>
+        public int InsertarUsuario(ClsUsuario obj)
+        {
+
+            return 0;
+        }
+        #endregion
+
+
 		/// 
 		/// <param name="Id"></param>
 		public Seguridad.clsEventoAuditoria ConsultarEventoAuditoria(int Id){
@@ -87,47 +126,10 @@ namespace Seguridad.DALC {
 
 		/// 
 		/// <param name="Id"></param>
-		public Seguridad.clsUsuario ConsultarUsuario(int Id){
+		public Seguridad.ClsUsuario ConsultarUsuario(int Id){
 
 			return null;
 		}
-
-        #region Usuario 
-		public List<clsUsuario> ConsultarUsuarios(){
-
-			return null;
-		}
-
-        public List<clsUsuario> ConsultarUsuariosAutenticacion()
-        {
-            
-            return null;
-        }
-
-        /// 
-        /// <param name="obj"></param>
-        public int EditarUsuario(clsUsuario obj)
-        {
-
-            return 0;
-        }
-
-        /// 
-        /// <param name="obj"></param>
-        public int EliminarUsuario(clsUsuario obj)
-        {
-
-            return 0;
-        }
-
-        /// 
-        /// <param name="obj"></param>
-        public int InsertarUsuario(clsUsuario obj)
-        {
-
-            return 0;
-        }
-        #endregion
 
 
         /// 

@@ -7,7 +7,7 @@
 ///////////////////////////////////////////////////////////
 
 namespace Seguridad.DALC {
-	internal class clsUsuarioDALC : Entidad<clsUsuario> {
+	internal class clsUsuarioDALC : Entidad<ClsUsuario> {
 
 		public clsControladorClaseBasica m_clsControladorClaseBasica;
 
@@ -25,21 +25,21 @@ namespace Seguridad.DALC {
 
 		/// 
 		/// <param name="obj"></param>
-		internal override int Editar(clsUsuario obj){
+		internal override int Editar(ClsUsuario obj){
 
 			return 0;
 		}
 
 		/// 
 		/// <param name="obj"></param>
-		internal override int Eliminar(clsUsuario obj){
+		internal override int Eliminar(ClsUsuario obj){
 
 			return 0;
 		}
 
 		/// 
 		/// <param name="obj"></param>
-		internal override int Insertar(clsUsuario obj){
+		internal override int Insertar(ClsUsuario obj){
 
 			return 0;
 		}

@@ -47,7 +47,8 @@
     <Compile Include="clsRol.cs" />
     <Compile Include="clsUsuario.cs" />
     <Compile Include="DALC\clsAuditoriaDALC.cs" />
-    <Compile Include="DALC\clsConstructorClaseBase.cs" />
+    <Compile Include="DALC\clsConstructorClaseBasica.cs" />
+    <Compile Include="DALC\clsConstructorUsuario.cs" />
     <Compile Include="DALC\clsControladorClaseBasica.cs" />
     <Compile Include="DALC\clsControladorSeguridad.cs" />
     <Compile Include="DALC\clsEventoAuditoriaDALC.cs" />

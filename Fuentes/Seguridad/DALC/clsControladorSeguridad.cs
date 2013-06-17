@@ -13,7 +13,7 @@ namespace Seguridad.DALC {
 	public class clsControladorSeguridad {
 
 		private clsAuditoriaDALC m_clsAuditoriaDALC;
-		private Datos.Comandos m_ejecutor_base_datos;
+		private BaseDatos.Comandos m_ejecutor_base_datos;
 
 		public clsControladorSeguridad(){
 
@@ -59,6 +59,8 @@ namespace Seguridad.DALC {
 
 			return 0;
 		}
+
+       
 
 	}//end clsControladorSeguridad
 

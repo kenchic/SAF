@@ -16,8 +16,8 @@ namespace Seguridad {
 		private string m_ipterminal;
 		private string m_seccion;
 		private string m_titulo;
-		private clsUsuario m_usuario;
-		public  clsUsuario m_clsUsuario;
+		private ClsUsuario m_usuario;
+		public  ClsUsuario m_clsUsuario;
 
 		public clsAuditoria(){
 
@@ -94,7 +94,7 @@ namespace Seguridad {
 			}
 		}
 
-		public clsUsuario Usuario{
+		public ClsUsuario Usuario{
 			get{
 				return m_usuario;
 			}

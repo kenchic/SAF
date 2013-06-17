@@ -7,26 +7,51 @@
 ///////////////////////////////////////////////////////////
 
 
-namespace Seguridad {
-	public class clsUsuario : ClaseBase {
+using System;
 
-		public string m_clave;
+namespace Seguridad {
+	public class ClsUsuario : ClaseBase, IDisposable
+    {
+
+        #region Miembros
+        public string m_clave;
 		public clsRol m_rol;
 		public string m_usuario;
+        public string m_apellido;
+        public string m_identificacion;
+        public string m_correo;
+        #endregion
 
-		public clsUsuario(){
+        #region Constructores
 
+        public ClsUsuario(long id = 0, string nombre = "", bool activo = true) : base(id,nombre,activo)
+        {
+           
+        }
+
+        public ClsUsuario()
+        {
+            Id = 0;
+            Nombre = "";
+            Activo = false;
+        }
+
+	    ~ClsUsuario(){
+            Dispose(false);
 		}
 
-		~clsUsuario(){
-
+		public override void Dispose(bool disposing){
+            if (disposing)
+            {
+                // Liberar recursos manejados
+                Rol.Dispose();
+            }
+            //Liberar recursos no manejados
 		}
+        #endregion
 
-		public override void Dispose(){
-
-		}
-
-		public string Clave{
+        #region Metodos
+        public string Clave{
 			get{
 				return m_clave;
 			}
@@ -34,7 +59,6 @@ namespace Seguridad {
 				m_clave = value;
 			}
 		}
-
 		public clsRol Rol{
 			get{
 				return m_rol;
@@ -43,7 +67,6 @@ namespace Seguridad {
 				m_rol = value;
 			}
 		}
-
 		public string Usuario{
 			get{
 				return m_usuario;
@@ -51,8 +74,42 @@ namespace Seguridad {
 			set{
 				m_usuario = value;
 			}
-		}
+        }
+        public string Identificacion
+        {
+            get
+            {
+                return m_identificacion;
+            }
+            set
+            {
+                m_identificacion = value;
+            }
+        }
+        public string Apellido
+        {
+            get
+            {
+                return m_apellido;
+            }
+            set
+            {
+                m_apellido = value;
+            }
+        }
+        public string Correo
+        {
+            get
+            {
+                return m_correo;
+            }
+            set
+            {
+                m_correo = value;
+            }
+        }
+        #endregion
 
-	}//end clsUsuario
+    }//end clsUsuario
 
 }//end namespace Seguridad
