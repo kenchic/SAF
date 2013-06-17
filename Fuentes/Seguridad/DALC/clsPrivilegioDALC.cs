@@ -10,7 +10,7 @@
 namespace Seguridad.DALC {
 	internal class clsPrivilegioDALC : Entidad<clsPrivilegio> {
 
-		public clsControladorClaseBasica m_clsControladorClaseBasica;
+		public clsFachadaClaseBasica m_clsFachadaClaseBasica;
 
 		public clsPrivilegioDALC(){
 

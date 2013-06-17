@@ -10,7 +10,7 @@
 namespace Seguridad.DALC {
 	internal class clsRolDALC : Entidad<clsRol> {
 
-		public Seguridad.DALC.clsControladorClaseBasica m_clsControladorClaseBasica;
+		public Seguridad.DALC.clsFachadaClaseBasica m_clsFachadaClaseBasica;
 
 		public clsRolDALC(){
 

@@ -47,17 +47,17 @@
     <Compile Include="clsRol.cs" />
     <Compile Include="clsUsuario.cs" />
     <Compile Include="DALC\clsAuditoriaDALC.cs" />
-    <Compile Include="DALC\clsConstructorClaseBasica.cs" />
-    <Compile Include="DALC\clsConstructorUsuario.cs" />
-    <Compile Include="DALC\clsControladorClaseBasica.cs" />
-    <Compile Include="DALC\clsControladorSeguridad.cs" />
+    <Compile Include="DALC\clsFabricaClaseBase.cs" />
+    <Compile Include="DALC\clsFabricaUsuario.cs" />
+    <Compile Include="DALC\clsFachadaClaseBasica.cs" />
+    <Compile Include="DALC\clsFachadaSeguridad.cs" />
     <Compile Include="DALC\clsEventoAuditoriaDALC.cs" />
     <Compile Include="DALC\clsPrivilegioDALC.cs" />
     <Compile Include="DALC\clsPrivilegioRolDALC.cs" />
     <Compile Include="DALC\clsRolDALC.cs" />
     <Compile Include="DALC\clsUsuarioDALC.cs" />
     <Compile Include="DALC\Entidad.cs" />
-    <Compile Include="DALC\IConstructorEntidad.cs" />
+    <Compile Include="DALC\IFabricaEntidad.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

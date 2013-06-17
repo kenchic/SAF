@@ -4,14 +4,14 @@ using System.Collections.Generic;
 
 namespace Seguridad.DALC
 {
-    public class  ClsConstructorUsuario : IConstructorEntidad<ClsUsuario>
+    public class  clsFabricaUsuario : IFabricaEntidad<ClsUsuario>
     {
 
-        public ClsConstructorUsuario(){
+        public clsFabricaUsuario(){
 
 		}
 
-        ~ClsConstructorUsuario()
+        ~clsFabricaUsuario()
         {
 
 		}

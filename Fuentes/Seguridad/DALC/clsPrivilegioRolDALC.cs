@@ -13,7 +13,7 @@ using Seguridad.DALC;
 namespace Seguridad.DALC {
 	internal class clsPrivilegioRolDALC : Entidad<clsPrivilegioRol> {
 
-		public Seguridad.DALC.clsControladorClaseBasica m_clsControladorClaseBasica;
+		public Seguridad.DALC.clsFachadaClaseBasica m_clsFachadaClaseBasica;
 
 		public clsPrivilegioRolDALC(){
 

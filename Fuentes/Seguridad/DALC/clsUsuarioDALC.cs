@@ -9,7 +9,7 @@
 namespace Seguridad.DALC {
 	internal class clsUsuarioDALC : Entidad<ClsUsuario> {
 
-		public clsControladorClaseBasica m_clsControladorClaseBasica;
+		public clsFachadaClaseBasica m_clsFachadaClaseBasica;
 
 		public clsUsuarioDALC(){
 

@@ -151,7 +151,7 @@ namespace SAFAppWeb
             string nomportal;
             string passcredencial;
 
-            Seguridad.DALC.clsControladorClaseBasica controladorClaseBasica = new Seguridad.DALC.clsControladorClaseBasica(Session["ejecutorBD"] as BaseDatos.Comandos);
+            Seguridad.DALC.clsFachadaClaseBasica controladorClaseBasica = new Seguridad.DALC.clsFachadaClaseBasica(Session["ejecutorBD"] as BaseDatos.Comandos);
             
 
 

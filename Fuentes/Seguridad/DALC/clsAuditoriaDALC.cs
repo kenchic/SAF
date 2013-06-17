@@ -10,7 +10,7 @@
 namespace Seguridad.DALC {
 	internal class clsAuditoriaDALC : Entidad<clsAuditoria> {
 
-		public clsControladorSeguridad m_clsControladorSeguridad;
+		public clsFachadaSeguridad m_clsFachadaSeguridad;
 
 		public clsAuditoriaDALC(){
 

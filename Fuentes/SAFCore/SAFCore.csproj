@@ -87,10 +87,10 @@
     <Compile Include="DALC\clsClienteDALC.cs" />
     <Compile Include="DALC\clsConductorDALC.cs" />
     <Compile Include="DALC\clsContratoDALC.cs" />
-    <Compile Include="DALC\clsControladorClaseBasica.cs" />
-    <Compile Include="DALC\clsControladorClaseDetalle.cs" />
-    <Compile Include="DALC\clsControladorClaseDocumento.cs" />
-    <Compile Include="DALC\clsControladorSAF.cs" />
+    <Compile Include="DALC\clsFachadaClaseBasica.cs" />
+    <Compile Include="DALC\clsFachadaClaseDetalle.cs" />
+    <Compile Include="DALC\clsFachadaClaseDocumento.cs" />
+    <Compile Include="DALC\clsFachadaSAF.cs" />
     <Compile Include="DALC\clsCorteDALC.cs" />
     <Compile Include="DALC\clsDetalleCorteDALC.cs" />
     <Compile Include="DALC\clsDetalleDevolucionDALC.cs" />

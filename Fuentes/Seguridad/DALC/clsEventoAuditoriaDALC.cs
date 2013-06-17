@@ -13,7 +13,7 @@ using Seguridad.DALC;
 namespace Seguridad.DALC {
 	internal class clsEventoAuditoriaDALC : Entidad<clsEventoAuditoria> {
 
-		public Seguridad.DALC.clsControladorClaseBasica m_clsControladorClaseBasica;
+		public Seguridad.DALC.clsFachadaClaseBasica m_clsFachadaClaseBasica;
 
 		public clsEventoAuditoriaDALC(){
 
