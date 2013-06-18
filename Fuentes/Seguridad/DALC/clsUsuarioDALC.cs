@@ -21,10 +21,10 @@ namespace Seguridad.DALC {
 		public override void Dispose(bool disposing){
 
 		}
-
-		/// 
+       
+        /// 
 		/// <param name="obj"></param>
-        internal override int Editar(clsUsuario obj)
+        public override int Editar(clsUsuario obj)
         {
 
 			return 0;
@@ -32,7 +32,7 @@ namespace Seguridad.DALC {
 
 		/// 
 		/// <param name="obj"></param>
-        internal override int Eliminar(clsUsuario obj)
+        public override int Eliminar(clsUsuario obj)
         {
 
 			return 0;
@@ -40,7 +40,7 @@ namespace Seguridad.DALC {
 
 		/// 
 		/// <param name="obj"></param>
-        internal override int Insertar(clsUsuario obj)
+        public override int Insertar(clsUsuario obj)
         {
 
 			return 0;

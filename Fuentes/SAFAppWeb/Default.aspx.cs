@@ -11,10 +11,6 @@ namespace SAFAppWeb
         {
 
         }
-        protected void LoginButton_Click(object sender, EventArgs e)
-        {
-
-        }
         #region Autenticar DA
         //protected void IniciarSesion_Authenticate(object sender, AuthenticateEventArgs e)
         //{
@@ -148,43 +144,26 @@ namespace SAFAppWeb
         #region Sin Autenticar DA
         protected void InicioSesion_Authenticate(object sender, AuthenticateEventArgs e)
         {
-            bool estado;
-            string nomportal;
-            string passcredencial;
-
-            Seguridad.DALC.clsFachadaClaseBase fachadaClaseBase = new Seguridad.DALC.clsFachadaClaseBase(Session["ejecutorBD"] as BaseDatos.Comandos);
-
-            clsUsuario usuario = fachadaClaseBase.ConsultarUsuariosAutenticacion(InicioSesion.UserName,InicioSesion.Password);
-
-            CuentaAcceso cuentausuario = ((SCLA.DAL.OperacionesBD)Session["ejecutorBD"]).autenticarUsuario(IniciarSesion.UserName, CuentaAcceso.obtenerHash(CuentaAcceso.obtenerHash(IniciarSesion.Password)), "SCLA");
-            if (cuentausuario == null)
+            var fachadaClaseBase = new Seguridad.DALC.clsFachadaClaseBase(Session["ejecutorBD"] as BaseDatos.Comandos);
+            var usuario = fachadaClaseBase.ConsultarUsuariosAutenticacion(InicioSesion.UserName,InicioSesion.Password);
+            if (usuario == null)
             {
                 e.Authenticated = false;
-                IniciarSesion.FailureText = "Nombre de usuario ó contraseña inválida";
+                InicioSesion.FailureText = "Nombre de usuario ó contraseña inválida";
                 return;
             }
-            else if (cuentausuario != null && cuentausuario.fechavencimiento < DateTime.Today)
-            {
-                IniciarSesion.FailureText = "Cuenta desahabilitada. Por favor contacte al administrador del sistema.";
-                e.Authenticated = false;
-                return;
-            }
-            else
-                e.Authenticated = true;
-                nomportal = "Administrador";
-                passcredencial = "kenchic126";
-                        
-            ((SCLA.DAL.OperacionesBD)Session["ejecutorBD"]).cuentaacceso = cuentausuario;
-            //estado = FormsAuthentication.Authenticate(cuentausuario.perfil.nombre, passcredencial);
-            estado = FormsAuthentication.Authenticate(nomportal, passcredencial);
+            e.Authenticated = true;
+                
+            const string nomportal = "sistema";
+            const string passcredencial = "kenchic126";
+            Session["UsuarioSesion"] = usuario;
+#pragma warning disable 612,618
+            bool estado = FormsAuthentication.Authenticate(nomportal, passcredencial);
+#pragma warning restore 612,618
             if (estado)
             {
                 FormsAuthentication.SetAuthCookie(nomportal, false);
-                
-                if (string.IsNullOrEmpty(Request.QueryString["ReturnUrl"]))
-                    Response.Redirect(nomportal);
-                else
-                    Response.Redirect(Request.QueryString["ReturnUrl"]);
+                Response.Redirect(string.IsNullOrEmpty(Request.QueryString["ReturnUrl"]) ? nomportal : Request.QueryString["ReturnUrl"]);
             }
         }
         #endregion

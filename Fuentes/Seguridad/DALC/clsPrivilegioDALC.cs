@@ -26,21 +26,23 @@ namespace Seguridad.DALC {
 
 		/// 
 		/// <param name="obj"></param>
-		internal override int Editar(clsPrivilegio obj){
+		public override int Editar(clsPrivilegio obj){
 
 			return 0;
 		}
 
 		/// 
 		/// <param name="obj"></param>
-		internal override int Eliminar(clsPrivilegio obj){
+        public override int Eliminar(clsPrivilegio obj)
+        {
 
 			return 0;
 		}
 
 		/// 
 		/// <param name="obj"></param>
-		internal override int Insertar(clsPrivilegio obj){
+        public override int Insertar(clsPrivilegio obj)
+        {
 
 			return 0;
 		}

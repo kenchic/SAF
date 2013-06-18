@@ -46,13 +46,13 @@ namespace Seguridad.DALC {
 
 		/// 
 		/// <param name="Id"></param>
-        internal virtual T Consultar(int Id)
+        public virtual T Consultar(int id)
         {
 
 			return null;
 		}
 
-        internal virtual List<T> ConsultarTodos()
+        public virtual List<T> ConsultarTodos()
         {
 
 			return null;
@@ -60,7 +60,7 @@ namespace Seguridad.DALC {
 
 		/// 
 		/// <param name="obj"></param>
-        internal virtual int Editar(T obj)
+        public virtual int Editar(T obj)
         {
 
 			return 0;
@@ -77,7 +77,7 @@ namespace Seguridad.DALC {
 
 		/// 
 		/// <param name="obj"></param>
-        internal virtual int Eliminar(T obj)
+        public virtual int Eliminar(T obj)
         {
 
 			return 0;
@@ -85,7 +85,7 @@ namespace Seguridad.DALC {
 
 		/// 
 		/// <param name="obj"></param>
-        internal virtual int Insertar(T obj)
+        public virtual int Insertar(T obj)
         {
 
 			return 0;
