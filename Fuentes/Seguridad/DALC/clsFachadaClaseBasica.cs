@@ -52,7 +52,10 @@ namespace Seguridad.DALC {
             var parametros = new Dictionary<string, string>();
             parametros.Add("Usuario",usuario);
             parametros.Add("Clave",clave);
-            return m_clsUsuarioDALC.ConsultarPorParametros(parametros, fabrica)[0];
+            var usuarios = m_clsUsuarioDALC.ConsultarPorParametros(parametros, fabrica);
+            if (usuarios.Count > 0)
+                return usuarios[0];
+            return null;
         }
 
         /// 
