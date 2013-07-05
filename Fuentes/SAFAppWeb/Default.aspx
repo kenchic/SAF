@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <link rel="stylesheet" href="css/Estilos.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="css/EstilosLogin.css" type="text/css" media="screen" />
     <title>SAF. Sistema de Alquiler de Formaleta</title>
 </head>
 <body>

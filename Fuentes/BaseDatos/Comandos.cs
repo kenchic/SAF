@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Data;
 using System.Data.Common;
-using BaseDatos;
 
 namespace BaseDatos
 {
@@ -219,12 +218,12 @@ namespace BaseDatos
             m_comando.CommandText = nombrePA;
             m_comando.CommandType = CommandType.StoredProcedure;
             m_dataset = new DataSet();
-            m_adaptador = base.ObtenerFabrica().CreateDataAdapter();
-            m_adaptador.SelectCommand = m_comando;
-            base.Abrir();
+            m_adaptador = ObtenerFabrica().CreateDataAdapter();
+            if (m_adaptador != null) m_adaptador.SelectCommand = m_comando;
+            Abrir();
             try
             {
-                m_adaptador.Fill(m_dataset);
+                if (m_adaptador != null) m_adaptador.Fill(m_dataset);
             }
             catch (Exception ex)
             {
@@ -232,7 +231,7 @@ namespace BaseDatos
             }
             finally
             {
-                base.Cerrar();
+                Cerrar();
             }
 
             return m_dataset;

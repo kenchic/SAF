@@ -1,0 +1,49 @@
+﻿
+body > div{
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    border: 2px solid #AAA;
+    padding: 10px;
+    text-align: center;
+    font-family: Segoe UI;
+}
+
+#encabezado{
+    position: absolute;
+    height: 40px;
+    top: 0px;
+    right: 0px;
+    left: 0px;
+    background-color: #222222;
+    border-color: #35C110;
+}
+
+#contenido{
+    position: absolute;
+    right: 0px;
+    top: 40px;
+    bottom: 40px;
+    left: 0px;
+    border-color: #35C12E;
+    background-color: #f0f4f0;
+}
+
+#pie{
+    position: absolute;
+    height: 40px;
+    bottom: 0px;
+    right: 0px;
+    left: 0px;
+    background-color: #222222;
+    border-color: #B24842;
+}
+
+.Titulo {
+    font-family: Segoe UI;
+	font-weight: bold;
+	font-size: 16pt;
+	color: #0C2E82;
+	height: 35px;
+	vertical-align: top;
+}

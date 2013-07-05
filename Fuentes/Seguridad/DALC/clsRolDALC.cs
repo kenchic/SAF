@@ -10,9 +10,11 @@
 namespace Seguridad.DALC {
 	internal class clsRolDALC : Entidad<clsRol> {
 
-		public Seguridad.DALC.clsFachadaClaseBase m_clsFachadaClaseBase;
+		public clsFachadaClaseBase m_clsFachadaClaseBase;
 
-		public clsRolDALC(){
+        public clsRolDALC(BaseDatos.Comandos ejecutorBaseDatos, string nombreParametroIdPadre)
+            : base(ejecutorBaseDatos, nombreParametroIdPadre)
+        {
 
 		}
 

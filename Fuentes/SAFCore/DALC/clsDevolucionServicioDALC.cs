@@ -7,8 +7,6 @@
 ///////////////////////////////////////////////////////////
 
 
-
-
 using SAFCore.DALC;
 namespace SAFCore.DALC {
 	internal class clsDevolucionServicioDALC : EntidadDocumento<clsDevolucionServicio> {

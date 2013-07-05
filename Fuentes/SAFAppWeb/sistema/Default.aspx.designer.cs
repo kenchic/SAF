@@ -22,67 +22,31 @@ namespace SAFAppWeb.sistema {
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
         
         /// <summary>
-        /// RadScriptManager1 control.
+        /// RadMenu1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::Telerik.Web.UI.RadScriptManager RadScriptManager1;
+        protected global::Telerik.Web.UI.RadMenu RadMenu1;
         
         /// <summary>
-        /// Radsplitter5 control.
+        /// rsContenido control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::Telerik.Web.UI.RadSplitter Radsplitter5;
+        protected global::Telerik.Web.UI.RadSplitter rsContenido;
         
         /// <summary>
-        /// Radpane2 control.
+        /// rpMenuIzquierdo control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::Telerik.Web.UI.RadPane Radpane2;
-        
-        /// <summary>
-        /// Radsplitbar5 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::Telerik.Web.UI.RadSplitBar Radsplitbar5;
-        
-        /// <summary>
-        /// Radpane6 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::Telerik.Web.UI.RadPane Radpane6;
-        
-        /// <summary>
-        /// Radsplitter6 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::Telerik.Web.UI.RadSplitter Radsplitter6;
-        
-        /// <summary>
-        /// Radpane7 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::Telerik.Web.UI.RadPane Radpane7;
+        protected global::Telerik.Web.UI.RadPane rpMenuIzquierdo;
         
         /// <summary>
         /// Radsplitbar6 control.
@@ -94,12 +58,48 @@ namespace SAFAppWeb.sistema {
         protected global::Telerik.Web.UI.RadSplitBar Radsplitbar6;
         
         /// <summary>
-        /// Radpane8 control.
+        /// rpFormulario control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::Telerik.Web.UI.RadPane Radpane8;
+        protected global::Telerik.Web.UI.RadPane rpFormulario;
+        
+        /// <summary>
+        /// RadAjaxManagerGeneral control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::Telerik.Web.UI.RadAjaxManager RadAjaxManagerGeneral;
+        
+        /// <summary>
+        /// RadAjaxLoadingPanelGeneral control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::Telerik.Web.UI.RadAjaxLoadingPanel RadAjaxLoadingPanelGeneral;
+        
+        /// <summary>
+        /// lbProcesar control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lbProcesar;
+        
+        /// <summary>
+        /// RadScriptManagerGeneral control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::Telerik.Web.UI.RadScriptManager RadScriptManagerGeneral;
     }
 }

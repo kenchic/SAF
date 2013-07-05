@@ -49,7 +49,7 @@
     <Compile Include="DALC\clsAuditoriaDALC.cs" />
     <Compile Include="DALC\clsFabricaClaseBase.cs" />
     <Compile Include="DALC\clsFabricaUsuario.cs" />
-    <Compile Include="DALC\clsFachadaClaseBasica.cs" />
+    <Compile Include="DALC\clsFachadaClaseBase.cs" />
     <Compile Include="DALC\clsFachadaSeguridad.cs" />
     <Compile Include="DALC\clsEventoAuditoriaDALC.cs" />
     <Compile Include="DALC\clsPrivilegioDALC.cs" />
@@ -57,7 +57,9 @@
     <Compile Include="DALC\clsRolDALC.cs" />
     <Compile Include="DALC\clsUsuarioDALC.cs" />
     <Compile Include="DALC\Entidad.cs" />
+    <Compile Include="DALC\clsFabricaClaseBaseHija.cs" />
     <Compile Include="DALC\IFabricaEntidad.cs" />
+    <Compile Include="DALC\InformacionPadre.cs" />
     <Compile Include="DALC\TipoAccionBaseDatos.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

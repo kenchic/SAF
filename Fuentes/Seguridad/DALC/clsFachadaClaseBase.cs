@@ -38,6 +38,14 @@ namespace Seguridad.DALC {
         #endregion
 
         #region Usuario
+        /// 
+        /// <param name="Id"></param>
+        public Seguridad.clsUsuario ConsultarUsuario(int Id)
+        {
+
+            return null;
+        }
+
         public List<clsUsuario> ConsultarUsuarios()
         {
 
@@ -96,7 +104,7 @@ namespace Seguridad.DALC {
 			return null;
 		}
 
-		/// 
+        /// 
 		/// <param name="Id"></param>
 		public Seguridad.clsPrivilegio ConsultarPrivilegio(int Id){
 
@@ -120,25 +128,57 @@ namespace Seguridad.DALC {
 			return null;
 		}
 
-		/// 
+        #region Roles
+        /// 
 		/// <param name="Id"></param>
-		public Seguridad.clsRol ConsultarRol(int Id){
+		public clsRol ConsultarRol(int Id){
 
 			return null;
 		}
 
-		public List<clsRol> ConsultarRoles(){
-
-			return null;
+        public List<clsRol> ConsultarRoles(int activo = -1)
+        {
+            var listFuente = new List<clsRol>();
+            m_clsRolDALC = new clsRolDALC(m_EjecutorBaseDatos, null);
+            m_clsRolDALC.NombreProcedimiento = "SP_ROLES";
+            var fabrica = new clsFabricaClaseBase<clsRol>();
+            if ((activo > -1))
+            {
+                var parametros = new Dictionary<string, string>();
+                parametros.Add("p_activo", activo.ToString());
+                listFuente = m_clsRolDALC.ConsultarPorParametros(parametros, fabrica);
+            }
+            else
+                listFuente = m_clsRolDALC.ConsultarTodos(fabrica);
+            return listFuente;
 		}
 
-		/// 
-		/// <param name="Id"></param>
-		public Seguridad.clsUsuario ConsultarUsuario(int Id){
+        /// 
+        /// <param name="obj"></param>
+        public int InsertarRol(clsRol obj)
+        {
 
-			return null;
-		}
+            return 0;
+        }
 
+        /// 
+        /// <param name="obj"></param>
+        public int EditarRol(clsRol obj)
+        {
+
+            return 0;
+        }
+
+        /// 
+        /// <param name="obj"></param>
+        public int EliminarRol(clsRol obj)
+        {
+
+            return 0;
+        }
+
+
+        #endregion
 
         /// 
 		/// <param name="obj"></param>
@@ -161,12 +201,7 @@ namespace Seguridad.DALC {
 			return 0;
 		}
 
-		/// 
-		/// <param name="obj"></param>
-		public int EditarRol(clsRol obj){
-
-			return 0;
-		}
+		
 
 		
 
@@ -193,15 +228,6 @@ namespace Seguridad.DALC {
 
 		/// 
 		/// <param name="obj"></param>
-		public int EliminarRol(clsRol obj){
-
-			return 0;
-		}
-
-		
-
-		/// 
-		/// <param name="obj"></param>
 		public int InsertarEventoAuditoria(clsEventoAuditoria obj){
 
 			return 0;
@@ -221,12 +247,7 @@ namespace Seguridad.DALC {
 			return 0;
 		}
 
-		/// 
-		/// <param name="obj"></param>
-		public int InsertarRol(clsRol obj){
-
-			return 0;
-		}
+		
 
 		
 

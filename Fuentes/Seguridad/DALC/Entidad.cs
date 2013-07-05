@@ -18,6 +18,7 @@ namespace Seguridad.DALC {
     {
 		private Comandos m_ejecutor_base_datos;
         private string m_nombre_procedimiento;
+        protected string m_nombreParametroIdPadre;
 
 		~Entidad(){
             Dispose(false);
@@ -110,6 +111,13 @@ namespace Seguridad.DALC {
 	        datos = EjecutorBaseDatos.ejecutarProcedimiento(NombreProcedimiento).Tables[0];
             return fabrica.CrearObjetos(ref datos);
         }
+
+        protected Entidad(Comandos ejecutorBaseDatos, string nombreParametroIdPadre)
+        {
+            EjecutorBaseDatos = ejecutorBaseDatos;
+            m_nombreParametroIdPadre = nombreParametroIdPadre;
+        }
+
 	}//end Entidad
 
 }//end namespace DALC
