@@ -24,6 +24,11 @@ namespace Seguridad {
 
         #region Constructores
 
+        public override string PropiedadIdPadre
+        {
+            get { return "Rol.Id"; }
+        }
+
         public clsUsuario(long id = 0, string nombre = "", bool activo = true) : base(id,nombre,activo)
         {
            

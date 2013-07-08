@@ -53,11 +53,15 @@ namespace Seguridad.DALC {
 			return null;
 		}
 
-        public virtual List<T> ConsultarTodos()
+        /// 
+        /// <param name="fab"></param>
+        public List<T> ConsultarTodos(IFabricaEntidad<T> fab)
         {
-
-			return null;
-		}
+            DataTable datos;
+            EjecutorBaseDatos.limpiarParametros();
+            datos = EjecutorBaseDatos.ejecutarProcedimiento(NombreProcedimiento).Tables[0];
+            return fab.CrearObjetos(ref datos);
+        }
 
 		/// 
 		/// <param name="obj"></param>

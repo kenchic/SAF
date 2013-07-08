@@ -6,23 +6,20 @@
 //  Original author: kenchic
 ///////////////////////////////////////////////////////////
 
-
 using System;
 using System.Collections.Generic;
 
-
 namespace Seguridad.DALC
 {
-    public class clsFabricaClaseBase<T> where T : ClaseBase, new()
+    public class clsFabricaClaseBase<T> : IFabricaEntidad<T> where T : ClaseBase, new()
     {
 
         public List<T> CrearObjetos(ref System.Data.DataTable tabla)
         {
-            T obj;
-            List<T> lista = new List<T>();
+            var lista = new List<T>();
             foreach (System.Data.DataRow fila in tabla.Rows)
             {
-                obj = new T();
+                var obj = new T();
                 obj.Id = Convert.ToInt32(fila["ID"]);
                 obj.Nombre = fila["NOMBRE"].ToString();
                 obj.Activo = Convert.ToBoolean(fila["ACTIVO"]);

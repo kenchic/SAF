@@ -15,6 +15,11 @@ namespace Seguridad {
 
 		private clsPrivilegio m_privilegiopadre;
 
+        public override string PropiedadIdPadre
+        {
+            get { return "Fuente.Id"; }
+        }
+
 		public clsPrivilegio(){
 
 		}

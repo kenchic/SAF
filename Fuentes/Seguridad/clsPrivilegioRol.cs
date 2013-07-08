@@ -11,9 +11,7 @@ namespace Seguridad {
 
 		private clsPrivilegio m_privilegio;
 		private clsRol m_rol;
-		public Seguridad.clsRol m_clsRol;
-		public Seguridad.clsPrivilegio m_clsPrivilegio;
-
+		
 		public clsPrivilegioRol(){
 
 		}
@@ -21,6 +19,11 @@ namespace Seguridad {
 		~clsPrivilegioRol(){
 
 		}
+
+        public override string PropiedadIdPadre
+        {
+            get { return "Fuente.Id"; }
+        }
 
 		public override void Dispose(bool disposing){
 

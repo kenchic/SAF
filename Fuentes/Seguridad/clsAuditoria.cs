@@ -17,7 +17,6 @@ namespace Seguridad {
 		private string m_seccion;
 		private string m_titulo;
 		private clsUsuario m_usuario;
-		public  clsUsuario m_clsUsuario;
 
 		public clsAuditoria(){
 
@@ -26,6 +25,11 @@ namespace Seguridad {
 		~clsAuditoria(){
 
 		}
+
+        public override string PropiedadIdPadre
+        {
+            get { return "Fuente.Id"; }
+        }
 
 		public virtual void Dispose(){
 

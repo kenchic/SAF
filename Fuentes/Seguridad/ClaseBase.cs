@@ -16,6 +16,7 @@ namespace Seguridad {
         private bool m_Activo;
 		private long m_Id;
 		private string m_Nombre;
+        public abstract string PropiedadIdPadre { get; }
         #endregion
 
         #region Constructores

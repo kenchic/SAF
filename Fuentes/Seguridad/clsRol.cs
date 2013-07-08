@@ -15,6 +15,11 @@ namespace Seguridad {
 
 		public Seguridad.clsUsuario m_clsUsuario;
 
+        public override string PropiedadIdPadre
+        {
+            get { return "Fuente.Id"; }
+        }
+
 		public clsRol(){
 
 		}

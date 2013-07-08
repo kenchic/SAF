@@ -15,6 +15,10 @@ namespace Seguridad {
 
 		public Seguridad.clsAuditoria m_clsAuditoria;
 
+        public override string PropiedadIdPadre
+        {
+            get { return "Fuente.Id"; }
+        }
 		public clsEventoAuditoria(){
 
 		}
