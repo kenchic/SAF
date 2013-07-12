@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/sistema/menus/Menus.Master" AutoEventWireup="true" CodeBehind="Usuarios.aspx.cs" Inherits="SAFAppWeb.sistema.menus.Usuarios" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/sistema/menus/Menus.Master" AutoEventWireup="true" CodeBehind="Administracion.aspx.cs" Inherits="SAFAppWeb.sistema.menus.Administracion" %>
 
 <%@ Register assembly="Telerik.Web.UI" namespace="Telerik.Web.UI" tagprefix="telerik" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">

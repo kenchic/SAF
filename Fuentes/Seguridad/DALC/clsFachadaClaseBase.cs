@@ -23,7 +23,7 @@ namespace Seguridad.DALC {
         #endregion
 
         #region Constructores
-        public clsFachadaClaseBase(Comandos ejecutor)
+        public clsFachadaClaseBase(ref Comandos ejecutor)
         {
             m_EjecutorBaseDatos = ejecutor;
         }
@@ -130,12 +130,11 @@ namespace Seguridad.DALC {
 
         #region Roles
         /// 
-		/// <param name="Id"></param>
-		public clsRol ConsultarRol(int Id){
+		/// <param name="id"></param>
+		public clsRol ConsultarRol(int id){
 
 			return null;
 		}
-
         public List<clsRol> ConsultarRoles(int activo = -1)
         {
             var listFuente = new List<clsRol>();
@@ -152,32 +151,30 @@ namespace Seguridad.DALC {
                 listFuente = m_clsRolDALC.ConsultarTodos(fabrica);
             return listFuente;
 		}
-
         /// 
         /// <param name="obj"></param>
         public int InsertarRol(clsRol obj)
         {
-
-            return 0;
+            m_clsRolDALC = new clsRolDALC(m_EjecutorBaseDatos, null);
+            m_clsRolDALC.NombreProcedimiento = "sp_ROLES";
+            return m_clsRolDALC.Insertar(obj);
         }
-
         /// 
         /// <param name="obj"></param>
         public int EditarRol(clsRol obj)
         {
-
-            return 0;
+            m_clsRolDALC = new clsRolDALC(m_EjecutorBaseDatos, null);
+            m_clsRolDALC.NombreProcedimiento = "sp_ROLES";
+            return m_clsRolDALC.Editar(obj);
         }
-
         /// 
         /// <param name="obj"></param>
         public int EliminarRol(clsRol obj)
         {
-
-            return 0;
+            m_clsRolDALC = new clsRolDALC(m_EjecutorBaseDatos, null);
+            m_clsRolDALC.NombreProcedimiento = "sp_ROLES";
+            return m_clsRolDALC.Eliminar(obj);
         }
-
-
         #endregion
 
         /// 

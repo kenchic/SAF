@@ -14,7 +14,7 @@
                 <Items>
                     <telerik:RadMenuItem runat="server" Text="Inicio" Target="rpMenuIzquierdo" NavigateUrl="menus/Bienvenido.aspx">
                     </telerik:RadMenuItem>
-                    <telerik:RadMenuItem runat="server" Text="Usuarios" Target="rpMenuIzquierdo" NavigateUrl="menus/Usuarios.aspx">
+                    <telerik:RadMenuItem runat="server" Text="Usuarios" Target="rpMenuIzquierdo" NavigateUrl="menus/Administracion.aspx">
                     </telerik:RadMenuItem>
                     <telerik:RadMenuItem runat="server" Text="Root RadMenuItem3">
                     </telerik:RadMenuItem>
@@ -31,7 +31,7 @@
         </div>
         <div id="contenido">
             <telerik:RadSplitter ID="rsContenido" runat="server" Width="100%" Height="100%">
-                <telerik:RadPane ID="rpMenuIzquierdo" runat="server" Width="15%" ContentUrl="menus/Bienvenido.aspx">
+                <telerik:RadPane ID="rpMenuIzquierdo" runat="server" Width="19%" ContentUrl="menus/Bienvenido.aspx">
                 </telerik:RadPane>
                 <telerik:RadSplitBar ID="Radsplitbar6" runat="server" CollapseMode="Forward">
                 </telerik:RadSplitBar>

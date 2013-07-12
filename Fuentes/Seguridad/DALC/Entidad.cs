@@ -9,6 +9,7 @@
 using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Reflection;
 using BaseDatos;
 
 namespace Seguridad.DALC {
@@ -67,8 +68,15 @@ namespace Seguridad.DALC {
 		/// <param name="obj"></param>
         public virtual int Editar(T obj)
         {
-
-			return 0;
+            int resultado;
+            EjecutorBaseDatos.limpiarParametros();
+            EjecutorBaseDatos.agregarParametro("p_id", obj.Id);
+            EjecutorBaseDatos.agregarParametro("p_nombre", obj.Nombre);
+            EjecutorBaseDatos.agregarParametro("p_activo", obj.Activo);
+            AsignarValorParametroPadre(obj);
+            EjecutorBaseDatos.agregarParametro("p_opcion", 3);
+            resultado = EjecutorBaseDatos.ejecutarProcedimientoNQ(NombreProcedimiento);
+            return resultado;
 		}
 
 		public Comandos EjecutorBaseDatos{
@@ -84,16 +92,26 @@ namespace Seguridad.DALC {
 		/// <param name="obj"></param>
         public virtual int Eliminar(T obj)
         {
-
-			return 0;
+            int resultado;
+            EjecutorBaseDatos.limpiarParametros();
+            EjecutorBaseDatos.agregarParametro("p_id", obj.Id);
+            EjecutorBaseDatos.agregarParametro("p_opcion", 4);
+            resultado = EjecutorBaseDatos.ejecutarProcedimientoNQ(NombreProcedimiento);
+            return resultado;
 		}
 
 		/// 
 		/// <param name="obj"></param>
         public virtual int Insertar(T obj)
         {
-
-			return 0;
+            int resultado;
+            EjecutorBaseDatos.limpiarParametros();
+            EjecutorBaseDatos.agregarParametro("p_nombre", obj.Nombre);
+            EjecutorBaseDatos.agregarParametro("p_activo", obj.Activo);
+            AsignarValorParametroPadre(obj);
+            EjecutorBaseDatos.agregarParametro("p_opcion", 2);
+            resultado = EjecutorBaseDatos.ejecutarProcedimientoNQ(NombreProcedimiento);
+            return resultado;
 		}
 
 		public string NombreProcedimiento{
@@ -120,6 +138,34 @@ namespace Seguridad.DALC {
         {
             EjecutorBaseDatos = ejecutorBaseDatos;
             m_nombreParametroIdPadre = nombreParametroIdPadre;
+        }
+
+        protected void AsignarValorParametroPadre(ClaseBase obj)
+        {
+            if (((EjecutorBaseDatos != null) && (m_nombreParametroIdPadre != null) && (obj.PropiedadIdPadre != null)))
+            {
+                string nombrePropiedad = obj.PropiedadIdPadre;
+                object obj1 = null;
+                obj1 = obj;
+                Type t = obj.GetType();
+                PropertyInfo valor = t.GetProperty(nombrePropiedad);
+                int indpunto = nombrePropiedad.IndexOf(".",StringComparison.Ordinal);
+                while ((indpunto != -1))
+                {
+                    string tipo = nombrePropiedad.Substring(0, indpunto);
+                    t = obj1.GetType();
+                    valor = t.GetProperty(tipo);
+                    obj1 = valor.GetValue(obj1, null);
+                    t = t.GetProperty(tipo).PropertyType;
+                    nombrePropiedad = nombrePropiedad.Substring(indpunto + 1);
+                    valor = t.GetProperty(nombrePropiedad);
+                    indpunto = nombrePropiedad.IndexOf(".", StringComparison.Ordinal);
+                }
+                if ((valor != null & (obj1 != null)))
+                {
+                    EjecutorBaseDatos.agregarParametro(m_nombreParametroIdPadre, valor.GetValue(obj1, null));
+                }
+            }
         }
 
 	}//end Entidad

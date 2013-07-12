@@ -1,16 +1,18 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/sistema/formularios/Formularios.Master" AutoEventWireup="true" CodeBehind="Roles.aspx.cs" Inherits="SAFAppWeb.sistema.formularios.Roles" %>
-<%@ Register TagPrefix="telerik" Namespace="Telerik.Web.UI" Assembly="Telerik.Web.UI, Version=2012.3.1205.45, Culture=neutral, PublicKeyToken=121fae78165ba3d4" %>
 <%@ Register assembly="Telerik.Web.UI" namespace="Telerik.Web.UI" tagprefix="telerik" %>
-<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-    <style type="text/css">
-        .auto-style1
-        {
-            width: 145px;
-            height: 15px;
-        }
-    </style>
+<asp:Content ID="Content1" ContentPlaceHolderID="Head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+    <telerik:RadScriptManager ID="RadScriptManager1" runat="server">
+        <Scripts>
+            <asp:ScriptReference Assembly="Telerik.Web.UI" Name="Telerik.Web.UI.Common.Core.js">
+            </asp:ScriptReference>
+            <asp:ScriptReference Assembly="Telerik.Web.UI" Name="Telerik.Web.UI.Common.jQuery.js">
+            </asp:ScriptReference>
+            <asp:ScriptReference Assembly="Telerik.Web.UI" Name="Telerik.Web.UI.Common.jQueryInclude.js">
+            </asp:ScriptReference>
+        </Scripts>
+    </telerik:RadScriptManager>
     <telerik:RadGrid ID="rgRoles" runat="server" AllowAutomaticDeletes="True"
     AllowAutomaticInserts="True" AllowPaging="True" AllowSorting="True" CellSpacing="0"
     Culture="es-ES" DataSourceID="odsRoles" GridLines="None" AllowAutomaticUpdates="True"
@@ -30,15 +32,17 @@
         <%--Encabezado manual--%>
         <CommandItemTemplate>
             <div style="padding: 5px 5px; float: left; text-align: left;">
-                <asp:LinkButton ID="btnAdd" runat="server" CommandName="InitInsert" ToolTip=" Agregar Nuevo Registro"><img style="border:0px;vertical-align:middle;" alt="" src='<%=ResolveUrl("~/Imagenes/Iconos/AddRecord.gif") %>' />&nbsp;&nbsp; Agregar &nbsp;&nbsp;</asp:LinkButton>|
+                <asp:LinkButton ID="btnAdd" runat="server" CommandName="InitInsert" ToolTip=" Agregar Nuevo Registro">
+                    <img style="border:0;vertical-align:middle;" alt="" src='<%=ResolveUrl("~/img/iconos/agregar.gif") %>' />&nbsp;&nbsp; Agregar &nbsp;&nbsp;
+                </asp:LinkButton>|
                 <asp:CheckBox ID="ckbActivarFiltro" runat="server" OnCheckedChanged="ckbActivarFiltro_CheckedChanged"
-                    Text=" Activar Filtro" ToolTip=" Activar filtro de Busqueda" AutoPostBack="true"
-                    CssClass="checkbox" />
+                    Text=" Activar Filtro" ToolTip=" Activar filtro de Busqueda" AutoPostBack="true"/>
             </div>
-            <div style="padding: 5px 5px; float: right; text-align: right;">
-                <asp:LinkButton ID="LinkButton2" runat="server" CommandName="RebindGrid" ToolTip=" Actualizar Tabla"><img style="border:0px;vertical-align:middle;" alt="" src='<%=ResolveUrl("~/Imagenes/Iconos/Refresh.gif") %>' />&nbsp;&nbsp; Actualizar&nbsp;&nbsp;</asp:LinkButton>|&nbsp;&nbsp;
-                <asp:Button ID="btnExpXLS" runat="server" Text=" " CssClass="rgExpXLS" CommandName="ExportToExcel"
-                    ToolTip=" Exportar a Excel" />
+            <div style="padding: 6px 6px; float: right; text-align: right;">
+                <asp:LinkButton ID="LinkButton2" runat="server" CommandName="RebindGrid" ToolTip=" Actualizar Tabla" >
+                    <img style="border:0;vertical-align:middle;" alt="" src='<%=ResolveUrl("~/img/iconos/refrescar.gif") %>' />&nbsp;&nbsp; Actualizar&nbsp;&nbsp;
+                </asp:LinkButton>|&nbsp;&nbsp;
+                <asp:Button ID="btnExpXLS" runat="server" Text="" CssClass="rgExpXLS" CommandName="ExportToExcel" ToolTip=" Exportar a Excel" />
             </div>
         </CommandItemTemplate>
         <RowIndicatorColumn Visible="True" FilterControlAltText="Filter RowIndicator column">
@@ -86,12 +90,15 @@
     TypeName="Seguridad.DALC.clsFachadaClaseBase" ondeleted="odsRoles_Deleted" 
     oninserted="odsRoles_Inserted" 
     onobjectcreating="odsRoles_ObjectCreating" 
-    onupdated="odsRoles_Updated">
+    onupdated="odsRoles_Updated" DataObjectTypeName="Seguridad.clsRol" DeleteMethod="EliminarRol" InsertMethod="InsertarRol" UpdateMethod="EditarRol">
+    <SelectParameters>
+        <asp:Parameter DefaultValue="-1" Name="activo" Type="Int32" />
+    </SelectParameters>
 </asp:ObjectDataSource>
 <telerik:RadWindowManager ID="rwmManagerPopUp" runat="server">
 </telerik:RadWindowManager>
 <telerik:RadAjaxLoadingPanel ID="rlpRoles" runat="server" Skin="Default" Width="256px">
-    <img alt="" class="auto-style1" src="../../img/iconos/cargando.gif" />
+    <img alt="" src="../../img/iconos/cargando.gif" />
 </telerik:RadAjaxLoadingPanel>
 <telerik:RadAjaxManagerProxy ID="RadAjaxManagerProxy1" runat="server">
     <ajaxsettings>

@@ -7,17 +7,14 @@
 ///////////////////////////////////////////////////////////
 
 
-
-
-using Seguridad;
 namespace Seguridad {
 	public class clsRol : ClaseBase {
 
-		public Seguridad.clsUsuario m_clsUsuario;
+		public clsUsuario m_clsUsuario;
 
         public override string PropiedadIdPadre
         {
-            get { return "Fuente.Id"; }
+            get { return null; }
         }
 
 		public clsRol(){

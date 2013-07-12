@@ -144,7 +144,8 @@ namespace SAFAppWeb
         #region Sin Autenticar DA
         protected void InicioSesion_Authenticate(object sender, AuthenticateEventArgs e)
         {
-            var fachadaClaseBase = new Seguridad.DALC.clsFachadaClaseBase(Session["ejecutorBD"] as BaseDatos.Comandos);
+            var ejecutor = (BaseDatos.Comandos)Session["ejecutorBD"];
+            var fachadaClaseBase = new Seguridad.DALC.clsFachadaClaseBase(ref ejecutor);
             var usuario = fachadaClaseBase.ConsultarUsuariosAutenticacion(InicioSesion.UserName,InicioSesion.Password);
             if (usuario == null)
             {

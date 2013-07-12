@@ -8,7 +8,6 @@ public sealed class Utilidad
     public const string VALOR_ITEM_VACIO = "-1";
     public const string SIN_FILTRO_BUSCAR = "todos";
     public const string COLOR_RESULTADO_BIEN = "green";
-
     public const string COLOR_RESULTADO_MAL = "red";
     public static void ColocarEstilomsg(ref Label etiqueta, string texto, bool resultado)
     {
