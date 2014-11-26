@@ -10,28 +10,26 @@
 <body>
     <form id="form1" runat="server">
         <div id="encabezado">
-            <telerik:RadMenu ID="RadMenu1" runat="server">
+            <telerik:RadMenu ID="MenuPrincipal" runat="server" Font-Bold="True" Font-Size="Large">
                 <Items>
-                    <telerik:RadMenuItem runat="server" Text="Inicio" Target="rpMenuIzquierdo" NavigateUrl="menus/Bienvenido.aspx">
+                    <telerik:RadMenuItem runat="server" Text="Sistema" Target="rpMenuIzquierdo" NavigateUrl="menus/Sistema.aspx">
                     </telerik:RadMenuItem>
-                    <telerik:RadMenuItem runat="server" Text="Usuarios" Target="rpMenuIzquierdo" NavigateUrl="menus/Administracion.aspx">
+                    <telerik:RadMenuItem runat="server" Text="Tablas Maestras" Target="rpMenuIzquierdo" NavigateUrl="menus/Administracion.aspx">
                     </telerik:RadMenuItem>
-                    <telerik:RadMenuItem runat="server" Text="Root RadMenuItem3">
+                    <telerik:RadMenuItem runat="server" Text="Inventario">
                     </telerik:RadMenuItem>
-                    <telerik:RadMenuItem runat="server" Text="Root RadMenuItem4">
+                    <telerik:RadMenuItem runat="server" Text="Proyectos">
                     </telerik:RadMenuItem>
-                    <telerik:RadMenuItem runat="server" Text="Root RadMenuItem5">
+                    <telerik:RadMenuItem runat="server" Text="Facturación">
                     </telerik:RadMenuItem>
-                    <telerik:RadMenuItem runat="server" Text="Root RadMenuItem6">
-                    </telerik:RadMenuItem>
-                    <telerik:RadMenuItem runat="server" Text="Root RadMenuItem7">
+                    <telerik:RadMenuItem runat="server" Text="Cartera">
                     </telerik:RadMenuItem>
                 </Items>
             </telerik:RadMenu>
         </div>
         <div id="contenido">
             <telerik:RadSplitter ID="rsContenido" runat="server" Width="100%" Height="100%">
-                <telerik:RadPane ID="rpMenuIzquierdo" runat="server" Width="19%" ContentUrl="menus/Bienvenido.aspx">
+                <telerik:RadPane ID="rpMenuIzquierdo" runat="server" Width="14%" ContentUrl="menus/Bienvenido.aspx">
                 </telerik:RadPane>
                 <telerik:RadSplitBar ID="Radsplitbar6" runat="server" CollapseMode="Forward">
                 </telerik:RadSplitBar>

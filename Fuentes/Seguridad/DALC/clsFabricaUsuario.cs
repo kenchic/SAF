@@ -34,6 +34,7 @@ namespace Seguridad.DALC
                 obj.Apellido = fila["Apellido"].ToString();
                 obj.Identificacion = fila["Identificacion"].ToString();
                 obj.Correo = fila["Correo"].ToString();
+                obj.Admin = Convert.ToBoolean(fila["Admin"]);
                 lista.Add(obj);
             }
             return lista;

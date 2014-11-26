@@ -1,5 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/sistema/menus/Menus.Master" AutoEventWireup="true" CodeBehind="Administracion.aspx.cs" Inherits="SAFAppWeb.sistema.menus.Administracion" %>
-
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/sistema/menus/Menus.Master" AutoEventWireup="true" CodeBehind="Sistema.aspx.cs" Inherits="SAFAppWeb.sistema.menus.Sistema" %>
 <%@ Register assembly="Telerik.Web.UI" namespace="Telerik.Web.UI" tagprefix="telerik" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
@@ -14,7 +13,7 @@
             </asp:ScriptReference>
         </Scripts>
     </telerik:RadScriptManager>
-    <telerik:RadPanelBar runat="server" ID="RadPanelBar1">
+    <telerik:RadPanelBar runat="server" ID="Menu" >
         <ExpandAnimation Type="None" />
         <CollapseAnimation Type="None" />
     </telerik:RadPanelBar>

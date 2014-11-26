@@ -22,13 +22,13 @@ namespace SAFAppWeb.sistema {
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
         
         /// <summary>
-        /// RadMenu1 control.
+        /// MenuPrincipal control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::Telerik.Web.UI.RadMenu RadMenu1;
+        protected global::Telerik.Web.UI.RadMenu MenuPrincipal;
         
         /// <summary>
         /// rsContenido control.

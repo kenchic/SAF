@@ -175,6 +175,15 @@ namespace Seguridad.DALC {
             m_clsRolDALC.NombreProcedimiento = "sp_ROLES";
             return m_clsRolDALC.Eliminar(obj);
         }
+       
+        /// 
+        /// <param name="obj"></param>
+        public int EliminarRoles(string Ids)
+        {
+            m_clsRolDALC = new clsRolDALC(m_EjecutorBaseDatos, null);
+            m_clsRolDALC.NombreProcedimiento = "sp_ROLES";
+            return m_clsRolDALC.EliminarVarios(Ids);
+        }
         #endregion
 
         /// 
@@ -242,12 +251,20 @@ namespace Seguridad.DALC {
 		public int InsertarPrivilegioRol(clsPrivilegioRol obj){
 
 			return 0;
-		}
+        }
 
-		
+        #region Privilegios Roles
+        /// 
+        /// <param name="obj"></param>
+        public bool TienePermiso(string Permiso, string Valor)
+        {
+           
+            m_clsRolDALC = new clsRolDALC(m_EjecutorBaseDatos, null);
+            m_clsRolDALC.NombreProcedimiento = "SP_PRIVILEGIOS_ROLES";
+            return m_clsRolDALC.TienePermiso(Permiso, Valor);
+        }
+        #endregion
 
-		
-
-	}//end clsFachadaClaseBase
+    }//end clsFachadaClaseBase
 
 }//end namespace DALC

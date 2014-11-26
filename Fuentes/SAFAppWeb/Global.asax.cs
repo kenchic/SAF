@@ -11,7 +11,8 @@ namespace SAFAppWeb
 
         protected void Session_Start(object sender, EventArgs e)
         {
-            var ejecutor = new BaseDatos.Comandos("Data Source=GERMAN-PC\\MSSQLSERVER2012;Initial Catalog=SAF; User ID=saf; Password=sql", "System.Data.SqlClient", "pDATOS");
+            var ejecutor = new BaseDatos.Comandos("Data Source=CRONOS;Initial Catalog=SAF; User ID=saf; Password=Admin123*", "System.Data.SqlClient", "pDATOS");
+            Session["mensajes"] = new Clases.Mensaje();
             Session["ejecutorBD"] = ejecutor;
         }
 

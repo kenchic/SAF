@@ -74,13 +74,15 @@
     <Content Include="img\fondos\fondoInicio.jpg" />
     <Content Include="img\iconos\agregar.gif" />
     <Content Include="img\iconos\cargando.gif" />
+    <Content Include="img\iconos\Eliminar.gif" />
     <Content Include="img\iconos\refrescar.gif" />
     <Content Include="sistema\Default.aspx" />
     <Content Include="sistema\formularios\Bienvenido.aspx" />
+    <Content Include="sistema\formularios\Permisos.aspx" />
     <Content Include="sistema\formularios\Roles.aspx" />
     <Content Include="sistema\formularios\Usuarios.aspx" />
     <Content Include="sistema\menus\Bienvenido.aspx" />
-    <Content Include="sistema\menus\Administracion.aspx" />
+    <Content Include="sistema\menus\Sistema.aspx" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
@@ -120,6 +122,13 @@
     <Compile Include="sistema\formularios\Formularios.Master.designer.cs">
       <DependentUpon>Formularios.Master</DependentUpon>
     </Compile>
+    <Compile Include="sistema\formularios\Permisos.aspx.cs">
+      <DependentUpon>Permisos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="sistema\formularios\Permisos.aspx.designer.cs">
+      <DependentUpon>Permisos.aspx</DependentUpon>
+    </Compile>
     <Compile Include="sistema\formularios\Roles.aspx.cs">
       <DependentUpon>Roles.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -148,12 +157,12 @@
     <Compile Include="sistema\menus\Menus.Master.designer.cs">
       <DependentUpon>Menus.Master</DependentUpon>
     </Compile>
-    <Compile Include="sistema\menus\Administracion.aspx.cs">
-      <DependentUpon>Administracion.aspx</DependentUpon>
+    <Compile Include="sistema\menus\Sistema.aspx.cs">
+      <DependentUpon>Sistema.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="sistema\menus\Administracion.aspx.designer.cs">
-      <DependentUpon>Administracion.aspx</DependentUpon>
+    <Compile Include="sistema\menus\Sistema.aspx.designer.cs">
+      <DependentUpon>Sistema.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

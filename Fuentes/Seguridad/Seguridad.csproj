@@ -60,7 +60,7 @@
     <Compile Include="DALC\clsFabricaClaseBaseHija.cs" />
     <Compile Include="DALC\IFabricaEntidad.cs" />
     <Compile Include="DALC\InformacionPadre.cs" />
-    <Compile Include="DALC\TipoAccionBaseDatos.cs" />
+    <Compile Include="DALC\enuTipoAccionBaseDatos.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

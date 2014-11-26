@@ -26,6 +26,19 @@ namespace Seguridad.DALC {
 
 		}
 
+        /// 
+        /// <param name="obj"></param>
+        public virtual int EliminarVarios(string obj)
+        {
+            int resultado;
+            EjecutorBaseDatos.limpiarParametros();
+            EjecutorBaseDatos.agregarParametro("ids", obj);
+            EjecutorBaseDatos.agregarParametro("opcion", 5);
+            resultado = EjecutorBaseDatos.ejecutarProcedimientoNQ(NombreProcedimiento);
+            return resultado;
+        }
+
+
 	}//end clsRolDALC
 
 }//end namespace DALC

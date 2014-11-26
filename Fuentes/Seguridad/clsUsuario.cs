@@ -20,6 +20,7 @@ namespace Seguridad {
         public string m_apellido;
         public string m_identificacion;
         public string m_correo;
+        public bool m_admin;
         #endregion
 
         #region Constructores
@@ -111,6 +112,17 @@ namespace Seguridad {
             set
             {
                 m_correo = value;
+            }
+        }
+        public bool Admin
+        {
+            get
+            {
+                return m_admin;
+            }
+            set
+            {
+                m_admin = value;
             }
         }
         #endregion

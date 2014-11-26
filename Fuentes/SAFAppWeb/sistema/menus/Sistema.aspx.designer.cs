@@ -10,7 +10,7 @@
 namespace SAFAppWeb.sistema.menus {
     
     
-    public partial class Administracion {
+    public partial class Sistema {
         
         /// <summary>
         /// RadScriptManager1 control.
@@ -22,12 +22,12 @@ namespace SAFAppWeb.sistema.menus {
         protected global::Telerik.Web.UI.RadScriptManager RadScriptManager1;
         
         /// <summary>
-        /// RadPanelBar1 control.
+        /// Menu control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::Telerik.Web.UI.RadPanelBar RadPanelBar1;
+        protected global::Telerik.Web.UI.RadPanelBar Menu;
     }
 }

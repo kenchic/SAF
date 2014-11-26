@@ -70,11 +70,11 @@ namespace Seguridad.DALC {
         {
             int resultado;
             EjecutorBaseDatos.limpiarParametros();
-            EjecutorBaseDatos.agregarParametro("p_id", obj.Id);
-            EjecutorBaseDatos.agregarParametro("p_nombre", obj.Nombre);
-            EjecutorBaseDatos.agregarParametro("p_activo", obj.Activo);
+            EjecutorBaseDatos.agregarParametro("id", obj.Id);
+            EjecutorBaseDatos.agregarParametro("nombre", obj.Nombre);
+            EjecutorBaseDatos.agregarParametro("activo", obj.Activo);
             AsignarValorParametroPadre(obj);
-            EjecutorBaseDatos.agregarParametro("p_opcion", 3);
+            EjecutorBaseDatos.agregarParametro("opcion", 3);
             resultado = EjecutorBaseDatos.ejecutarProcedimientoNQ(NombreProcedimiento);
             return resultado;
 		}
@@ -94,8 +94,8 @@ namespace Seguridad.DALC {
         {
             int resultado;
             EjecutorBaseDatos.limpiarParametros();
-            EjecutorBaseDatos.agregarParametro("p_id", obj.Id);
-            EjecutorBaseDatos.agregarParametro("p_opcion", 4);
+            EjecutorBaseDatos.agregarParametro("id", obj.Id);
+            EjecutorBaseDatos.agregarParametro("opcion", 4);
             resultado = EjecutorBaseDatos.ejecutarProcedimientoNQ(NombreProcedimiento);
             return resultado;
 		}
@@ -106,10 +106,10 @@ namespace Seguridad.DALC {
         {
             int resultado;
             EjecutorBaseDatos.limpiarParametros();
-            EjecutorBaseDatos.agregarParametro("p_nombre", obj.Nombre);
-            EjecutorBaseDatos.agregarParametro("p_activo", obj.Activo);
+            EjecutorBaseDatos.agregarParametro("nombre", obj.Nombre);
+            EjecutorBaseDatos.agregarParametro("activo", obj.Activo);
             AsignarValorParametroPadre(obj);
-            EjecutorBaseDatos.agregarParametro("p_opcion", 2);
+            EjecutorBaseDatos.agregarParametro("opcion", 2);
             resultado = EjecutorBaseDatos.ejecutarProcedimientoNQ(NombreProcedimiento);
             return resultado;
 		}
@@ -166,6 +166,19 @@ namespace Seguridad.DALC {
                     EjecutorBaseDatos.agregarParametro(m_nombreParametroIdPadre, valor.GetValue(obj1, null));
                 }
             }
+        }
+
+        public bool TienePermiso(string Permiso, string Valor)
+        {
+            int resultado;
+            EjecutorBaseDatos.limpiarParametros();
+            EjecutorBaseDatos.agregarParametro("permiso", Permiso);
+            EjecutorBaseDatos.agregarParametro("valor", Valor);
+            EjecutorBaseDatos.agregarParametro("opcion", enuTipoAccionBaseDatos.Permiso);
+            resultado = EjecutorBaseDatos.ejecutarProcedimientoNQ(NombreProcedimiento);
+            if (resultado > 0)
+                return true;
+            return false;
         }
 
 	}//end Entidad

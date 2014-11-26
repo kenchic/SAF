@@ -7,7 +7,7 @@ using System.Web.UI.WebControls;
 
 namespace SAFAppWeb.sistema.formularios
 {
-    public partial class Usuarios : System.Web.UI.Page
+    public partial class Permisos : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {

@@ -4,7 +4,7 @@ using System.Data.Common;
 
 namespace BaseDatos
 {
-    public class Comandos : Conexion
+    public class Comandos : Conexion, IDisposable
     {
         #region "Miembros"
         private DataSet m_dataset;
@@ -57,6 +57,25 @@ namespace BaseDatos
             m_comando.Connection = base.MConexion;
             m_comando.CommandTimeout = 0;
             m_nombrecursorsalida = nombrecursorsalida;
+        }
+
+        protected virtual void Dispose(bool disposing)
+        {
+            if (disposing)
+            {
+                // dispose managed resources
+                m_comando.Dispose();
+                m_adaptador.Dispose();
+                m_datatable.Dispose();
+                m_dataset.Dispose();
+            }
+            // free native resources
+        }
+
+        public void Dispose()
+        {
+            Dispose(true);
+            GC.SuppressFinalize(this);
         }
         #endregion
 
@@ -370,6 +389,8 @@ namespace BaseDatos
             }
             return filasafectadas;
         }
+
+       
         #endregion
     }
 }

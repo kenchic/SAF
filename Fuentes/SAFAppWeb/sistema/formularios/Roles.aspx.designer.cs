@@ -10,7 +10,7 @@
 namespace SAFAppWeb.sistema.formularios {
     
     
-    public partial class Roles {
+    public partial class Datos {
         
         /// <summary>
         /// RadScriptManager1 control.
@@ -22,40 +22,40 @@ namespace SAFAppWeb.sistema.formularios {
         protected global::Telerik.Web.UI.RadScriptManager RadScriptManager1;
         
         /// <summary>
-        /// rgRoles control.
+        /// rgDatos control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::Telerik.Web.UI.RadGrid rgRoles;
+        protected global::Telerik.Web.UI.RadGrid rgDatos;
         
         /// <summary>
-        /// odsRoles control.
+        /// odsDatos control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ObjectDataSource odsRoles;
+        protected global::System.Web.UI.WebControls.ObjectDataSource odsDatos;
         
         /// <summary>
-        /// rwmManagerPopUp control.
+        /// PopUp control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::Telerik.Web.UI.RadWindowManager rwmManagerPopUp;
+        protected global::Telerik.Web.UI.RadWindowManager PopUp;
         
         /// <summary>
-        /// rlpRoles control.
+        /// rlpDatos control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::Telerik.Web.UI.RadAjaxLoadingPanel rlpRoles;
+        protected global::Telerik.Web.UI.RadAjaxLoadingPanel rlpDatos;
         
         /// <summary>
         /// RadAjaxManagerProxy1 control.

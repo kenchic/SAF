@@ -11,7 +11,7 @@ namespace SAFAppWeb.sistema.formularios
 {
 
 
-    public partial class Usuarios
+    public partial class Permisos
     {
     }
 }
