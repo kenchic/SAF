@@ -168,12 +168,13 @@ namespace Seguridad.DALC {
             }
         }
 
-        public bool TienePermiso(string Permiso, string Valor)
+        public bool TienePermiso(string permiso, string valor, string usuario)
         {
             int resultado;
             EjecutorBaseDatos.limpiarParametros();
-            EjecutorBaseDatos.agregarParametro("permiso", Permiso);
-            EjecutorBaseDatos.agregarParametro("valor", Valor);
+            EjecutorBaseDatos.agregarParametro("permiso", permiso);
+            EjecutorBaseDatos.agregarParametro("valor", valor);
+            EjecutorBaseDatos.agregarParametro("id", valor);
             EjecutorBaseDatos.agregarParametro("opcion", enuTipoAccionBaseDatos.Permiso);
             resultado = EjecutorBaseDatos.ejecutarProcedimientoNQ(NombreProcedimiento);
             if (resultado > 0)
