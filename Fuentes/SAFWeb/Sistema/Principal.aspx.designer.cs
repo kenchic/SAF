@@ -7,19 +7,10 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace SAFWeb {
+namespace SAFWeb.Sistema {
     
     
-    public partial class Default {
-        
-        /// <summary>
-        /// body control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl body;
+    public partial class Principal {
         
         /// <summary>
         /// form1 control.
@@ -31,12 +22,12 @@ namespace SAFWeb {
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
         
         /// <summary>
-        /// login1 control.
+        /// spContenido control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SAFWeb.login login1;
+        protected global::DevExpress.Web.ASPxSplitter spContenido;
     }
 }

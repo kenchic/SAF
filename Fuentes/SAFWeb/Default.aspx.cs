@@ -1,9 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Web;
-using System.Web.UI;
-using System.Web.UI.WebControls;
 
 namespace SAFWeb
 {
@@ -11,7 +8,13 @@ namespace SAFWeb
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            string[] filesindirectory = System.IO.Directory.GetFiles(Server.MapPath("~/img/fondos"));
+            Random random = new Random();
+            int randomNumber = random.Next(1, filesindirectory.Length);
+            string url = String.Format("~/img/fondos/{0}", randomNumber + ".jpg");
+            body.Style["background-image"] = Page.ResolveUrl(url);
+            body.Style["background-size"] = "cover";
         }
+
     }
 }

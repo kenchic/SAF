@@ -1,96 +1,26 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="SAFWeb.Default" %>
 
+<%@ Register src="login.ascx" tagname="login" tagprefix="uc1" %>
+
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title></title>
+    <link rel="stylesheet" href="css/EstilosLogin.css" type="text/css" media="screen" />
+    <title>SAF. Sistema de Alquiler de Formaleta</title>
 </head>
-<body>
+<body id="body" runat="server">
     <form id="form1" runat="server">
-        <div>
 
-            <dx:ASPxSplitter ID="spContenido" runat="server" FullscreenMode="True" Width="100%" Height="100%" Orientation="Vertical" >
-                <Panes>
-                    <dx:SplitterPane Size="80px">
-                        <ContentCollection>
-                            <dx:SplitterContentControl runat="server">
-                                <table cellpadding="0" cellspacing="0" border="0" style="width: 100%; height: 100%;">
-                                    <tr>
-                                        <td align="center">
-                                            <dx:ASPxLabel runat="server" Text="Encabezado"
-                                                Font-Size="14px" ID="ASPxLabel1" />
-                                        </td>
-                                    </tr>
-                                </table>
-                            </dx:SplitterContentControl>
-                        </ContentCollection>
-                    </dx:SplitterPane>
-
-                    <dx:SplitterPane>
-                        <Panes>
-                            <dx:SplitterPane Size="300px">
-                                <ContentCollection>
-                                    <dx:SplitterContentControl runat="server">
-                                        <table cellpadding="0" cellspacing="0" border="0" style="width: 100%; height: 100%;">
-                                            <tr>
-                                                <td align="center" style="text-align: left">
-                                                    <dx:ASPxLabel runat="server" Text="Opciones"
-                                                        Font-Size="14px" ID="lbTituloOpciones" />
-                                                    <br />
-                                                    <dx:ASPxMenu ID="menu" runat="server" Orientation="Vertical">
-                                                    </dx:ASPxMenu>
-                                                </td>
-                                            </tr>
-                                        </table>
-                                    </dx:SplitterContentControl>
-                                </ContentCollection>
-                            </dx:SplitterPane>
-                            <dx:SplitterPane>
-                                <Panes>
-                                    <dx:SplitterPane>
-                                        <ContentCollection>
-                                            <dx:SplitterContentControl runat="server">
-                                                <table cellpadding="0" cellspacing="0" border="0" style="width: 100%; height: 100%;">
-                                                    <tr>
-                                                        <td align="center">
-                                                            <dx:ASPxLabel runat="server" Text="Contenido" Font-Size="14px"
-                                                                ID="ASPxLabel3" />
-                                                        </td>
-                                                    </tr>
-                                                </table>
-                                            </dx:SplitterContentControl>
-                                        </ContentCollection>
-                                    </dx:SplitterPane>
-                                </Panes>
-<ContentCollection>
-<dx:SplitterContentControl runat="server"></dx:SplitterContentControl>
-</ContentCollection>
-                            </dx:SplitterPane>
-                        </Panes>
-<ContentCollection>
-<dx:SplitterContentControl runat="server"></dx:SplitterContentControl>
-</ContentCollection>
-                    </dx:SplitterPane>
-
-                    <dx:SplitterPane Size="60px">
-                        <ContentCollection>
-                            <dx:SplitterContentControl runat="server">
-                                <table cellpadding="0" cellspacing="0" border="0" style="width: 100%; height: 100%;">
-                                    <tr>
-                                        <td align="center">
-                                            <dx:ASPxLabel runat="server" Text="Pie Pagina." Font-Size="14px" ID="ASPxLabel4" />
-                                        </td>
-                                    </tr>
-                                </table>
-                            </dx:SplitterContentControl>
-                        </ContentCollection>
-                    </dx:SplitterPane>
-
-                </Panes>
-            </dx:ASPxSplitter>
-
-        </div>
+        <table  style="margin: 0; padding: 0; position: fixed; left: -5px; top: -2px;  width: 102%; height: 102%">
+            <tr style="padding: 0px; margin: 0px;">
+                <td style="padding: 0px; margin: 0px; height: 100%; min-width: 0%; max-width:5%; cursor: pointer; width: 5%"></td>
+                <td class="loginCentral">
+                    <uc1:login ID="login1" runat="server" />
+                </td>
+                <td style="padding: 0px; margin: 0px; height: 100%; min-width: 0%; max-width: 70%; cursor: pointer;  width: 70% "></td>
+            </tr>
+        </table>
     </form>
 </body>
 </html>

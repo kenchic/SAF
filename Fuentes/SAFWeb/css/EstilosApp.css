@@ -1,0 +1,63 @@
+﻿
+body > div{
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    border: 2px solid #AAA;
+    padding: 10px;
+    text-align: center;
+    font-family: Segoe UI;
+}
+
+#encabezado{
+    position: absolute;
+    height: 30px;
+    top: 0px;
+    right: 0px;
+    left: 0px;
+    background-color: #222222;
+    border-color: #35C110;
+}
+
+#contenido{
+    position: absolute;
+    right: 0px;
+    top: 30px;
+    bottom: 30px;
+    left: 0px;
+    border-color: #35C12E;
+    background-color: #ffffff;
+}
+
+#pie{
+    position: absolute;
+    height: 30px;
+    bottom: 0px;
+    right: 0px;
+    left: 0px;
+    background-color: #222222;
+    border-color: #B24842;
+}
+
+.Titulo {
+    font-family: Segoe UI;
+	font-weight: bold;
+	font-size: 16pt;
+	color: #0C2E82;
+	height: 35px;
+	vertical-align: top;
+}
+
+/*FORMULARIOS*/
+#encabezadoForm{
+   height: 80px;
+   width: 100%;
+   margin-left: 0px;
+   margin-top: 0px;
+}
+
+#grillasForm{
+    position: absolute;
+    width:  99.9%;
+    margin-left: -8px;
+}

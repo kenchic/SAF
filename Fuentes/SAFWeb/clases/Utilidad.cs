@@ -1,6 +1,6 @@
 ﻿using System.Web.UI;
 using System.Web.UI.WebControls;
-using Telerik.Web.UI;
+using DevExpress.Web;
 
 public sealed class Utilidad
 {
@@ -15,7 +15,7 @@ public sealed class Utilidad
         etiqueta.ForeColor = (resultado) ? System.Drawing.Color.Green : System.Drawing.Color.Red;
     }
 
-    public static void MostrarResultadoOperacionBd(ref RadGrid grilla, string texto, bool resultado)
+    public static void MostrarResultadoOperacionBd(ref ASPxGridView grilla, string texto, bool resultado)
     {
         var color = COLOR_RESULTADO_MAL;
         if ((resultado))
@@ -30,31 +30,27 @@ public sealed class Utilidad
             combo.Items.Insert(0, new ListItem(texto, valor));
         combo.Items.FindByValue(valor).Selected = true;
     }
-    public static void SeleccionarItemCombo(ref RadComboBox combo, string valor, string texto)
-    {
-        combo.ClearSelection();
-        if ((combo.Items.FindItemByValue(valor) == null))
-            combo.Items.Insert(0, new RadComboBoxItem(texto, valor));
-        combo.Items.FindItemByValue(valor).Selected = true;
+    public static void SeleccionarItemCombo(ref ASPxComboBox combo, string valor, string texto)
+    {        
+        
+        combo.SelectedIndex = -1;
+        if ((combo.Items.FindByValue(valor) == null))
+            combo.Items.Insert(0, new ListEditItem(texto, valor));
+        combo.Items.FindByValue(valor).Selected = true;
     }
     public static void AgregarToolTipCombo(ref DropDownList combo)
     {
         foreach (ListItem item in combo.Items)
             item.Attributes.Add("title", item.Text);
-    }
-    public static void AgregarToolTipCombo(ref RadComboBox combo)
-    {
-        foreach (RadComboBoxItem item in combo.Items)
-            item.Attributes.Add("title", item.Text);
-    }
+    }    
     public static void AgregarItemVacio(ref DropDownList combo)
     {
         var itemvacio = new ListItem(TEXTO_ITEM_VACIO, VALOR_ITEM_VACIO);
         combo.Items.Insert(0, itemvacio);
     }
-    public static void AgregarItemVacio(ref RadComboBox combo)
+    public static void AgregarItemVacio(ref ASPxComboBox combo)
     {
-        var itemVacio = new RadComboBoxItem(TEXTO_ITEM_VACIO, VALOR_ITEM_VACIO);
+        var itemVacio = new ListEditItem(TEXTO_ITEM_VACIO, VALOR_ITEM_VACIO);
         combo.Items.Insert(0, itemVacio);
     }
     public static void AgregarItemVacio(ref DropDownList combo, string textoItem, string valorItem)
@@ -62,28 +58,10 @@ public sealed class Utilidad
         var itemvacio = new ListItem(textoItem, valorItem);
         combo.Items.Insert(0, itemvacio);
     }
-    public static void AgregarItemVacio(ref RadComboBox combo, string textoItem, string valorItem)
+    public static void AgregarItemVacio(ref ASPxComboBox combo, string textoItem, string valorItem)
     {
-        var itemvacio = new RadComboBoxItem(textoItem, valorItem);
+        var itemvacio = new ListEditItem(textoItem, valorItem);
         combo.Items.Insert(0, itemvacio);
     }
 
-    public static void AbrirVentana(Page pagina, string url)
-    {
-        var script = "<script>window.open('" + url + "');</script>";
-        if ((!(pagina.ClientScript.IsStartupScriptRegistered("AbrirVentana"))))
-            pagina.ClientScript.RegisterClientScriptBlock(pagina.GetType(), "AbrirVentana", script);
-    }
-
-    public static void CrearValidador(GridEditableItem item, string editorColumna, string idControl)
-    {
-        var editor = (GridTextBoxColumnEditor)item.EditManager.GetColumnEditor(editorColumna);
-        var cell = (TableCell)editor.TextBoxControl.Parent;
-        var validator = new RequiredFieldValidator();
-        editor.TextBoxControl.ID = idControl;
-        validator.ControlToValidate = editor.TextBoxControl.ID;
-        validator.Display = ValidatorDisplay.Dynamic;
-        validator.ErrorMessage = @"<span style='display: inline; float: right'><img src='../Imagenes/Controles/imgError.gif' title='Este campo es requerido.' alt='' /></span>";
-        cell.Controls.Add(validator);
-    }
 }

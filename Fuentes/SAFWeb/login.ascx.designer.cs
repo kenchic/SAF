@@ -10,33 +10,33 @@
 namespace SAFWeb {
     
     
-    public partial class Default {
+    public partial class login {
         
         /// <summary>
-        /// body control.
+        /// inpUsuario control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl body;
+        protected global::System.Web.UI.HtmlControls.HtmlInputText inpUsuario;
         
         /// <summary>
-        /// form1 control.
+        /// inpClave control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm form1;
+        protected global::System.Web.UI.HtmlControls.HtmlInputPassword inpClave;
         
         /// <summary>
-        /// login1 control.
+        /// btnIngresar control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SAFWeb.login login1;
+        protected global::System.Web.UI.WebControls.Button btnIngresar;
     }
 }
