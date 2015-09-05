@@ -1,15 +1,15 @@
 using System;
     using System.Collections.Generic;
     using System.Linq;
-    using System.Web;
-    using System.Web.Security;
-    using System.Web.SessionState;
-    using DevExpress.Web;
+using BaseDatos;
+ 
 
     namespace SAFWeb {
         public class Global_asax : System.Web.HttpApplication {
             void Application_Start(object sender, EventArgs e) {
                 DevExpress.Web.ASPxWebControl.CallbackError += new EventHandler(Application_Error);
+                var ejecutor = new BaseDatos.Comandos("Data Source=localhost;Initial Catalog=SAF; User ID=saf; Password=K9saf126", "System.Data.SqlClient", "pDATOS");
+                Session["ejecutorBD"] = ejecutor;
             }
 
             void Application_End(object sender, EventArgs e) {
