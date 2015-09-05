@@ -15,15 +15,15 @@ namespace SAFWeb
             body.Style["background-image"] = Page.ResolveUrl(url);
             body.Style["background-size"] = "cover";
 
-            var ejecutor = (BaseDatos.Comandos)Session["ejecutorBD"];
-            var fachadaClaseBase = new Seguridad.DALC.clsFachadaClaseBase(ref ejecutor);
-            var usuario = fachadaClaseBase.ConsultarUsuariosAutenticacion(InicioSesion.UserName, InicioSesion.Password);
-            if (usuario == null)
-            {
-                e.Authenticated = false;
-                InicioSesion.FailureText = "Nombre de usuario ó contraseña inválida";
-                return;
-            }
+            //var ejecutor = (BaseDatos.Comandos)Session["ejecutorBD"];
+            //var fachadaClaseBase = new Seguridad.DALC.clsFachadaClaseBase(ref ejecutor);
+            //var usuario = fachadaClaseBase.ConsultarUsuariosAutenticacion(InicioSesion.UserName, InicioSesion.Password);
+            //if (usuario == null)
+            //{
+            //    e.Authenticated = false;
+            //    InicioSesion.FailureText = "Nombre de usuario ó contraseña inválida";
+            //    return;
+            //}
         }
 
     }
