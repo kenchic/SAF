@@ -2,6 +2,8 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using BaseDatos;
+using System.Configuration;
+using System.Web;
 
 
 namespace SAFWeb
@@ -10,9 +12,7 @@ namespace SAFWeb
     {
         void Application_Start(object sender, EventArgs e)
         {
-            DevExpress.Web.ASPxWebControl.CallbackError += new EventHandler(Application_Error);
-            var ejecutor = new BaseDatos.Comandos("Data Source=localhost;Initial Catalog=SAF; User ID=saf; Password=K9saf126", "System.Data.SqlClient", "pDATOS");
-            //Session["ejecutorBD"] = ejecutor;
+            DevExpress.Web.ASPxWebControl.CallbackError += new EventHandler(Application_Error);            
         }
 
         void Application_End(object sender, EventArgs e)
@@ -28,6 +28,10 @@ namespace SAFWeb
         void Session_Start(object sender, EventArgs e)
         {
             // Code that runs when a new session is started
+            var ejecutor = new Comandos(ConfigurationManager.ConnectionStrings["SAF"].ConnectionString, "System.Data.SqlClient");
+            Session["ejecutorBDSAF"] = ejecutor;
+            ejecutor = new Comandos(ConfigurationManager.ConnectionStrings["SAFseg"].ConnectionString, "System.Data.SqlClient");
+            Session["ejecutorBDSAFseg"] = ejecutor;
         }
 
         void Session_End(object sender, EventArgs e)

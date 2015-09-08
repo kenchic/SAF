@@ -15,7 +15,7 @@
     </div>
     <br />
     <div class="login">
-        <input type="text" placeholder="Usuario" name="user" runat="server" id="inpUsuario" /><br />
+        <input type="text" placeholder="Usuario" name="user" runat="server" id="inpUsuario"/><br />
         <input type="password" placeholder="Clave" name="password" runat="server" id="inpClave" /><br />
         <asp:Button ID="btnIngresar" runat="server" Text="Iniciar" CssClass="botonASP" OnClick="btnIngresar_Click" />
     </div>

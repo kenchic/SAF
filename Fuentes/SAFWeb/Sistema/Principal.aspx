@@ -11,41 +11,59 @@
         <div>
             <dx:ASPxSplitter ID="spContenido" runat="server" FullscreenMode="True" Width="100%" Height="100%" Orientation="Vertical">
                 <Panes>
-                    <dx:SplitterPane Size="80px">
+                    <dx:SplitterPane Size="40px" Name="Encabezado" ContentUrl="Controles/frmEncabezado.aspx" PaneStyle-BackColor="#333333">
+                        <Separators>
+                            <SeparatorStyle>
+                            <Border BorderStyle="None" />
+                            </SeparatorStyle>
+                        </Separators>
+                        <PaneStyle>
+                            <Border BorderStyle="None" />
+                        </PaneStyle>
                         <ContentCollection>
                             <dx:SplitterContentControl runat="server">
                             </dx:SplitterContentControl>
                         </ContentCollection>
                     </dx:SplitterPane>
 
-                    <dx:SplitterPane>
+                    <dx:SplitterPane Name="Contenido">                        
+                        <Separator Visible="False">
+                        </Separator>
                         <Panes>
-                            <dx:SplitterPane Size="300px">
+                            <%--IZQUIERDA--%>
+                            <dx:SplitterPane Size="300px" Name="Izquierda" ShowCollapseBackwardButton="True" ContentUrlIFrameName="contenidoIzquierda">
+                                <PaneStyle>
+                                    <Border BorderStyle="None" />
+                                </PaneStyle>
                                 <ContentCollection>
                                     <dx:SplitterContentControl runat="server">
                                     </dx:SplitterContentControl>
                                 </ContentCollection>
                             </dx:SplitterPane>
-                            <dx:SplitterPane>
-                                <Panes>
-                                    <dx:SplitterPane>
-                                        <ContentCollection>
-                                            <dx:SplitterContentControl runat="server">
-                                            </dx:SplitterContentControl>
-                                        </ContentCollection>
-                                    </dx:SplitterPane>
-                                </Panes>
+                            <%--CONTENIDO--%>
+                            <dx:SplitterPane Name="Central" ContentUrlIFrameName="contenidoCentral">
+                                <PaneStyle>
+                                    <Border BorderStyle="None" />
+                                </PaneStyle>
                                 <ContentCollection>
                                     <dx:SplitterContentControl runat="server"></dx:SplitterContentControl>
                                 </ContentCollection>
                             </dx:SplitterPane>
                         </Panes>
+                        <PaneStyle>
+                            <Border BorderStyle="None" />
+                        </PaneStyle>
                         <ContentCollection>
                             <dx:SplitterContentControl runat="server"></dx:SplitterContentControl>
                         </ContentCollection>
                     </dx:SplitterPane>
 
-                    <dx:SplitterPane Size="60px">
+                    <dx:SplitterPane Size="40px" Name="Pie" PaneStyle-BackColor="#333333">
+                        <Separator Visible="False">
+                        </Separator>
+                        <PaneStyle>
+                            <Border BorderStyle="None" />
+                        </PaneStyle>
                         <ContentCollection>
                             <dx:SplitterContentControl runat="server">
                             </dx:SplitterContentControl>

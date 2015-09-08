@@ -89,6 +89,9 @@
     <Content Include="css\EstilosLogin.css" />
     <Content Include="css\EstilosApp.css" />
     <Content Include="Default.aspx" />
+    <Content Include="img\fondos\4.jpg" />
+    <Content Include="img\fondos\5.jpg" />
+    <Content Include="img\fondos\6.jpg" />
     <Content Include="login.ascx" />
     <Content Include="Global.asax" />
   </ItemGroup>
@@ -101,6 +104,7 @@
     <Content Include="img\iconos\Eliminar.gif" />
     <Content Include="img\iconos\refrescar.gif" />
     <Content Include="js\prefixfree_login.min.js" />
+    <Content Include="Sistema\Controles\frmEncabezado.aspx" />
     <Content Include="Sistema\Principal.aspx" />
     <Content Include="Web.config" />
     <None Include="Web.Debug.config">
@@ -131,6 +135,13 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Sistema\Controles\frmEncabezado.aspx.cs">
+      <DependentUpon>frmEncabezado.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sistema\Controles\frmEncabezado.aspx.designer.cs">
+      <DependentUpon>frmEncabezado.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Sistema\Principal.aspx.cs">
       <DependentUpon>Principal.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -149,6 +160,10 @@
     <ProjectReference Include="..\BaseDatos\BaseDatos.csproj">
       <Project>{676087ab-06b3-4862-a7bb-1c1ec347a0ce}</Project>
       <Name>BaseDatos</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Seguridad\Seguridad.csproj">
+      <Project>{1eb24b2b-b2e7-443b-83b5-38e4250448bc}</Project>
+      <Name>Seguridad</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>

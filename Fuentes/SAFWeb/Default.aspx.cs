@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.Linq;
 
+
+
 namespace SAFWeb
 {
     public partial class Default : System.Web.UI.Page
@@ -14,17 +16,6 @@ namespace SAFWeb
             string url = String.Format("~/img/fondos/{0}", randomNumber + ".jpg");
             body.Style["background-image"] = Page.ResolveUrl(url);
             body.Style["background-size"] = "cover";
-
-            //var ejecutor = (BaseDatos.Comandos)Session["ejecutorBD"];
-            //var fachadaClaseBase = new Seguridad.DALC.clsFachadaClaseBase(ref ejecutor);
-            //var usuario = fachadaClaseBase.ConsultarUsuariosAutenticacion(InicioSesion.UserName, InicioSesion.Password);
-            //if (usuario == null)
-            //{
-            //    e.Authenticated = false;
-            //    InicioSesion.FailureText = "Nombre de usuario ó contraseña inválida";
-            //    return;
-            //}
         }
-
     }
 }
