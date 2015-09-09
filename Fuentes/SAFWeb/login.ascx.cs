@@ -18,10 +18,10 @@ namespace SAFWeb
             var ejecutor = (Comandos)Session["ejecutorBDSAFseg"];
             var fachadaSeg = new clsFachadaSAF(ref ejecutor);
 
-            List<ParametroBD> parametros = new List<ParametroBD>();
-            parametros.Add(new ParametroBD("Usuario", inpUsuario.Value, ParametroBD.OperadorLogico.igual));
-            parametros.Add(new ParametroBD("Clave", inpClave.Value, ParametroBD.OperadorLogico.igual));
-            var usuario = fachadaSeg.consultarEntidadUsuario(parametros);
+            SentenciaSQL sql = new SentenciaSQL();
+            sql.FiltroBD.Add(new FiltroBD("Usuario", inpUsuario.Value, FiltroBD.OperadorLogico.igual));
+            sql.FiltroBD.Add(new FiltroBD("Clave", inpClave.Value, FiltroBD.OperadorLogico.igual));
+            var usuario = fachadaSeg.consultarEntidadUsuario(sql);
             if (usuario != null)
                 Response.Redirect("~/sistema/Principal.aspx");
         }

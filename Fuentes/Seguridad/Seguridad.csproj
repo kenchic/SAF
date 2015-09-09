@@ -41,6 +41,8 @@
   <ItemGroup>
     <Compile Include="DALC\clsAuditoriaDALC.cs" />
     <Compile Include="DALC\clsEventoAuditoriaDALC.cs" />
+    <Compile Include="DALC\clsMenuDALC.cs" />
+    <Compile Include="DALC\clsMenuRolDALC.cs" />
     <Compile Include="DALC\clsParametroDALC.cs" />
     <Compile Include="DALC\clsParametroSistemaDALC.cs" />
     <Compile Include="DALC\clsPrivilegioDALC.cs" />
@@ -49,6 +51,8 @@
     <Compile Include="DALC\clsUsuarioDALC.cs" />
     <Compile Include="Entidades\clsAuditoria.cs" />
     <Compile Include="Entidades\clsEventoAuditoria.cs" />
+    <Compile Include="Entidades\clsMenu.cs" />
+    <Compile Include="Entidades\clsMenuRol.cs" />
     <Compile Include="Entidades\clsParametro.cs" />
     <Compile Include="Entidades\clsParametroSistema.cs" />
     <Compile Include="Entidades\clsPrivilegio.cs" />
@@ -57,6 +61,8 @@
     <Compile Include="Entidades\clsUsuario.cs" />
     <Compile Include="Fabricas\clsFabricaAuditoria.cs" />
     <Compile Include="Fabricas\clsFabricaEventoAuditoria.cs" />
+    <Compile Include="Fabricas\clsFabricaMenu.cs" />
+    <Compile Include="Fabricas\clsFabricaMenuRol.cs" />
     <Compile Include="Fabricas\clsFabricaParametro.cs" />
     <Compile Include="Fabricas\clsFabricaParametroSistema.cs" />
     <Compile Include="Fabricas\clsFabricaPrivilegio.cs" />

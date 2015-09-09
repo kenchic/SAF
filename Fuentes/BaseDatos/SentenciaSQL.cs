@@ -4,7 +4,22 @@ using System.Linq;
 
 namespace BaseDatos
 {
-    public class ParametroBD
+    public class SentenciaSQL
+    {
+        public List<FiltroBD> FiltroBD;
+        public List<string> OrdenBD;
+        public List<string> GrupoBD;
+
+        public SentenciaSQL()
+        {
+            FiltroBD = new List<FiltroBD>();
+            OrdenBD = new List<string>();
+            GrupoBD = new List<string>();
+        }
+    }
+
+
+    public class FiltroBD
     {
         public enum OperadorLogico
         {
@@ -47,7 +62,7 @@ namespace BaseDatos
             }
         }
 
-        public ParametroBD(string campo, object valor, OperadorLogico operador)
+        public FiltroBD(string campo, object valor, OperadorLogico operador)
         {
             Campo = campo;
             Valor = valor;

@@ -106,7 +106,9 @@
     <Content Include="js\prefixfree_login.min.js" />
     <Content Include="Sistema\Controles\frmEncabezado.aspx" />
     <Content Include="Sistema\Principal.aspx" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
