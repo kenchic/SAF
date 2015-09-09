@@ -22,12 +22,12 @@ namespace SAFWeb.Sistema.Controles {
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
         
         /// <summary>
-        /// Menu control.
+        /// ASPxMenu1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::DevExpress.Web.ASPxMenu Menu;
+        protected global::DevExpress.Web.ASPxMenu ASPxMenu1;
     }
 }

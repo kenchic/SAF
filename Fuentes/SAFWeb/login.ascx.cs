@@ -19,11 +19,20 @@ namespace SAFWeb
             var fachadaSeg = new clsFachadaSAF(ref ejecutor);
 
             SentenciaSQL sql = new SentenciaSQL();
-            sql.FiltroBD.Add(new FiltroBD("Usuario", inpUsuario.Value, FiltroBD.OperadorLogico.igual));
-            sql.FiltroBD.Add(new FiltroBD("Clave", inpClave.Value, FiltroBD.OperadorLogico.igual));
+            sql.FiltroBD.Add(new FiltroBD(clsUsuario.Campos.usuario, inpUsuario.Value, FiltroBD.OperadorLogico.igual));
+            sql.FiltroBD.Add(new FiltroBD(clsUsuario.Campos.clave, inpClave.Value, FiltroBD.OperadorLogico.igual));
             var usuario = fachadaSeg.consultarEntidadUsuario(sql);
             if (usuario != null)
+            {
+                Session["Usuario"] = usuario;
+                
+                sql = new SentenciaSQL();
+                sql.FiltroBD.Add(new FiltroBD(clsRol.Campos.id, usuario.idRol, FiltroBD.OperadorLogico.igual));
+                var rol = fachadaSeg.consultarEntidadRol(sql);
+
+                Session["UsuarioRol"] = rol;
                 Response.Redirect("~/sistema/Principal.aspx");
+            }
         }
     }
 }

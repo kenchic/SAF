@@ -104,7 +104,8 @@
     <Content Include="img\iconos\Eliminar.gif" />
     <Content Include="img\iconos\refrescar.gif" />
     <Content Include="js\prefixfree_login.min.js" />
-    <Content Include="Sistema\Controles\frmEncabezado.aspx" />
+    <Content Include="Sistema\frmEncabezado.aspx" />
+    <Content Include="Sistema\frmMenuIzq.aspx" />
     <Content Include="Sistema\Principal.aspx" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
@@ -137,12 +138,19 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Sistema\Controles\frmEncabezado.aspx.cs">
+    <Compile Include="Sistema\frmEncabezado.aspx.cs">
       <DependentUpon>frmEncabezado.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Sistema\Controles\frmEncabezado.aspx.designer.cs">
+    <Compile Include="Sistema\frmEncabezado.aspx.designer.cs">
       <DependentUpon>frmEncabezado.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Sistema\frmMenuIzq.aspx.cs">
+      <DependentUpon>frmMenuIzq.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sistema\frmMenuIzq.aspx.designer.cs">
+      <DependentUpon>frmMenuIzq.aspx</DependentUpon>
     </Compile>
     <Compile Include="Sistema\Principal.aspx.cs">
       <DependentUpon>Principal.aspx</DependentUpon>

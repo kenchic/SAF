@@ -62,9 +62,9 @@ namespace BaseDatos
             }
         }
 
-        public FiltroBD(string campo, object valor, OperadorLogico operador)
+        public FiltroBD(object campo, object valor, OperadorLogico operador)
         {
-            Campo = campo;
+            Campo = campo.ToString();
             Valor = valor;
             Operador = operador;
         }

@@ -42,6 +42,7 @@
     <Compile Include="DALC\clsAuditoriaDALC.cs" />
     <Compile Include="DALC\clsEventoAuditoriaDALC.cs" />
     <Compile Include="DALC\clsMenuDALC.cs" />
+    <Compile Include="DALC\clsMenuAdicionalDALC.cs" />
     <Compile Include="DALC\clsMenuRolDALC.cs" />
     <Compile Include="DALC\clsParametroDALC.cs" />
     <Compile Include="DALC\clsParametroSistemaDALC.cs" />
@@ -69,6 +70,7 @@
     <Compile Include="Fabricas\clsFabricaPrivilegioRol.cs" />
     <Compile Include="Fabricas\clsFabricaRol.cs" />
     <Compile Include="Fabricas\clsFabricaUsuario.cs" />
+    <Compile Include="Fachada\clsFachadaAdicionalSAF.cs" />
     <Compile Include="Fachada\clsFachadaSAF.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

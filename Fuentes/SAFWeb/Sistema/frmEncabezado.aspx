@@ -10,20 +10,14 @@
     <form id="form1" runat="server">
     <div>
     
-        <dx:ASPxMenu ID="Menu" runat="server">
+    
+        <dx:ASPxMenu ID="ASPxMenu1" runat="server" Target="contenidoCentral">
             <Items>
-                <dx:MenuItem>
-                </dx:MenuItem>
-                <dx:MenuItem>
-                </dx:MenuItem>
-                <dx:MenuItem>
-                </dx:MenuItem>
-                <dx:MenuItem>
-                </dx:MenuItem>
-                <dx:MenuItem>
+                <dx:MenuItem Name="Administracion" NavigateUrl="~/Sistema/frmMenuIzq.aspx" Text="Administración">
                 </dx:MenuItem>
             </Items>
         </dx:ASPxMenu>
+    
     
     </div>
     </form>

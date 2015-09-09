@@ -5,13 +5,13 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace SAFWeb.Sistema.Controles
+namespace SAFWeb.Sistema
 {
-    public partial class frmEncabezado : System.Web.UI.Page
+    public partial class frmMenuIzq : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            
+
         }
     }
 }
