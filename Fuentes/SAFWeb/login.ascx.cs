@@ -16,7 +16,7 @@ namespace SAFWeb
         protected void btnIngresar_Click(object sender, EventArgs e)
         {
             var ejecutor = (Comandos)Session["ejecutorBDSAFseg"];
-            var fachadaSeg = new clsFachadaSAF(ref ejecutor);
+            var fachadaSeg = new clsFachadaSAFseg(ref ejecutor);
 
             SentenciaSQL sql = new SentenciaSQL();
             sql.FiltroBD.Add(new FiltroBD(clsUsuario.Campos.usuario, inpUsuario.Value, FiltroBD.OperadorLogico.igual));

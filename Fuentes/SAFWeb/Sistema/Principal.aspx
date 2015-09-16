@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Principal.aspx.cs" Inherits="SAFWeb.Sistema.Principal" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Principal.aspx.cs" Inherits="SAFWeb.Sistema.Principal" ClientIDMode="Static"%>
 
 <!DOCTYPE html>
 
@@ -11,7 +11,7 @@
         <div>
             <dx:ASPxSplitter ID="spContenido" runat="server" FullscreenMode="True" Width="100%" Height="100%" Orientation="Vertical">
                 <Panes>
-                    <dx:SplitterPane Size="40px" Name="Encabezado" ContentUrl="Controles/frmEncabezado.aspx" PaneStyle-BackColor="#333333">
+                    <dx:SplitterPane Size="40px" Name="Encabezado" ContentUrl="frmEncabezado.aspx" PaneStyle-BackColor="#333333">
                         <Separators>
                             <SeparatorStyle>
                             <Border BorderStyle="None" />
@@ -31,7 +31,7 @@
                         </Separator>
                         <Panes>
                             <%--IZQUIERDA--%>
-                            <dx:SplitterPane Size="300px" Name="Izquierda" ShowCollapseBackwardButton="True" ContentUrlIFrameName="contenidoIzquierda">
+                            <dx:SplitterPane Size="300px" Name="contenidoIzquierda" ShowCollapseBackwardButton="True" ContentUrlIFrameName="contenidoIzquierda" ContentUrl="Content.aspx">
                                 <PaneStyle>
                                     <Border BorderStyle="None" />
                                 </PaneStyle>

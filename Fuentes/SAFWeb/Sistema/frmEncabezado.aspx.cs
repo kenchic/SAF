@@ -14,7 +14,7 @@ namespace SAFWeb.Sistema.Controles
             if (!IsPostBack)
             {
                 var ejecutor = (Comandos)Session["ejecutorBDSAFseg"];
-                var fachadaSeg = new clsFachadaAdicionalSAF(ref ejecutor);
+                var fachadaSeg = new clsFachadaSAFSegAdicional(ref ejecutor);
                 var rol = (clsRol)Session["UsuarioRol"];
 
                 SentenciaSQL sql = new SentenciaSQL();
@@ -23,15 +23,11 @@ namespace SAFWeb.Sistema.Controles
                 if (menu != null)
                 {
                     //Menu.Items.Clear();
-                    //foreach (var item in menu)
-                    //{
-                            
-                    //}
-                    //Menu.NameField = "Nombre";
-                    //Menu.NavigateUrlField = "Url";
-                    //Menu.TextField = "Nombre";
-                    //Menu.DataSource = menu;
-                    //Menu.DataBind();
+                    foreach (var item in menu)
+                    {
+                        Menu.Items.Add(item.Nombre, "ID" + item.Id, "", item.Url);
+
+                    }
                 }
             }
         }

@@ -8,18 +8,16 @@
 </head>
 <body>
     <form id="form1" runat="server">
-    <div>
-    
-    
-        <dx:ASPxMenu ID="ASPxMenu1" runat="server" Target="contenidoCentral">
-            <Items>
-                <dx:MenuItem Name="Administracion" NavigateUrl="~/Sistema/frmMenuIzq.aspx" Text="Administración">
-                </dx:MenuItem>
-            </Items>
-        </dx:ASPxMenu>
-    
-    
-    </div>
+        <div>
+
+
+            <dx:ASPxMenu ID="Menu" runat="server" Target="contenidoIzquierda">
+               <%-- <Items>
+                    <dx:MenuItem Name="Administracion" NavigateUrl="frmMenuIzq.aspx"  Text="Administración">
+                    </dx:MenuItem>
+                </Items>--%>
+            </dx:ASPxMenu>
+        </div>
     </form>
 </body>
 </html>

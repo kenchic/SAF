@@ -70,8 +70,18 @@
     <Compile Include="Fabricas\clsFabricaPrivilegioRol.cs" />
     <Compile Include="Fabricas\clsFabricaRol.cs" />
     <Compile Include="Fabricas\clsFabricaUsuario.cs" />
-    <Compile Include="Fachada\clsFachadaAdicionalSAF.cs" />
-    <Compile Include="Fachada\clsFachadaSAF.cs" />
+    <Compile Include="Fachada\clsFachada.cs" />
+    <Compile Include="Fachada\clsFachadaAdicional.cs" />
+    <Compile Include="Fachada\clsFachadaAuditoria.cs" />
+    <Compile Include="Fachada\clsFachadaEventoAuditoria.cs" />
+    <Compile Include="Fachada\clsFachadaMenu.cs" />
+    <Compile Include="Fachada\clsFachadaMenuRol.cs" />
+    <Compile Include="Fachada\clsFachadaParametro.cs" />
+    <Compile Include="Fachada\clsFachadaParametroSistema.cs" />
+    <Compile Include="Fachada\clsFachadaPrivilegio.cs" />
+    <Compile Include="Fachada\clsFachadaPrivilegioRol.cs" />
+    <Compile Include="Fachada\clsFachadaRol.cs" />
+    <Compile Include="Fachada\clsFachadaUsuario.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

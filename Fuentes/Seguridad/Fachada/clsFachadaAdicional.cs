@@ -14,14 +14,14 @@ using BaseDatos;
 
 namespace SAFseg
 {
-    public partial class clsFachadaAdicionalSAF
+    public partial class clsFachadaSAFSegAdicional
     {
         private Comandos m_EjecutorBaseDatos;
         #region Miembros
         private clsMenuAdicionalDALC m_clsMenuAdicionalDALC;
         #endregion
 
-        public clsFachadaAdicionalSAF(ref Comandos ejecutor)
+        public clsFachadaSAFSegAdicional(ref Comandos ejecutor)
         {
             this.m_EjecutorBaseDatos = ejecutor;
         }
