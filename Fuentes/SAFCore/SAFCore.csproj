@@ -40,7 +40,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DALC\clsAgenteDALC.cs" />
-    <Compile Include="DALC\clsAuditoriaDALC.cs" />
     <Compile Include="DALC\clsBodegaDALC.cs" />
     <Compile Include="DALC\clsCiudadDALC.cs" />
     <Compile Include="DALC\clsClienteDALC.cs" />
@@ -63,7 +62,6 @@
     <Compile Include="DALC\clsDevolucionServicioDALC.cs" />
     <Compile Include="DALC\clsDocumentoDALC.cs" />
     <Compile Include="DALC\clsElementoDALC.cs" />
-    <Compile Include="DALC\clsEventoAuditoriaDALC.cs" />
     <Compile Include="DALC\clsFacturaDALC.cs" />
     <Compile Include="DALC\clsGrupoElementoDALC.cs" />
     <Compile Include="DALC\clsListaPrecioDALC.cs" />
@@ -72,8 +70,6 @@
     <Compile Include="DALC\clsOrdenServicioDALC.cs" />
     <Compile Include="DALC\clsParametroDALC.cs" />
     <Compile Include="DALC\clsParametroSistemaDALC.cs" />
-    <Compile Include="DALC\clsPrivilegioDALC.cs" />
-    <Compile Include="DALC\clsPrivilegioRolDALC.cs" />
     <Compile Include="DALC\clsProveedorDALC.cs" />
     <Compile Include="DALC\clsProyectoAlquilerDALC.cs" />
     <Compile Include="DALC\clsProyectoDALC.cs" />
@@ -81,13 +77,10 @@
     <Compile Include="DALC\clsRemisionDALC.cs" />
     <Compile Include="DALC\clsRepDevolucionServicioDALC.cs" />
     <Compile Include="DALC\clsReposicionDALC.cs" />
-    <Compile Include="DALC\clsRolDALC.cs" />
     <Compile Include="DALC\clsTipoDocumentoDALC.cs" />
     <Compile Include="DALC\clsUnidadMedidaDALC.cs" />
-    <Compile Include="DALC\clsUsuarioDALC.cs" />
     <Compile Include="DALC\clsVentaDALC.cs" />
     <Compile Include="Entidades\clsAgente.cs" />
-    <Compile Include="Entidades\clsAuditoria.cs" />
     <Compile Include="Entidades\clsBodega.cs" />
     <Compile Include="Entidades\clsCiudad.cs" />
     <Compile Include="Entidades\clsCliente.cs" />
@@ -110,7 +103,6 @@
     <Compile Include="Entidades\clsDevolucionServicio.cs" />
     <Compile Include="Entidades\clsDocumento.cs" />
     <Compile Include="Entidades\clsElemento.cs" />
-    <Compile Include="Entidades\clsEventoAuditoria.cs" />
     <Compile Include="Entidades\clsFactura.cs" />
     <Compile Include="Entidades\clsGrupoElemento.cs" />
     <Compile Include="Entidades\clsListaPrecio.cs" />
@@ -119,8 +111,6 @@
     <Compile Include="Entidades\clsOrdenServicio.cs" />
     <Compile Include="Entidades\clsParametro.cs" />
     <Compile Include="Entidades\clsParametroSistema.cs" />
-    <Compile Include="Entidades\clsPrivilegio.cs" />
-    <Compile Include="Entidades\clsPrivilegioRol.cs" />
     <Compile Include="Entidades\clsProveedor.cs" />
     <Compile Include="Entidades\clsProyecto.cs" />
     <Compile Include="Entidades\clsProyectoAlquiler.cs" />
@@ -128,13 +118,10 @@
     <Compile Include="Entidades\clsRemision.cs" />
     <Compile Include="Entidades\clsRepDevolucionServicio.cs" />
     <Compile Include="Entidades\clsReposicion.cs" />
-    <Compile Include="Entidades\clsRol.cs" />
     <Compile Include="Entidades\clsTipoDocumento.cs" />
     <Compile Include="Entidades\clsUnidadMedida.cs" />
-    <Compile Include="Entidades\clsUsuario.cs" />
     <Compile Include="Entidades\clsVenta.cs" />
     <Compile Include="Fabricas\clsFabricaAgente.cs" />
-    <Compile Include="Fabricas\clsFabricaAuditoria.cs" />
     <Compile Include="Fabricas\clsFabricaBodega.cs" />
     <Compile Include="Fabricas\clsFabricaCiudad.cs" />
     <Compile Include="Fabricas\clsFabricaCliente.cs" />
@@ -157,7 +144,6 @@
     <Compile Include="Fabricas\clsFabricaDevolucionServicio.cs" />
     <Compile Include="Fabricas\clsFabricaDocumento.cs" />
     <Compile Include="Fabricas\clsFabricaElemento.cs" />
-    <Compile Include="Fabricas\clsFabricaEventoAuditoria.cs" />
     <Compile Include="Fabricas\clsFabricaFactura.cs" />
     <Compile Include="Fabricas\clsFabricaGrupoElemento.cs" />
     <Compile Include="Fabricas\clsFabricaListaPrecio.cs" />
@@ -166,8 +152,6 @@
     <Compile Include="Fabricas\clsFabricaOrdenServicio.cs" />
     <Compile Include="Fabricas\clsFabricaParametro.cs" />
     <Compile Include="Fabricas\clsFabricaParametroSistema.cs" />
-    <Compile Include="Fabricas\clsFabricaPrivilegio.cs" />
-    <Compile Include="Fabricas\clsFabricaPrivilegioRol.cs" />
     <Compile Include="Fabricas\clsFabricaProveedor.cs" />
     <Compile Include="Fabricas\clsFabricaProyecto.cs" />
     <Compile Include="Fabricas\clsFabricaProyectoAlquiler.cs" />
@@ -175,12 +159,51 @@
     <Compile Include="Fabricas\clsFabricaRemision.cs" />
     <Compile Include="Fabricas\clsFabricaRepDevolucionServicio.cs" />
     <Compile Include="Fabricas\clsFabricaReposicion.cs" />
-    <Compile Include="Fabricas\clsFabricaRol.cs" />
     <Compile Include="Fabricas\clsFabricaTipoDocumento.cs" />
     <Compile Include="Fabricas\clsFabricaUnidadMedida.cs" />
-    <Compile Include="Fabricas\clsFabricaUsuario.cs" />
     <Compile Include="Fabricas\clsFabricaVenta.cs" />
-    <Compile Include="Fachada\clsFachadaSAF.cs" />
+    <Compile Include="Fachada\clsFachada.cs" />
+    <Compile Include="Fachada\clsFachadaAgente.cs" />
+    <Compile Include="Fachada\clsFachadaBodega.cs" />
+    <Compile Include="Fachada\clsFachadaCiudad.cs" />
+    <Compile Include="Fachada\clsFachadaCliente.cs" />
+    <Compile Include="Fachada\clsFachadaConductor.cs" />
+    <Compile Include="Fachada\clsFachadaContrato.cs" />
+    <Compile Include="Fachada\clsFachadaCorte.cs" />
+    <Compile Include="Fachada\clsFachadaDetalleCorte.cs" />
+    <Compile Include="Fachada\clsFachadaDetalleDevolucion.cs" />
+    <Compile Include="Fachada\clsFachadaDetalleDevolucionServicio.cs" />
+    <Compile Include="Fachada\clsFachadaDetalleDocumento.cs" />
+    <Compile Include="Fachada\clsFachadaDetalleFactura.cs" />
+    <Compile Include="Fachada\clsFachadaDetalleListaPrecio.cs" />
+    <Compile Include="Fachada\clsFachadaDetalleMantenimiento.cs" />
+    <Compile Include="Fachada\clsFachadaDetalleOrdenServicio.cs" />
+    <Compile Include="Fachada\clsFachadaDetalleRemision.cs" />
+    <Compile Include="Fachada\clsFachadaDetalleRepDevolucionServicio.cs" />
+    <Compile Include="Fachada\clsFachadaDetalleReposicion.cs" />
+    <Compile Include="Fachada\clsFachadaDetalleVenta.cs" />
+    <Compile Include="Fachada\clsFachadaDevolucion.cs" />
+    <Compile Include="Fachada\clsFachadaDevolucionServicio.cs" />
+    <Compile Include="Fachada\clsFachadaDocumento.cs" />
+    <Compile Include="Fachada\clsFachadaElemento.cs" />
+    <Compile Include="Fachada\clsFachadaFactura.cs" />
+    <Compile Include="Fachada\clsFachadaGrupoElemento.cs" />
+    <Compile Include="Fachada\clsFachadaListaPrecio.cs" />
+    <Compile Include="Fachada\clsFachadaMantenimiento.cs" />
+    <Compile Include="Fachada\clsFachadaMovimientoBodega.cs" />
+    <Compile Include="Fachada\clsFachadaOrdenServicio.cs" />
+    <Compile Include="Fachada\clsFachadaParametro.cs" />
+    <Compile Include="Fachada\clsFachadaParametroSistema.cs" />
+    <Compile Include="Fachada\clsFachadaProveedor.cs" />
+    <Compile Include="Fachada\clsFachadaProyecto.cs" />
+    <Compile Include="Fachada\clsFachadaProyectoAlquiler.cs" />
+    <Compile Include="Fachada\clsFachadaProyectoVenta.cs" />
+    <Compile Include="Fachada\clsFachadaRemision.cs" />
+    <Compile Include="Fachada\clsFachadaRepDevolucionServicio.cs" />
+    <Compile Include="Fachada\clsFachadaReposicion.cs" />
+    <Compile Include="Fachada\clsFachadaTipoDocumento.cs" />
+    <Compile Include="Fachada\clsFachadaUnidadMedida.cs" />
+    <Compile Include="Fachada\clsFachadaVenta.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

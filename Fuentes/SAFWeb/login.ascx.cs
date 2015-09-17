@@ -31,7 +31,7 @@ namespace SAFWeb
                 var rol = fachadaSeg.consultarEntidadRol(sql);
 
                 Session["UsuarioRol"] = rol;
-                Response.Redirect("~/sistema/Principal.aspx");
+                Response.Redirect("~/sistema/frmPrincipal.aspx");
             }
         }
     }

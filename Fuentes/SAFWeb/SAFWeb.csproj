@@ -104,9 +104,11 @@
     <Content Include="img\iconos\Eliminar.gif" />
     <Content Include="img\iconos\refrescar.gif" />
     <Content Include="js\prefixfree_login.min.js" />
+    <Content Include="Proyectos\frmProyectos.aspx" />
+    <Content Include="Sistema\frmContenidoVacio.aspx" />
     <Content Include="Sistema\frmEncabezado.aspx" />
-    <Content Include="Sistema\frmMenuIzq.aspx" />
-    <Content Include="Sistema\Principal.aspx" />
+    <Content Include="Sistema\frmMenuModulos.aspx" />
+    <Content Include="Sistema\frmPrincipal.aspx" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
@@ -138,6 +140,20 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Proyectos\frmProyectos.aspx.cs">
+      <DependentUpon>frmProyectos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Proyectos\frmProyectos.aspx.designer.cs">
+      <DependentUpon>frmProyectos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Sistema\frmContenidoVacio.aspx.cs">
+      <DependentUpon>frmContenidoVacio.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sistema\frmContenidoVacio.aspx.designer.cs">
+      <DependentUpon>frmContenidoVacio.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Sistema\frmEncabezado.aspx.cs">
       <DependentUpon>frmEncabezado.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -145,19 +161,19 @@
     <Compile Include="Sistema\frmEncabezado.aspx.designer.cs">
       <DependentUpon>frmEncabezado.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Sistema\frmMenuIzq.aspx.cs">
-      <DependentUpon>frmMenuIzq.aspx</DependentUpon>
+    <Compile Include="Sistema\frmMenuModulos.aspx.cs">
+      <DependentUpon>frmMenuModulos.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Sistema\frmMenuIzq.aspx.designer.cs">
-      <DependentUpon>frmMenuIzq.aspx</DependentUpon>
+    <Compile Include="Sistema\frmMenuModulos.aspx.designer.cs">
+      <DependentUpon>frmMenuModulos.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Sistema\Principal.aspx.cs">
-      <DependentUpon>Principal.aspx</DependentUpon>
+    <Compile Include="Sistema\frmPrincipal.aspx.cs">
+      <DependentUpon>frmPrincipal.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Sistema\Principal.aspx.designer.cs">
-      <DependentUpon>Principal.aspx</DependentUpon>
+    <Compile Include="Sistema\frmPrincipal.aspx.designer.cs">
+      <DependentUpon>frmPrincipal.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

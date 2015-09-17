@@ -9,13 +9,7 @@
 <body>
     <form id="form1" runat="server">
         <div>
-
-
             <dx:ASPxMenu ID="Menu" runat="server" Target="contenidoIzquierda">
-               <%-- <Items>
-                    <dx:MenuItem Name="Administracion" NavigateUrl="frmMenuIzq.aspx"  Text="Administración">
-                    </dx:MenuItem>
-                </Items>--%>
             </dx:ASPxMenu>
         </div>
     </form>

@@ -36,7 +36,7 @@ namespace SAFseg
 
         private string construirSelect()
         {
-            string Select = "Select bdMenu.Id,idMenuPadre,Nombre,Url,Orden,Activo From bdMenuRol ";
+            string Select = "Select bdMenu.Id,idMenuNivel1,idMenuNivel2,Nombre,Url,Orden,Imagen, Activo From bdMenuRol ";
             Select += "inner join bdMenu on bdMenuRol.idMenu = bdMenu.id";
             return Select;
         }
@@ -52,8 +52,18 @@ namespace SAFseg
             return condicion;
         }
 
-        /// 
-        /// 
+        private string OrdenSQL(SentenciaSQL sql)
+        {
+            string ordenar = "";
+            if (sql.OrdenBD.Count > 0)
+            {
+                foreach (var orden in sql.OrdenBD)
+                    ordenar += "," + orden;
+                ordenar = " Order By " + ordenar.Substring(1);
+            }
+            return ordenar;
+        }
+
         public clsMenu Consultar(SentenciaSQL sql)
         {
             DataTable datos = new DataTable();
@@ -65,21 +75,17 @@ namespace SAFseg
             return fab.CrearObjeto(datos);
         }
 
-        /// 
-        /// 
         public List<clsMenu> listConsultar(SentenciaSQL sql)
         {
             DataTable datos = new DataTable();
             clsFabricaMenu fab = new clsFabricaMenu();
 
             string SentenciaSQL = "";
-            SentenciaSQL = construirSelect() + CondicionSQL(sql);
+            SentenciaSQL = construirSelect() + CondicionSQL(sql) + OrdenSQL(sql);
             datos = EjecutorBaseDatos.obtenerConsulta(SentenciaSQL);
             return fab.CrearObjetos(datos);
         }
 
-        /// 
-        /// 
         public DataTable datatableConsultar(SentenciaSQL sql)
         {
             DataTable datos = new DataTable();
@@ -89,23 +95,18 @@ namespace SAFseg
             return datos;
         }
 
-        /// 
-        /// <param name="obj"></param>
         public int Editar(clsMenu obj)
         {
             int resultado = 0;
             return resultado;
         }
-        /// 
-        /// <param name="obj"></param>
+       
         public int Eliminar(clsMenu obj)
         {
             int resultado = 0;
             return resultado;
         }
 
-        /// 
-        /// <param name="obj"></param>
         public int Insertar(clsMenu obj)
         {
             int resultado = 0;

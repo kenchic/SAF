@@ -7,14 +7,14 @@ namespace BaseDatos
     public class SentenciaSQL
     {
         public List<FiltroBD> FiltroBD;
-        public List<string> OrdenBD;
-        public List<string> GrupoBD;
+        public List<object> OrdenBD;
+        public List<object> GrupoBD;
 
         public SentenciaSQL()
         {
             FiltroBD = new List<FiltroBD>();
-            OrdenBD = new List<string>();
-            GrupoBD = new List<string>();
+            OrdenBD = new List<object>();
+            GrupoBD = new List<object>();
         }
     }
 

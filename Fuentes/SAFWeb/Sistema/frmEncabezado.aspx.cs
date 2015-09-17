@@ -19,15 +19,13 @@ namespace SAFWeb.Sistema.Controles
 
                 SentenciaSQL sql = new SentenciaSQL();
                 sql.FiltroBD.Add(new FiltroBD(clsMenuRol.Campos.idrol, rol.Id, FiltroBD.OperadorLogico.igual));
+                sql.FiltroBD.Add(new FiltroBD(clsMenu.Campos.idmenunivel1, 0, FiltroBD.OperadorLogico.igual));
+                sql.OrdenBD.Add(clsMenu.Campos.orden);
                 List<clsMenu> menu = fachadaSeg.consultarListaMenuRol(sql);
                 if (menu != null)
                 {
-                    //Menu.Items.Clear();
                     foreach (var item in menu)
-                    {
                         Menu.Items.Add(item.Nombre, "ID" + item.Id, "", item.Url);
-
-                    }
                 }
             }
         }
