@@ -40,22 +40,22 @@ namespace BaseDatos
         {
             get
             {
-                object ValorFiltro = "";
-                switch (Valor.GetType().ToString())
-                {
-                    case "System.Int32":
-                        ValorFiltro = Valor;
-                        break;
-                    default:
-                        ValorFiltro = string.Format("'{0}'", Valor);
-                        break;
-                }
+                //object ValorFiltro = "";
+                //switch (Valor.GetType().ToString())
+                //{
+                //    case "System.Int32":
+                //        ValorFiltro = Valor;
+                //        break;
+                //    default:
+                //        ValorFiltro = string.Format("'{0}'", Valor);
+                //        break;
+                //}
 
                 string par = "";
                 switch (Operador)
                 {
                     case OperadorLogico.igual:
-                        par = string.Format(" AND {0} = {1}", Campo, ValorFiltro);
+                        par = string.Format(" AND {0} = @{1}", Campo, Campo);
                         break;
                 }
                 return par;

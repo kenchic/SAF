@@ -362,6 +362,7 @@ namespace BaseDatos
             }
             return m_datatable;
         }
+
         /// <summary>
         /// Ejecuta una instruccion SQL que no es de consulta sino de manipulacion de datos tales como:
         /// INSERT, UPDATE, DELETE, etc.

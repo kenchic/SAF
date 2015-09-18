@@ -45,8 +45,12 @@ namespace SAFseg
             string condicion = "";
             if (sql.FiltroBD.Count > 0)
             {
+                EjecutorBaseDatos.limpiarParametros();
                 foreach (var filtro in sql.FiltroBD)
+                {
+                    EjecutorBaseDatos.agregarParametro(filtro.Campo, filtro.Valor);
                     condicion += filtro.Filtro;
+                }
                 condicion = " Where " + condicion.Substring(4);
             }
             return condicion;
