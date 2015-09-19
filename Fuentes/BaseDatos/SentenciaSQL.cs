@@ -40,17 +40,6 @@ namespace BaseDatos
         {
             get
             {
-                //object ValorFiltro = "";
-                //switch (Valor.GetType().ToString())
-                //{
-                //    case "System.Int32":
-                //        ValorFiltro = Valor;
-                //        break;
-                //    default:
-                //        ValorFiltro = string.Format("'{0}'", Valor);
-                //        break;
-                //}
-
                 string par = "";
                 switch (Operador)
                 {

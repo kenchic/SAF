@@ -29,7 +29,7 @@ namespace SAFWeb
         {
             // Code that runs when a new session is started
             var ejecutor = new Comandos(ConfigurationManager.ConnectionStrings["SAF"].ConnectionString, "System.Data.SqlClient");
-            Session["ejecutorBDSAF"] = ejecutor;
+            Session["ejecutorBDSAFcore"] = ejecutor;
             ejecutor = new Comandos(ConfigurationManager.ConnectionStrings["SAFseg"].ConnectionString, "System.Data.SqlClient");
             Session["ejecutorBDSAFseg"] = ejecutor;
         }

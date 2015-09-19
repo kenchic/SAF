@@ -7,27 +7,18 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace SAFWeb.Proyectos {
+namespace SAFWeb.Proyectos.Controles {
     
     
-    public partial class frmProyectos {
+    public partial class ctrProyectoList {
         
         /// <summary>
-        /// form1 control.
+        /// gvDatos control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm form1;
-        
-        /// <summary>
-        /// ctrProyectoList1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::SAFWeb.Proyectos.Controles.ctrProyectoList ctrProyectoList1;
+        protected global::DevExpress.Web.ASPxGridView gvDatos;
     }
 }
