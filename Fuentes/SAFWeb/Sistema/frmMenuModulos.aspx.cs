@@ -38,7 +38,7 @@ namespace SAFWeb.Sistema
                             {
                                 index++;
                                 nbMenuModulo.Groups.Add(item.Nombre);
-                                idNivel2 = item.idMenuNivel2;
+                                idNivel2 = item.idMenuNivel2.Value;
                             }
                             else
                                 nbMenuModulo.Groups[index].Items.Add(item.Nombre, "ID" + item.Id, item.Imagen, item.Url);

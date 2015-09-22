@@ -86,6 +86,9 @@
     <Reference Include="DevExpress.Web.ASPxSpreadsheet.v14.2, Version=14.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Clientes\Controles\ctrClienteForm.ascx" />
+    <Content Include="Clientes\Controles\ctrClienteList.ascx" />
+    <Content Include="Clientes\frmClientes.aspx" />
     <Content Include="css\EstilosLogin.css" />
     <Content Include="css\EstilosApp.css" />
     <Content Include="Default.aspx" />
@@ -124,6 +127,27 @@
   <ItemGroup>
     <Compile Include="clases\Mensaje.cs" />
     <Compile Include="clases\Utilidad.cs" />
+    <Compile Include="Clientes\Controles\ctrClienteForm.ascx.cs">
+      <DependentUpon>ctrClienteForm.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Clientes\Controles\ctrClienteForm.ascx.designer.cs">
+      <DependentUpon>ctrClienteForm.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Clientes\Controles\ctrClienteList.ascx.cs">
+      <DependentUpon>ctrClienteList.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Clientes\Controles\ctrClienteList.ascx.designer.cs">
+      <DependentUpon>ctrClienteList.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Clientes\frmClientes.aspx.cs">
+      <DependentUpon>frmClientes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Clientes\frmClientes.aspx.designer.cs">
+      <DependentUpon>frmClientes.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
