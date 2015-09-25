@@ -365,7 +365,7 @@ namespace BaseDatos
 
         /// <summary>
         /// Ejecuta una instruccion SQL que no es de consulta sino de manipulacion de datos tales como:
-        /// INSERT, UPDATE, DELETE, etc.
+        /// UPDATE, DELETE, etc.
         /// </summary>
         /// <param name="sentenciaSQL">Intruccion SQL que se va a ejecutar</param>
         /// <returns>Numero de filas afectadas por la ejecucion de la instruccion</returns>
@@ -378,6 +378,34 @@ namespace BaseDatos
             try
             {
                 filasafectadas = m_comando.ExecuteNonQuery();
+            }
+            catch (DbException ex)
+            {
+                filasafectadas = -1;
+                m_ultimoerror = obtenerError(ex);
+            }
+            finally
+            {
+                base.Cerrar();
+            }
+            return filasafectadas;
+        }
+
+        /// <summary>
+        /// Ejecuta una instruccion SQL que no es de consulta sino de manipulacion de datos tales como:
+        /// INSERT etc.
+        /// </summary>
+        /// <param name="sentenciaSQL">Intruccion SQL que se va a ejecutar</param>
+        /// <returns>Numero de filas afectadas por la ejecucion de la instruccion</returns>
+        public int ejecutarSentenciaInsert(string sentenciaSQL)
+        {
+            int filasafectadas;
+            m_comando.CommandText = sentenciaSQL + " SELECT SCOPE_IDENTITY()";
+            m_comando.CommandType = CommandType.Text;
+            base.Abrir();
+            try
+            {
+                filasafectadas = Convert.ToInt32(m_comando.ExecuteScalar());
             }
             catch (DbException ex)
             {

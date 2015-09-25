@@ -15,9 +15,9 @@ namespace SAFWeb.Sistema
         {
             if (!IsPostBack)
             {
-                if (Request.QueryString["ModuloID"] != null)
+                if (Request["ModuloID"] != null)
                 {
-                    var idModulo = Request.QueryString["ModuloID"];
+                    var idModulo = Request["ModuloID"];
                     var ejecutor = (Comandos)Session["ejecutorBDSAFseg"];
                     var fachadaSeg = new clsFachadaSAFSegAdicional(ref ejecutor);
                     var rol = (clsRol)Session["UsuarioRol"];

@@ -86,9 +86,11 @@
     <Reference Include="DevExpress.Web.ASPxSpreadsheet.v14.2, Version=14.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Clientes\Controles\ctrClienteForm.ascx" />
-    <Content Include="Clientes\Controles\ctrClienteList.ascx" />
-    <Content Include="Clientes\frmClientes.aspx" />
+    <Content Include="SAFcore\Controles\ctrCiudadForm.ascx" />
+    <Content Include="SAFcore\Controles\ctrClienteForm.ascx" />
+    <Content Include="SAFcore\Controles\ctrClienteList.ascx" />
+    <Content Include="SAFcore\frmCiudadForm.aspx" />
+    <Content Include="SAFcore\frmClientes.aspx" />
     <Content Include="css\EstilosLogin.css" />
     <Content Include="css\EstilosApp.css" />
     <Content Include="Default.aspx" />
@@ -107,9 +109,10 @@
     <Content Include="img\iconos\Eliminar.gif" />
     <Content Include="img\iconos\refrescar.gif" />
     <Content Include="js\prefixfree_login.min.js" />
-    <Content Include="Proyectos\Controles\ctrProyectoForm.ascx" />
-    <Content Include="Proyectos\Controles\ctrProyectoList.ascx" />
-    <Content Include="Proyectos\frmProyectos.aspx" />
+    <Content Include="SAFcore\Controles\ctrProyectoForm.ascx" />
+    <Content Include="SAFcore\Controles\ctrProyectoList.ascx" />
+    <Content Include="SAFcore\frmProyectoForm.aspx" />
+    <Content Include="SAFcore\frmProyectoList.aspx" />
     <Content Include="Sistema\frmContenidoVacio.aspx" />
     <Content Include="Sistema\frmEncabezado.aspx" />
     <Content Include="Sistema\frmMenuModulos.aspx" />
@@ -127,25 +130,39 @@
   <ItemGroup>
     <Compile Include="clases\Mensaje.cs" />
     <Compile Include="clases\Utilidad.cs" />
-    <Compile Include="Clientes\Controles\ctrClienteForm.ascx.cs">
+    <Compile Include="SAFcore\Controles\ctrCiudadForm.ascx.cs">
+      <DependentUpon>ctrCiudadForm.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SAFcore\Controles\ctrCiudadForm.ascx.designer.cs">
+      <DependentUpon>ctrCiudadForm.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="SAFcore\Controles\ctrClienteForm.ascx.cs">
       <DependentUpon>ctrClienteForm.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Clientes\Controles\ctrClienteForm.ascx.designer.cs">
+    <Compile Include="SAFcore\Controles\ctrClienteForm.ascx.designer.cs">
       <DependentUpon>ctrClienteForm.ascx</DependentUpon>
     </Compile>
-    <Compile Include="Clientes\Controles\ctrClienteList.ascx.cs">
+    <Compile Include="SAFcore\Controles\ctrClienteList.ascx.cs">
       <DependentUpon>ctrClienteList.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Clientes\Controles\ctrClienteList.ascx.designer.cs">
+    <Compile Include="SAFcore\Controles\ctrClienteList.ascx.designer.cs">
       <DependentUpon>ctrClienteList.ascx</DependentUpon>
     </Compile>
-    <Compile Include="Clientes\frmClientes.aspx.cs">
+    <Compile Include="SAFcore\frmCiudadForm.aspx.cs">
+      <DependentUpon>frmCiudadForm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SAFcore\frmCiudadForm.aspx.designer.cs">
+      <DependentUpon>frmCiudadForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SAFcore\frmClientes.aspx.cs">
       <DependentUpon>frmClientes.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Clientes\frmClientes.aspx.designer.cs">
+    <Compile Include="SAFcore\frmClientes.aspx.designer.cs">
       <DependentUpon>frmClientes.aspx</DependentUpon>
     </Compile>
     <Compile Include="Default.aspx.cs">
@@ -166,26 +183,33 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Proyectos\Controles\ctrProyectoForm.ascx.cs">
+    <Compile Include="SAFcore\Controles\ctrProyectoForm.ascx.cs">
       <DependentUpon>ctrProyectoForm.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Proyectos\Controles\ctrProyectoForm.ascx.designer.cs">
+    <Compile Include="SAFcore\Controles\ctrProyectoForm.ascx.designer.cs">
       <DependentUpon>ctrProyectoForm.ascx</DependentUpon>
     </Compile>
-    <Compile Include="Proyectos\Controles\ctrProyectoList.ascx.cs">
+    <Compile Include="SAFcore\Controles\ctrProyectoList.ascx.cs">
       <DependentUpon>ctrProyectoList.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Proyectos\Controles\ctrProyectoList.ascx.designer.cs">
+    <Compile Include="SAFcore\Controles\ctrProyectoList.ascx.designer.cs">
       <DependentUpon>ctrProyectoList.ascx</DependentUpon>
     </Compile>
-    <Compile Include="Proyectos\frmProyectos.aspx.cs">
-      <DependentUpon>frmProyectos.aspx</DependentUpon>
+    <Compile Include="SAFcore\frmProyectoForm.aspx.cs">
+      <DependentUpon>frmProyectoForm.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Proyectos\frmProyectos.aspx.designer.cs">
-      <DependentUpon>frmProyectos.aspx</DependentUpon>
+    <Compile Include="SAFcore\frmProyectoForm.aspx.designer.cs">
+      <DependentUpon>frmProyectoForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SAFcore\frmProyectoList.aspx.cs">
+      <DependentUpon>frmProyectoList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SAFcore\frmProyectoList.aspx.designer.cs">
+      <DependentUpon>frmProyectoList.aspx</DependentUpon>
     </Compile>
     <Compile Include="Sistema\frmContenidoVacio.aspx.cs">
       <DependentUpon>frmContenidoVacio.aspx</DependentUpon>
@@ -218,6 +242,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="SAFseg\" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Properties\licenses.licx" />
