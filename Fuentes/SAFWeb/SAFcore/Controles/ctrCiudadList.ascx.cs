@@ -5,9 +5,9 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace SAFWeb.Clientes
+namespace SAFWeb.SAFcore.Controles
 {
-    public partial class frmClientes : System.Web.UI.Page
+    public partial class ctrCiudadList : System.Web.UI.UserControl
     {
         protected void Page_Load(object sender, EventArgs e)
         {

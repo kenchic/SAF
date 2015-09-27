@@ -87,10 +87,10 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="SAFcore\Controles\ctrCiudadForm.ascx" />
+    <Content Include="SAFcore\Controles\ctrCiudadList.ascx" />
     <Content Include="SAFcore\Controles\ctrClienteForm.ascx" />
     <Content Include="SAFcore\Controles\ctrClienteList.ascx" />
     <Content Include="SAFcore\frmCiudadForm.aspx" />
-    <Content Include="SAFcore\frmClientes.aspx" />
     <Content Include="css\EstilosLogin.css" />
     <Content Include="css\EstilosApp.css" />
     <Content Include="Default.aspx" />
@@ -137,6 +137,13 @@
     <Compile Include="SAFcore\Controles\ctrCiudadForm.ascx.designer.cs">
       <DependentUpon>ctrCiudadForm.ascx</DependentUpon>
     </Compile>
+    <Compile Include="SAFcore\Controles\ctrCiudadList.ascx.cs">
+      <DependentUpon>ctrCiudadList.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SAFcore\Controles\ctrCiudadList.ascx.designer.cs">
+      <DependentUpon>ctrCiudadList.ascx</DependentUpon>
+    </Compile>
     <Compile Include="SAFcore\Controles\ctrClienteForm.ascx.cs">
       <DependentUpon>ctrClienteForm.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -157,13 +164,6 @@
     </Compile>
     <Compile Include="SAFcore\frmCiudadForm.aspx.designer.cs">
       <DependentUpon>frmCiudadForm.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="SAFcore\frmClientes.aspx.cs">
-      <DependentUpon>frmClientes.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="SAFcore\frmClientes.aspx.designer.cs">
-      <DependentUpon>frmClientes.aspx</DependentUpon>
     </Compile>
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
