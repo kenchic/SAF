@@ -3,12 +3,18 @@
     <dx:ASPxGridView ID="gvDatos" runat="server" AutoGenerateColumns="False" OnDataBinding="gvDatos_DataBinding" Width="100%"  Border-BorderStyle="None"
          KeyFieldName="Id" >
         <Columns>
-            <dx:GridViewDataTextColumn Name="NombreCliente" Caption="Cliente " VisibleIndex="0">
+            <dx:GridViewDataTextColumn FieldName="Id" Caption="Id Ciudad" VisibleIndex="0" Visible="false">
             </dx:GridViewDataTextColumn>
-            <dx:GridViewDataTextColumn Name="NombreCiudad" Caption="Ciudad" VisibleIndex="1">
+            <dx:GridViewDataTextColumn FieldName="Nombre" Caption="Nombre" VisibleIndex="1">
             </dx:GridViewDataTextColumn>
-            <dx:GridViewDataTextColumn Name="Nombre" Caption="Nombre" VisibleIndex="2">
+            <dx:GridViewDataTextColumn FieldName="Activo" Caption="Activo" VisibleIndex="2">
             </dx:GridViewDataTextColumn>
+            <dx:GridViewDataHyperLinkColumn Caption="Editar" VisibleIndex="3">
+                <PropertiesHyperLinkEdit NavigateUrlFormatString"ver">
+                </PropertiesHyperLinkEdit>
+            </dx:GridViewDataHyperLinkColumn>
         </Columns>
+
+<Border BorderStyle="None"></Border>
     </dx:ASPxGridView>
 </div>
