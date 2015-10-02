@@ -1,5 +1,5 @@
 ﻿
-body > div{
+body > div {
     -moz-border-radius: 10px;
     -webkit-border-radius: 10px;
     border-radius: 10px;
@@ -9,19 +9,33 @@ body > div{
     font-family: Segoe UI;
 }
 
-.grillasForm{
-    margin-left: -8px; 
-    margin-right: -8px;    
+.grillasForm {
+    margin-left: -8px;
+    margin-right: -8px;
 }
 
-.layoutForm{
-        
+.botonesList {
+    background-color: gray;
+    width: 100%;
+    margin-left: -8px;
+    margin-right: -8px;
 }
 
-.TextBox{
-    width: 300px
+.layoutForm {
 }
 
-.ComboBox{
-    width: 300px
+.TextBox {
+    width: 300px;
+}
+
+.ComboBox {
+    width: 300px;
+}
+
+.tablaFilaEnc {
+    height: 5px;
+}
+
+.tablaFilaPie {
+    height: 5px;
 }

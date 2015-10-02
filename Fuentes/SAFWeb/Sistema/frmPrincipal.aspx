@@ -31,7 +31,7 @@
                         </Separator>
                         <Panes>
                             <%--IZQUIERDA--%>
-                            <dx:SplitterPane Size="300px" Name="contenidoIzquierda" ShowCollapseBackwardButton="True" ContentUrlIFrameName="contenidoIzquierda" ContentUrl="frmContenidoVacio.aspx">
+                            <dx:SplitterPane Size="200px" Name="contenidoIzquierda" ShowCollapseBackwardButton="True" ContentUrlIFrameName="contenidoIzquierda" ContentUrl="frmContenidoVacio.aspx">
                                 <PaneStyle>
                                     <Border BorderStyle="None" />
                                 </PaneStyle>

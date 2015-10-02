@@ -26,6 +26,7 @@ namespace SAFWeb.Sistema
                     sql.FiltroBD.Add(new FiltroBD(clsMenuRol.Campos.idrol, rol.Id, FiltroBD.OperadorLogico.igual));
                     sql.FiltroBD.Add(new FiltroBD(clsMenu.Campos.idmenunivel1, idModulo, FiltroBD.OperadorLogico.igual));
                     sql.OrdenBD.Add(clsMenu.Campos.orden);
+                    
                     List<clsMenu> menu = fachadaSeg.consultarListaMenuRol(sql);
 
                     if (menu != null)

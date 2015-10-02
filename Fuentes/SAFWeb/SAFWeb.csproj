@@ -88,8 +88,12 @@
   <ItemGroup>
     <Content Include="SAFcore\Controles\ctrCiudadForm.ascx" />
     <Content Include="SAFcore\Controles\ctrCiudadList.ascx" />
-    <Content Include="SAFcore\Controles\ctrClienteForm.ascx" />
-    <Content Include="SAFcore\Controles\ctrClienteList.ascx" />
+    <Content Include="SAFcore\Controles\ctrElementoForm.ascx" />
+    <Content Include="SAFcore\Controles\ctrElementoList.ascx" />
+    <Content Include="SAFcore\Controles\ctrGrupoElementoForm.ascx" />
+    <Content Include="SAFcore\Controles\ctrGrupoElementoList.ascx" />
+    <Content Include="SAFcore\Controles\ctrUnidadMedidaForm.ascx" />
+    <Content Include="SAFcore\Controles\ctrUnidadMedidaList.ascx" />
     <Content Include="SAFcore\frmCiudadForm.aspx" />
     <Content Include="css\EstilosLogin.css" />
     <Content Include="css\EstilosApp.css" />
@@ -109,10 +113,13 @@
     <Content Include="img\iconos\Eliminar.gif" />
     <Content Include="img\iconos\refrescar.gif" />
     <Content Include="js\prefixfree_login.min.js" />
-    <Content Include="SAFcore\Controles\ctrProyectoForm.ascx" />
-    <Content Include="SAFcore\Controles\ctrProyectoList.ascx" />
-    <Content Include="SAFcore\frmProyectoForm.aspx" />
-    <Content Include="SAFcore\frmProyectoList.aspx" />
+    <Content Include="SAFcore\frmCiudadList.aspx" />
+    <Content Include="SAFcore\frmElementoForm.aspx" />
+    <Content Include="SAFcore\frmElementoList.aspx" />
+    <Content Include="SAFcore\frmGrupoElementoForm.aspx" />
+    <Content Include="SAFcore\frmGrupoElementoList.aspx" />
+    <Content Include="SAFcore\frmUnidadMedidaForm.aspx" />
+    <Content Include="SAFcore\frmUnidadMedidaList.aspx" />
     <Content Include="Sistema\frmContenidoVacio.aspx" />
     <Content Include="Sistema\frmEncabezado.aspx" />
     <Content Include="Sistema\frmMenuModulos.aspx" />
@@ -144,19 +151,47 @@
     <Compile Include="SAFcore\Controles\ctrCiudadList.ascx.designer.cs">
       <DependentUpon>ctrCiudadList.ascx</DependentUpon>
     </Compile>
-    <Compile Include="SAFcore\Controles\ctrClienteForm.ascx.cs">
-      <DependentUpon>ctrClienteForm.ascx</DependentUpon>
+    <Compile Include="SAFcore\Controles\ctrElementoForm.ascx.cs">
+      <DependentUpon>ctrElementoForm.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="SAFcore\Controles\ctrClienteForm.ascx.designer.cs">
-      <DependentUpon>ctrClienteForm.ascx</DependentUpon>
+    <Compile Include="SAFcore\Controles\ctrElementoForm.ascx.designer.cs">
+      <DependentUpon>ctrElementoForm.ascx</DependentUpon>
     </Compile>
-    <Compile Include="SAFcore\Controles\ctrClienteList.ascx.cs">
-      <DependentUpon>ctrClienteList.ascx</DependentUpon>
+    <Compile Include="SAFcore\Controles\ctrElementoList.ascx.cs">
+      <DependentUpon>ctrElementoList.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="SAFcore\Controles\ctrClienteList.ascx.designer.cs">
-      <DependentUpon>ctrClienteList.ascx</DependentUpon>
+    <Compile Include="SAFcore\Controles\ctrElementoList.ascx.designer.cs">
+      <DependentUpon>ctrElementoList.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="SAFcore\Controles\ctrGrupoElementoForm.ascx.cs">
+      <DependentUpon>ctrGrupoElementoForm.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SAFcore\Controles\ctrGrupoElementoForm.ascx.designer.cs">
+      <DependentUpon>ctrGrupoElementoForm.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="SAFcore\Controles\ctrGrupoElementoList.ascx.cs">
+      <DependentUpon>ctrGrupoElementoList.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SAFcore\Controles\ctrGrupoElementoList.ascx.designer.cs">
+      <DependentUpon>ctrGrupoElementoList.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="SAFcore\Controles\ctrUnidadMedidaForm.ascx.cs">
+      <DependentUpon>ctrUnidadMedidaForm.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SAFcore\Controles\ctrUnidadMedidaForm.ascx.designer.cs">
+      <DependentUpon>ctrUnidadMedidaForm.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="SAFcore\Controles\ctrUnidadMedidaList.ascx.cs">
+      <DependentUpon>ctrUnidadMedidaList.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SAFcore\Controles\ctrUnidadMedidaList.ascx.designer.cs">
+      <DependentUpon>ctrUnidadMedidaList.ascx</DependentUpon>
     </Compile>
     <Compile Include="SAFcore\frmCiudadForm.aspx.cs">
       <DependentUpon>frmCiudadForm.aspx</DependentUpon>
@@ -183,33 +218,54 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SAFcore\Controles\ctrProyectoForm.ascx.cs">
-      <DependentUpon>ctrProyectoForm.ascx</DependentUpon>
+    <Compile Include="SAFcore\frmCiudadList.aspx.cs">
+      <DependentUpon>frmCiudadList.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="SAFcore\Controles\ctrProyectoForm.ascx.designer.cs">
-      <DependentUpon>ctrProyectoForm.ascx</DependentUpon>
+    <Compile Include="SAFcore\frmCiudadList.aspx.designer.cs">
+      <DependentUpon>frmCiudadList.aspx</DependentUpon>
     </Compile>
-    <Compile Include="SAFcore\Controles\ctrProyectoList.ascx.cs">
-      <DependentUpon>ctrProyectoList.ascx</DependentUpon>
+    <Compile Include="SAFcore\frmElementoForm.aspx.cs">
+      <DependentUpon>frmElementoForm.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="SAFcore\Controles\ctrProyectoList.ascx.designer.cs">
-      <DependentUpon>ctrProyectoList.ascx</DependentUpon>
+    <Compile Include="SAFcore\frmElementoForm.aspx.designer.cs">
+      <DependentUpon>frmElementoForm.aspx</DependentUpon>
     </Compile>
-    <Compile Include="SAFcore\frmProyectoForm.aspx.cs">
-      <DependentUpon>frmProyectoForm.aspx</DependentUpon>
+    <Compile Include="SAFcore\frmElementoList.aspx.cs">
+      <DependentUpon>frmElementoList.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="SAFcore\frmProyectoForm.aspx.designer.cs">
-      <DependentUpon>frmProyectoForm.aspx</DependentUpon>
+    <Compile Include="SAFcore\frmElementoList.aspx.designer.cs">
+      <DependentUpon>frmElementoList.aspx</DependentUpon>
     </Compile>
-    <Compile Include="SAFcore\frmProyectoList.aspx.cs">
-      <DependentUpon>frmProyectoList.aspx</DependentUpon>
+    <Compile Include="SAFcore\frmGrupoElementoForm.aspx.cs">
+      <DependentUpon>frmGrupoElementoForm.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="SAFcore\frmProyectoList.aspx.designer.cs">
-      <DependentUpon>frmProyectoList.aspx</DependentUpon>
+    <Compile Include="SAFcore\frmGrupoElementoForm.aspx.designer.cs">
+      <DependentUpon>frmGrupoElementoForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SAFcore\frmGrupoElementoList.aspx.cs">
+      <DependentUpon>frmGrupoElementoList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SAFcore\frmGrupoElementoList.aspx.designer.cs">
+      <DependentUpon>frmGrupoElementoList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SAFcore\frmUnidadMedidaForm.aspx.cs">
+      <DependentUpon>frmUnidadMedidaForm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SAFcore\frmUnidadMedidaForm.aspx.designer.cs">
+      <DependentUpon>frmUnidadMedidaForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SAFcore\frmUnidadMedidaList.aspx.cs">
+      <DependentUpon>frmUnidadMedidaList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SAFcore\frmUnidadMedidaList.aspx.designer.cs">
+      <DependentUpon>frmUnidadMedidaList.aspx</DependentUpon>
     </Compile>
     <Compile Include="Sistema\frmContenidoVacio.aspx.cs">
       <DependentUpon>frmContenidoVacio.aspx</DependentUpon>
