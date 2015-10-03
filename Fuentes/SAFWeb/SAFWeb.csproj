@@ -86,6 +86,8 @@
     <Reference Include="DevExpress.Web.ASPxSpreadsheet.v14.2, Version=14.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="SAFcore\Controles\ctrBodegaForm.ascx" />
+    <Content Include="SAFcore\Controles\ctrBodegaList.ascx" />
     <Content Include="SAFcore\Controles\ctrCiudadForm.ascx" />
     <Content Include="SAFcore\Controles\ctrCiudadList.ascx" />
     <Content Include="SAFcore\Controles\ctrElementoForm.ascx" />
@@ -94,6 +96,8 @@
     <Content Include="SAFcore\Controles\ctrGrupoElementoList.ascx" />
     <Content Include="SAFcore\Controles\ctrUnidadMedidaForm.ascx" />
     <Content Include="SAFcore\Controles\ctrUnidadMedidaList.ascx" />
+    <Content Include="SAFcore\frmBodegaForm.aspx" />
+    <Content Include="SAFcore\frmBodegaList.aspx" />
     <Content Include="SAFcore\frmCiudadForm.aspx" />
     <Content Include="css\EstilosLogin.css" />
     <Content Include="css\EstilosApp.css" />
@@ -137,6 +141,20 @@
   <ItemGroup>
     <Compile Include="clases\Mensaje.cs" />
     <Compile Include="clases\Utilidad.cs" />
+    <Compile Include="SAFcore\Controles\ctrBodegaForm.ascx.cs">
+      <DependentUpon>ctrBodegaForm.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SAFcore\Controles\ctrBodegaForm.ascx.designer.cs">
+      <DependentUpon>ctrBodegaForm.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="SAFcore\Controles\ctrBodegaList.ascx.cs">
+      <DependentUpon>ctrBodegaList.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SAFcore\Controles\ctrBodegaList.ascx.designer.cs">
+      <DependentUpon>ctrBodegaList.ascx</DependentUpon>
+    </Compile>
     <Compile Include="SAFcore\Controles\ctrCiudadForm.ascx.cs">
       <DependentUpon>ctrCiudadForm.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -192,6 +210,20 @@
     </Compile>
     <Compile Include="SAFcore\Controles\ctrUnidadMedidaList.ascx.designer.cs">
       <DependentUpon>ctrUnidadMedidaList.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="SAFcore\frmBodegaForm.aspx.cs">
+      <DependentUpon>frmBodegaForm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SAFcore\frmBodegaForm.aspx.designer.cs">
+      <DependentUpon>frmBodegaForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SAFcore\frmBodegaList.aspx.cs">
+      <DependentUpon>frmBodegaList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SAFcore\frmBodegaList.aspx.designer.cs">
+      <DependentUpon>frmBodegaList.aspx</DependentUpon>
     </Compile>
     <Compile Include="SAFcore\frmCiudadForm.aspx.cs">
       <DependentUpon>frmCiudadForm.aspx</DependentUpon>
