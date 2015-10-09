@@ -90,10 +90,15 @@
     <Content Include="SAFcore\Controles\ctrBodegaList.ascx" />
     <Content Include="SAFcore\Controles\ctrCiudadForm.ascx" />
     <Content Include="SAFcore\Controles\ctrCiudadList.ascx" />
+    <Content Include="SAFcore\Controles\ctrDetalleDocumentoList.ascx" />
+    <Content Include="SAFcore\Controles\ctrDocumentoForm.ascx" />
+    <Content Include="SAFcore\Controles\ctrDocumentoList.ascx" />
     <Content Include="SAFcore\Controles\ctrElementoForm.ascx" />
     <Content Include="SAFcore\Controles\ctrElementoList.ascx" />
     <Content Include="SAFcore\Controles\ctrGrupoElementoForm.ascx" />
     <Content Include="SAFcore\Controles\ctrGrupoElementoList.ascx" />
+    <Content Include="SAFcore\Controles\ctrTipoDocumentoForm.ascx" />
+    <Content Include="SAFcore\Controles\ctrTipoDocumentoList.ascx" />
     <Content Include="SAFcore\Controles\ctrUnidadMedidaForm.ascx" />
     <Content Include="SAFcore\Controles\ctrUnidadMedidaList.ascx" />
     <Content Include="SAFcore\frmBodegaForm.aspx" />
@@ -118,10 +123,14 @@
     <Content Include="img\iconos\refrescar.gif" />
     <Content Include="js\prefixfree_login.min.js" />
     <Content Include="SAFcore\frmCiudadList.aspx" />
+    <Content Include="SAFcore\frmDocumentoForm.aspx" />
+    <Content Include="SAFcore\frmDocumentoList.aspx" />
     <Content Include="SAFcore\frmElementoForm.aspx" />
     <Content Include="SAFcore\frmElementoList.aspx" />
     <Content Include="SAFcore\frmGrupoElementoForm.aspx" />
     <Content Include="SAFcore\frmGrupoElementoList.aspx" />
+    <Content Include="SAFcore\frmTipoDocumentoForm.aspx" />
+    <Content Include="SAFcore\frmTipoDocumentoList.aspx" />
     <Content Include="SAFcore\frmUnidadMedidaForm.aspx" />
     <Content Include="SAFcore\frmUnidadMedidaList.aspx" />
     <Content Include="Sistema\frmContenidoVacio.aspx" />
@@ -169,6 +178,27 @@
     <Compile Include="SAFcore\Controles\ctrCiudadList.ascx.designer.cs">
       <DependentUpon>ctrCiudadList.ascx</DependentUpon>
     </Compile>
+    <Compile Include="SAFcore\Controles\ctrDetalleDocumentoList.ascx.cs">
+      <DependentUpon>ctrDetalleDocumentoList.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SAFcore\Controles\ctrDetalleDocumentoList.ascx.designer.cs">
+      <DependentUpon>ctrDetalleDocumentoList.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="SAFcore\Controles\ctrDocumentoForm.ascx.cs">
+      <DependentUpon>ctrDocumentoForm.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SAFcore\Controles\ctrDocumentoForm.ascx.designer.cs">
+      <DependentUpon>ctrDocumentoForm.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="SAFcore\Controles\ctrDocumentoList.ascx.cs">
+      <DependentUpon>ctrDocumentoList.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SAFcore\Controles\ctrDocumentoList.ascx.designer.cs">
+      <DependentUpon>ctrDocumentoList.ascx</DependentUpon>
+    </Compile>
     <Compile Include="SAFcore\Controles\ctrElementoForm.ascx.cs">
       <DependentUpon>ctrElementoForm.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -196,6 +226,20 @@
     </Compile>
     <Compile Include="SAFcore\Controles\ctrGrupoElementoList.ascx.designer.cs">
       <DependentUpon>ctrGrupoElementoList.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="SAFcore\Controles\ctrTipoDocumentoForm.ascx.cs">
+      <DependentUpon>ctrTipoDocumentoForm.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SAFcore\Controles\ctrTipoDocumentoForm.ascx.designer.cs">
+      <DependentUpon>ctrTipoDocumentoForm.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="SAFcore\Controles\ctrTipoDocumentoList.ascx.cs">
+      <DependentUpon>ctrTipoDocumentoList.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SAFcore\Controles\ctrTipoDocumentoList.ascx.designer.cs">
+      <DependentUpon>ctrTipoDocumentoList.ascx</DependentUpon>
     </Compile>
     <Compile Include="SAFcore\Controles\ctrUnidadMedidaForm.ascx.cs">
       <DependentUpon>ctrUnidadMedidaForm.ascx</DependentUpon>
@@ -257,6 +301,20 @@
     <Compile Include="SAFcore\frmCiudadList.aspx.designer.cs">
       <DependentUpon>frmCiudadList.aspx</DependentUpon>
     </Compile>
+    <Compile Include="SAFcore\frmDocumentoForm.aspx.cs">
+      <DependentUpon>frmDocumentoForm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SAFcore\frmDocumentoForm.aspx.designer.cs">
+      <DependentUpon>frmDocumentoForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SAFcore\frmDocumentoList.aspx.cs">
+      <DependentUpon>frmDocumentoList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SAFcore\frmDocumentoList.aspx.designer.cs">
+      <DependentUpon>frmDocumentoList.aspx</DependentUpon>
+    </Compile>
     <Compile Include="SAFcore\frmElementoForm.aspx.cs">
       <DependentUpon>frmElementoForm.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -284,6 +342,20 @@
     </Compile>
     <Compile Include="SAFcore\frmGrupoElementoList.aspx.designer.cs">
       <DependentUpon>frmGrupoElementoList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SAFcore\frmTipoDocumentoForm.aspx.cs">
+      <DependentUpon>frmTipoDocumentoForm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SAFcore\frmTipoDocumentoForm.aspx.designer.cs">
+      <DependentUpon>frmTipoDocumentoForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SAFcore\frmTipoDocumentoList.aspx.cs">
+      <DependentUpon>frmTipoDocumentoList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SAFcore\frmTipoDocumentoList.aspx.designer.cs">
+      <DependentUpon>frmTipoDocumentoList.aspx</DependentUpon>
     </Compile>
     <Compile Include="SAFcore\frmUnidadMedidaForm.aspx.cs">
       <DependentUpon>frmUnidadMedidaForm.aspx</DependentUpon>
