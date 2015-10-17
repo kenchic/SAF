@@ -186,7 +186,6 @@
     <Compile Include="Fachada\clsFachadaDevolucion.cs" />
     <Compile Include="Fachada\clsFachadaDevolucionServicio.cs" />
     <Compile Include="Fachada\clsFachadaDocumento.cs" />
-    <Compile Include="Fachada\clsFachadaDocumentoAdicional.cs" />
     <Compile Include="Fachada\clsFachadaElemento.cs" />
     <Compile Include="Fachada\clsFachadaFactura.cs" />
     <Compile Include="Fachada\clsFachadaGrupoElemento.cs" />
