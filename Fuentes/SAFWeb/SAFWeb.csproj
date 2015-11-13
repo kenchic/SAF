@@ -90,6 +90,8 @@
     <Content Include="SAFcore\Controles\ctrBodegaList.ascx" />
     <Content Include="SAFcore\Controles\ctrCiudadForm.ascx" />
     <Content Include="SAFcore\Controles\ctrCiudadList.ascx" />
+    <Content Include="SAFcore\Controles\ctrClienteForm.ascx" />
+    <Content Include="SAFcore\Controles\ctrClienteList.ascx" />
     <Content Include="SAFcore\Controles\ctrDetalleDocumentoList.ascx" />
     <Content Include="SAFcore\Controles\ctrDocumentoForm.ascx" />
     <Content Include="SAFcore\Controles\ctrDocumentoList.ascx" />
@@ -123,6 +125,8 @@
     <Content Include="img\iconos\refrescar.gif" />
     <Content Include="js\prefixfree_login.min.js" />
     <Content Include="SAFcore\frmCiudadList.aspx" />
+    <Content Include="SAFcore\frmClienteForm.aspx" />
+    <Content Include="SAFcore\frmClienteList.aspx" />
     <Content Include="SAFcore\frmDocumentoForm.aspx" />
     <Content Include="SAFcore\frmDocumentoList.aspx" />
     <Content Include="SAFcore\frmElementoForm.aspx" />
@@ -177,6 +181,20 @@
     </Compile>
     <Compile Include="SAFcore\Controles\ctrCiudadList.ascx.designer.cs">
       <DependentUpon>ctrCiudadList.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="SAFcore\Controles\ctrClienteForm.ascx.cs">
+      <DependentUpon>ctrClienteForm.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SAFcore\Controles\ctrClienteForm.ascx.designer.cs">
+      <DependentUpon>ctrClienteForm.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="SAFcore\Controles\ctrClienteList.ascx.cs">
+      <DependentUpon>ctrClienteList.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SAFcore\Controles\ctrClienteList.ascx.designer.cs">
+      <DependentUpon>ctrClienteList.ascx</DependentUpon>
     </Compile>
     <Compile Include="SAFcore\Controles\ctrDetalleDocumentoList.ascx.cs">
       <DependentUpon>ctrDetalleDocumentoList.ascx</DependentUpon>
@@ -300,6 +318,20 @@
     </Compile>
     <Compile Include="SAFcore\frmCiudadList.aspx.designer.cs">
       <DependentUpon>frmCiudadList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SAFcore\frmClienteForm.aspx.cs">
+      <DependentUpon>frmClienteForm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SAFcore\frmClienteForm.aspx.designer.cs">
+      <DependentUpon>frmClienteForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SAFcore\frmClienteList.aspx.cs">
+      <DependentUpon>frmClienteList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SAFcore\frmClienteList.aspx.designer.cs">
+      <DependentUpon>frmClienteList.aspx</DependentUpon>
     </Compile>
     <Compile Include="SAFcore\frmDocumentoForm.aspx.cs">
       <DependentUpon>frmDocumentoForm.aspx</DependentUpon>
