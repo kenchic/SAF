@@ -86,6 +86,8 @@
     <Reference Include="DevExpress.Web.ASPxSpreadsheet.v14.2, Version=14.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="img\iconos\agregarEntidad.gif" />
+    <Content Include="js\Funciones.js" />
     <Content Include="SAFcore\Controles\ctrBodegaForm.ascx" />
     <Content Include="SAFcore\Controles\ctrBodegaList.ascx" />
     <Content Include="SAFcore\Controles\ctrCiudadForm.ascx" />
@@ -99,6 +101,8 @@
     <Content Include="SAFcore\Controles\ctrElementoList.ascx" />
     <Content Include="SAFcore\Controles\ctrGrupoElementoForm.ascx" />
     <Content Include="SAFcore\Controles\ctrGrupoElementoList.ascx" />
+    <Content Include="SAFcore\Controles\ctrProyectoForm.ascx" />
+    <Content Include="SAFcore\Controles\ctrProyectoList.ascx" />
     <Content Include="SAFcore\Controles\ctrTipoDocumentoForm.ascx" />
     <Content Include="SAFcore\Controles\ctrTipoDocumentoList.ascx" />
     <Content Include="SAFcore\Controles\ctrUnidadMedidaForm.ascx" />
@@ -133,6 +137,8 @@
     <Content Include="SAFcore\frmElementoList.aspx" />
     <Content Include="SAFcore\frmGrupoElementoForm.aspx" />
     <Content Include="SAFcore\frmGrupoElementoList.aspx" />
+    <Content Include="SAFcore\frmProyectoForm.aspx" />
+    <Content Include="SAFcore\frmProyectoList.aspx" />
     <Content Include="SAFcore\frmTipoDocumentoForm.aspx" />
     <Content Include="SAFcore\frmTipoDocumentoList.aspx" />
     <Content Include="SAFcore\frmUnidadMedidaForm.aspx" />
@@ -244,6 +250,20 @@
     </Compile>
     <Compile Include="SAFcore\Controles\ctrGrupoElementoList.ascx.designer.cs">
       <DependentUpon>ctrGrupoElementoList.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="SAFcore\Controles\ctrProyectoForm.ascx.cs">
+      <DependentUpon>ctrProyectoForm.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SAFcore\Controles\ctrProyectoForm.ascx.designer.cs">
+      <DependentUpon>ctrProyectoForm.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="SAFcore\Controles\ctrProyectoList.ascx.cs">
+      <DependentUpon>ctrProyectoList.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SAFcore\Controles\ctrProyectoList.ascx.designer.cs">
+      <DependentUpon>ctrProyectoList.ascx</DependentUpon>
     </Compile>
     <Compile Include="SAFcore\Controles\ctrTipoDocumentoForm.ascx.cs">
       <DependentUpon>ctrTipoDocumentoForm.ascx</DependentUpon>
@@ -374,6 +394,20 @@
     </Compile>
     <Compile Include="SAFcore\frmGrupoElementoList.aspx.designer.cs">
       <DependentUpon>frmGrupoElementoList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SAFcore\frmProyectoForm.aspx.cs">
+      <DependentUpon>frmProyectoForm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SAFcore\frmProyectoForm.aspx.designer.cs">
+      <DependentUpon>frmProyectoForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SAFcore\frmProyectoList.aspx.cs">
+      <DependentUpon>frmProyectoList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SAFcore\frmProyectoList.aspx.designer.cs">
+      <DependentUpon>frmProyectoList.aspx</DependentUpon>
     </Compile>
     <Compile Include="SAFcore\frmTipoDocumentoForm.aspx.cs">
       <DependentUpon>frmTipoDocumentoForm.aspx</DependentUpon>
