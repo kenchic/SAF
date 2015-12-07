@@ -139,6 +139,7 @@
     <Content Include="SAFcore\frmGrupoElementoList.aspx" />
     <Content Include="SAFcore\frmProyectoForm.aspx" />
     <Content Include="SAFcore\frmProyectoList.aspx" />
+    <Content Include="SAFcore\frmProyectoPrincipal.aspx" />
     <Content Include="SAFcore\frmTipoDocumentoForm.aspx" />
     <Content Include="SAFcore\frmTipoDocumentoList.aspx" />
     <Content Include="SAFcore\frmUnidadMedidaForm.aspx" />
@@ -408,6 +409,13 @@
     </Compile>
     <Compile Include="SAFcore\frmProyectoList.aspx.designer.cs">
       <DependentUpon>frmProyectoList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SAFcore\frmProyectoPrincipal.aspx.cs">
+      <DependentUpon>frmProyectoPrincipal.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SAFcore\frmProyectoPrincipal.aspx.designer.cs">
+      <DependentUpon>frmProyectoPrincipal.aspx</DependentUpon>
     </Compile>
     <Compile Include="SAFcore\frmTipoDocumentoForm.aspx.cs">
       <DependentUpon>frmTipoDocumentoForm.aspx</DependentUpon>
