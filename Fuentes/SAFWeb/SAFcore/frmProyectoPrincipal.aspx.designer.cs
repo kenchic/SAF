@@ -22,6 +22,15 @@ namespace SAFWeb.SAFcore {
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
         
         /// <summary>
+        /// lbTitulo control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::DevExpress.Web.ASPxLabel lbTitulo;
+        
+        /// <summary>
         /// hlInfoProyecto control.
         /// </summary>
         /// <remarks>
@@ -29,5 +38,32 @@ namespace SAFWeb.SAFcore {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::DevExpress.Web.ASPxHyperLink hlInfoProyecto;
+        
+        /// <summary>
+        /// hlInfoContrato control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::DevExpress.Web.ASPxHyperLink hlInfoContrato;
+        
+        /// <summary>
+        /// hlInfoMovimientos control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::DevExpress.Web.ASPxHyperLink hlInfoMovimientos;
+        
+        /// <summary>
+        /// hlInfoFacturas control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::DevExpress.Web.ASPxHyperLink hlInfoFacturas;
     }
 }

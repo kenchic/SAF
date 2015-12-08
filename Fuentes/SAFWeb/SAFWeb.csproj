@@ -87,6 +87,10 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="img\iconos\agregarEntidad.gif" />
+    <Content Include="img\iconos\Contrato.png" />
+    <Content Include="img\iconos\Datos.png" />
+    <Content Include="img\iconos\Facturar.png" />
+    <Content Include="img\iconos\Movimientos.png" />
     <Content Include="js\Funciones.js" />
     <Content Include="SAFcore\Controles\ctrBodegaForm.ascx" />
     <Content Include="SAFcore\Controles\ctrBodegaList.ascx" />
