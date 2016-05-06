@@ -1,4 +1,4 @@
 SAF
 ===
 
-Sistema de Alquiler de Formaleta. C# 2012 y SQL 2012
+Sistema de Alquiler de Formaleta. c# 2012 Express
